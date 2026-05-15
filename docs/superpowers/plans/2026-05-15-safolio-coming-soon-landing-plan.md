@@ -35,11 +35,13 @@ Sets up the Next.js project, dependency baseline, tooling, and core providers (i
 ### Task 1: Initialize Next.js project
 
 **Files:**
+
 - Create: `package.json`, `tsconfig.json`, `next.config.ts`, `eslint.config.mjs`, `.gitignore`, `app/layout.tsx`, `app/page.tsx`, `app/globals.css`, `public/next.svg`, `public/vercel.svg`
 
 - [ ] **Step 1: Create Next.js 15 project**
 
 Run from `C:\Users\yasin\Projects\safolio-web`:
+
 ```bash
 pnpm create next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias="@/*" --use-pnpm --skip-install
 ```
@@ -78,11 +80,13 @@ git commit -m "chore: initialize Next.js 15 project with TypeScript and Tailwind
 ### Task 2: Strict TypeScript config
 
 **Files:**
+
 - Modify: `tsconfig.json`
 
 - [ ] **Step 1: Update tsconfig.json to strict mode**
 
 Replace contents:
+
 ```json
 {
   "compilerOptions": {
@@ -132,6 +136,7 @@ git commit -m "chore: enable strict TypeScript"
 ### Task 3: Prettier setup
 
 **Files:**
+
 - Create: `.prettierrc.json`, `.prettierignore`
 - Modify: `package.json` (add scripts and devDeps)
 
@@ -166,6 +171,7 @@ public
 - [ ] **Step 4: Add format scripts to `package.json`**
 
 Inside `"scripts"` block, add:
+
 ```json
 "format": "prettier --write .",
 "format:check": "prettier --check ."
@@ -190,6 +196,7 @@ git commit -m "chore: add Prettier with Tailwind plugin"
 ### Task 4: Install runtime dependencies
 
 **Files:**
+
 - Modify: `package.json`, `pnpm-lock.yaml`
 
 - [ ] **Step 1: Install all runtime libs**
@@ -218,6 +225,7 @@ git commit -m "chore: add runtime dependencies (next-intl, next-themes, form, an
 ### Task 5: Folder skeleton
 
 **Files:**
+
 - Create: `app/[locale]/`, `components/sections/`, `components/ui/`, `lib/`, `i18n/`, `messages/`
 
 - [ ] **Step 1: Create directories**
@@ -229,6 +237,7 @@ mkdir -p "app/[locale]" components/sections components/ui lib i18n messages publ
 - [ ] **Step 2: Create placeholder `messages/en.json` and `messages/tr.json`**
 
 `messages/en.json`:
+
 ```json
 {
   "Nav": {
@@ -238,6 +247,7 @@ mkdir -p "app/[locale]" components/sections components/ui lib i18n messages publ
 ```
 
 `messages/tr.json`:
+
 ```json
 {
   "Nav": {
@@ -253,6 +263,7 @@ mkdir -p "app/[locale]" components/sections components/ui lib i18n messages publ
 ### Task 6: next-intl routing + middleware
 
 **Files:**
+
 - Create: `i18n/routing.ts`, `i18n/navigation.ts`, `i18n/request.ts`, `middleware.ts`
 - Modify: `next.config.ts`
 
@@ -274,8 +285,7 @@ export const routing = defineRouting({
 import { createNavigation } from "next-intl/navigation";
 import { routing } from "./routing";
 
-export const { Link, redirect, usePathname, useRouter, getPathname } =
-  createNavigation(routing);
+export const { Link, redirect, usePathname, useRouter, getPathname } = createNavigation(routing);
 ```
 
 - [ ] **Step 3: Create `i18n/request.ts`**
@@ -337,6 +347,7 @@ git commit -m "feat(i18n): configure next-intl with TR/EN locales"
 ### Task 7: Pass-through root layout + locale layout (with ThemeProvider)
 
 **Files:**
+
 - Delete: `app/page.tsx` (will be replaced under `[locale]`)
 - Modify: `app/layout.tsx`
 - Create: `app/[locale]/layout.tsx`, `app/[locale]/page.tsx`, `components/theme-provider.tsx`
@@ -365,10 +376,7 @@ rm app/page.tsx
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import type { ComponentProps } from "react";
 
-export function ThemeProvider({
-  children,
-  ...props
-}: ComponentProps<typeof NextThemesProvider>) {
+export function ThemeProvider({ children, ...props }: ComponentProps<typeof NextThemesProvider>) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
 ```
@@ -472,6 +480,7 @@ git commit -m "feat(layout): wire next-intl + next-themes providers in locale la
 ### Task 8: Global CSS with theme tokens
 
 **Files:**
+
 - Modify: `app/globals.css`
 
 - [ ] **Step 1: Replace `app/globals.css`**
@@ -546,7 +555,7 @@ git commit -m "feat(layout): wire next-intl + next-themes providers in locale la
     @apply bg-background text-foreground;
   }
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-ring;
+    @apply outline-ring outline-2 outline-offset-2;
   }
 }
 ```
@@ -573,6 +582,7 @@ git commit -m "feat(theme): add light/dark CSS variables and Tailwind v4 @theme 
 ### Task 9: Tailwind utility helper
 
 **Files:**
+
 - Create: `lib/utils.ts`
 
 - [ ] **Step 1: Create `lib/utils.ts`**
@@ -598,6 +608,7 @@ git commit -m "feat(lib): add cn() Tailwind class merger helper"
 ### Task 10: shadcn/ui init + first components
 
 **Files:**
+
 - Create: `components.json`, `components/ui/button.tsx`, `components/ui/input.tsx`, `components/ui/dropdown-menu.tsx`, `components/ui/sheet.tsx`, `components/ui/accordion.tsx`, `components/ui/tabs.tsx`
 - Modify: relevant files as shadcn requires
 
@@ -608,6 +619,7 @@ pnpm dlx shadcn@latest init
 ```
 
 Answer prompts:
+
 - Which style? → **Default**
 - Which color? → **Neutral**
 - CSS variables? → **Yes**
@@ -668,6 +680,7 @@ Builds the LocaleSwitcher, ThemeToggle, SkipToMain, Header, Footer scaffolding, 
 ### Task 11: Asset download script
 
 **Files:**
+
 - Create: `scripts/download-assets.mjs`
 - Modify: `package.json` (add `assets:download` script)
 
@@ -679,7 +692,10 @@ import { dirname } from "node:path";
 
 const ASSETS = [
   ["public/logo.svg", "https://safolio.com/wp-content/uploads/2025/07/safolio_logo.svg"],
-  ["public/logo-white.svg", "https://safolio.com/wp-content/uploads/2025/07/safolio_logo_white.svg"],
+  [
+    "public/logo-white.svg",
+    "https://safolio.com/wp-content/uploads/2025/07/safolio_logo_white.svg",
+  ],
   ["public/icon.png", "https://safolio.com/wp-content/uploads/2025/07/safolio-icon-1.png"],
   [
     "public/images/hero-portrait.png",
@@ -713,6 +729,7 @@ console.log("Done.");
 - [ ] **Step 2: Add script to `package.json`**
 
 Inside `"scripts"`:
+
 ```json
 "assets:download": "node scripts/download-assets.mjs"
 ```
@@ -728,6 +745,7 @@ Expected: 8 files downloaded into `public/`.
 - [ ] **Step 4: Manually save App Store and Google Play badges**
 
 Note for implementer: Download official badges manually from:
+
 - Apple: https://developer.apple.com/app-store/marketing/guidelines/#downloadOnAppstore
 - Google: https://play.google.com/intl/en_us/badges/
 
@@ -747,6 +765,7 @@ git commit -m "chore: add asset download script and import brand assets from saf
 ### Task 12: Favicon and metadata icons
 
 **Files:**
+
 - Create: `app/icon.png`, `app/apple-icon.png`
 - Modify: nothing else
 
@@ -771,6 +790,7 @@ git commit -m "feat(meta): add favicon and apple-touch-icon"
 ### Task 13: messages/en.json and messages/tr.json full content
 
 **Files:**
+
 - Modify: `messages/en.json`, `messages/tr.json`
 
 - [ ] **Step 1: Replace `messages/en.json`**
@@ -1101,6 +1121,7 @@ git commit -m "feat(i18n): add full TR/EN message catalogues"
 ### Task 14: SkipToMain component
 
 **Files:**
+
 - Create: `components/skip-to-main.tsx`
 
 - [ ] **Step 1: Create `components/skip-to-main.tsx`**
@@ -1113,7 +1134,7 @@ export function SkipToMain() {
   return (
     <a
       href="#main"
-      className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-button focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+      className="focus:rounded-button focus:bg-primary focus:text-primary-foreground sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2"
     >
       {t("skipToMain")}
     </a>
@@ -1133,6 +1154,7 @@ git commit -m "feat(a11y): add SkipToMain link"
 ### Task 15: LocaleSwitcher component
 
 **Files:**
+
 - Create: `components/locale-switcher.tsx`
 
 - [ ] **Step 1: Create `components/locale-switcher.tsx`**
@@ -1206,6 +1228,7 @@ git commit -m "feat(i18n): add LocaleSwitcher dropdown"
 ### Task 16: ThemeToggle component
 
 **Files:**
+
 - Create: `components/theme-toggle.tsx`
 
 - [ ] **Step 1: Create `components/theme-toggle.tsx`**
@@ -1234,8 +1257,8 @@ export function ThemeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" aria-label={a11y("toggleTheme")}>
-          <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <Sun className="h-5 w-5 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <Moon className="absolute h-5 w-5 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -1266,6 +1289,7 @@ git commit -m "feat(theme): add ThemeToggle dropdown"
 ### Task 17: Header component
 
 **Files:**
+
 - Create: `components/sections/header.tsx`
 
 - [ ] **Step 1: Create `components/sections/header.tsx`**
@@ -1299,9 +1323,7 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-40 transition-colors duration-200",
-        scrolled
-          ? "border-b border-border bg-background/80 backdrop-blur"
-          : "bg-transparent",
+        scrolled ? "border-border bg-background/80 border-b backdrop-blur" : "bg-transparent",
       )}
     >
       <div className="mx-auto flex h-16 max-w-[1300px] items-center justify-between px-4 md:px-6">
@@ -1325,7 +1347,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-2 md:flex">
-          <Link href="/" className="px-3 py-2 text-sm font-medium hover:text-accent">
+          <Link href="/" className="hover:text-accent px-3 py-2 text-sm font-medium">
             {t("home")}
           </Link>
           <LocaleSwitcher />
@@ -1369,6 +1391,7 @@ git commit -m "feat(section): add Header with logo, nav, language and theme swit
 ### Task 18: Wire Header into page; manual smoke test
 
 **Files:**
+
 - Modify: `app/[locale]/page.tsx`
 
 - [ ] **Step 1: Replace `app/[locale]/page.tsx`**
@@ -1427,6 +1450,7 @@ Build out the seven page sections plus the SignupForm.
 ### Task 19: SignupForm component + zod schema
 
 **Files:**
+
 - Create: `lib/schemas.ts`, `components/signup-form.tsx`
 
 - [ ] **Step 1: Create `lib/schemas.ts`**
@@ -1500,7 +1524,7 @@ export function SignupForm({ tone = "on-light" }: SignupFormProps) {
     >
       <div
         className={cn(
-          "relative flex items-center rounded-input border",
+          "rounded-input relative flex items-center border",
           onDark ? "border-on-dark-border bg-white/10" : "border-input bg-card",
         )}
       >
@@ -1516,14 +1540,14 @@ export function SignupForm({ tone = "on-light" }: SignupFormProps) {
           aria-describedby={errors.email ? "email-error" : undefined}
           className={cn(
             "flex-1 border-0 bg-transparent shadow-none focus-visible:ring-0",
-            onDark && "text-white placeholder:text-on-dark-muted",
+            onDark && "placeholder:text-on-dark-muted text-white",
           )}
           {...register("email")}
         />
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="m-1 h-9 rounded-input bg-primary px-4 text-primary-foreground hover:bg-primary-hover"
+          className="rounded-input bg-primary text-primary-foreground hover:bg-primary-hover m-1 h-9 px-4"
         >
           {isSubmitting ? t("submitting") : t("submit")}
         </Button>
@@ -1550,6 +1574,7 @@ git commit -m "feat(form): add SignupForm with zod validation and fake-success t
 ### Task 20: Hero section
 
 **Files:**
+
 - Create: `components/sections/hero.tsx`
 
 - [ ] **Step 1: Create `components/sections/hero.tsx`**
@@ -1568,25 +1593,25 @@ export function Hero() {
     >
       <div className="mx-auto grid max-w-[1300px] gap-12 px-4 pb-24 md:grid-cols-2 md:px-6 md:pb-32">
         <div className="flex flex-col justify-center">
-          <h1 className="text-[clamp(2rem,5vw,3.25rem)] font-semibold leading-[1.15] tracking-tight text-foreground">
+          <h1 className="text-foreground text-[clamp(2rem,5vw,3.25rem)] leading-[1.15] font-semibold tracking-tight">
             {t("heading")}
           </h1>
-          <p className="mt-6 max-w-md text-sm leading-[26px] text-muted-foreground">
+          <p className="text-muted-foreground mt-6 max-w-md text-sm leading-[26px]">
             {t("description")}
           </p>
-          <div className="my-8 h-px w-1/4 bg-border" />
+          <div className="bg-border my-8 h-px w-1/4" />
           <p className="mb-3 text-base font-semibold">
             <strong>{t("signUpLabel")}</strong>{" "}
-            <span className="font-normal text-muted-foreground">| {t("signUpHint")}</span>
+            <span className="text-muted-foreground font-normal">| {t("signUpHint")}</span>
           </p>
           <SignupForm tone="on-light" />
         </div>
 
         <div className="relative">
-          <div className="rounded-card bg-primary/95 px-6 py-5 text-primary-foreground md:max-w-sm">
+          <div className="rounded-card bg-primary/95 text-primary-foreground px-6 py-5 md:max-w-sm">
             <p className="text-sm">{t("comingSoonReady")}</p>
           </div>
-          <div className="relative mt-6 overflow-hidden rounded-card">
+          <div className="rounded-card relative mt-6 overflow-hidden">
             <Image
               src="/images/hero-portrait.png"
               alt=""
@@ -1595,14 +1620,14 @@ export function Hero() {
               priority
               className="mx-auto h-auto w-full max-w-md object-contain dark:brightness-[0.7]"
             />
-            <div className="absolute inset-x-4 bottom-4 rounded-card bg-card/95 p-5 shadow-lg backdrop-blur">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+            <div className="rounded-card bg-card/95 absolute inset-x-4 bottom-4 p-5 shadow-lg backdrop-blur">
+              <p className="text-muted-foreground text-xs tracking-wide uppercase">
                 {t("comingSoon")}
               </p>
-              <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-highlight">
-                <div className="h-full w-3/4 rounded-full bg-primary" />
+              <div className="bg-highlight mt-3 h-2 w-full overflow-hidden rounded-full">
+                <div className="bg-primary h-full w-3/4 rounded-full" />
               </div>
-              <p className="mt-2 text-xs font-semibold text-foreground">75%</p>
+              <p className="text-foreground mt-2 text-xs font-semibold">75%</p>
             </div>
           </div>
         </div>
@@ -1624,6 +1649,7 @@ git commit -m "feat(section): add Hero with signup form and progress card"
 ### Task 21: About section ("What is Safolio?")
 
 **Files:**
+
 - Create: `components/sections/about.tsx`
 
 - [ ] **Step 1: Create `components/sections/about.tsx`**
@@ -1638,19 +1664,26 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FEATURE_KEYS = ["intro", "independent", "multiAsset", "journal", "risk", "community"] as const;
+const FEATURE_KEYS = [
+  "intro",
+  "independent",
+  "multiAsset",
+  "journal",
+  "risk",
+  "community",
+] as const;
 
 export function About() {
   const t = useTranslations("About");
   return (
-    <section className="border-t border-border">
+    <section className="border-border border-t">
       <div className="mx-auto grid max-w-[1300px] gap-12 px-4 py-16 md:grid-cols-2 md:px-6 md:py-24">
         <div>
-          <h2 className="text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-tight tracking-tight">
+          <h2 className="text-[clamp(1.875rem,4vw,3rem)] leading-tight font-semibold tracking-tight">
             {t("heading")} <span className="bg-highlight px-2">{t("headingHighlight")}</span>
           </h2>
-          <p className="mt-6 text-base leading-[26px] text-muted-foreground">{t("body")}</p>
-          <div className="mt-10 overflow-hidden rounded-card">
+          <p className="text-muted-foreground mt-6 text-base leading-[26px]">{t("body")}</p>
+          <div className="rounded-card mt-10 overflow-hidden">
             <Image
               src="/images/team.jpg"
               alt=""
@@ -1692,6 +1725,7 @@ git commit -m "feat(section): add About section with team image and feature acco
 ### Task 22: DesignedForYou section
 
 **Files:**
+
 - Create: `components/sections/designed-for-you.tsx`
 
 - [ ] **Step 1: Create `components/sections/designed-for-you.tsx`**
@@ -1707,13 +1741,13 @@ export function DesignedForYou() {
   const whyItems = t.raw("tabs.why.items") as string[];
 
   return (
-    <section className="border-t border-border">
+    <section className="border-border border-t">
       <div className="mx-auto max-w-[1300px] px-4 py-16 md:px-6 md:py-24">
-        <h2 className="text-center text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-tight tracking-tight md:text-left">
+        <h2 className="text-center text-[clamp(1.875rem,4vw,3rem)] leading-tight font-semibold tracking-tight md:text-left">
           {t("heading")} <span className="bg-highlight px-2">{t("headingHighlight")}</span>
         </h2>
         <div className="mt-12 grid items-start gap-12 md:grid-cols-2">
-          <div className="overflow-hidden rounded-card">
+          <div className="rounded-card overflow-hidden">
             <Image
               src="/images/designed-for-you.jpg"
               alt=""
@@ -1727,7 +1761,7 @@ export function DesignedForYou() {
               <TabsTrigger value="audience">{t("tabs.audience.label")}</TabsTrigger>
               <TabsTrigger value="why">{t("tabs.why.label")}</TabsTrigger>
             </TabsList>
-            <TabsContent value="audience" className="mt-6 text-muted-foreground">
+            <TabsContent value="audience" className="text-muted-foreground mt-6">
               <ul className="list-disc space-y-2 pl-5">
                 {audienceItems.map((item) => (
                   <li key={item}>{item}</li>
@@ -1735,7 +1769,7 @@ export function DesignedForYou() {
               </ul>
               <p className="mt-4">{t("tabs.audience.outro")}</p>
             </TabsContent>
-            <TabsContent value="why" className="mt-6 text-muted-foreground">
+            <TabsContent value="why" className="text-muted-foreground mt-6">
               <ul className="list-disc space-y-2 pl-5">
                 {whyItems.map((item) => (
                   <li key={item}>{item}</li>
@@ -1762,6 +1796,7 @@ git commit -m "feat(section): add DesignedForYou with audience and reasons tabs"
 ### Task 23: WhyWeCreated section
 
 **Files:**
+
 - Create: `components/sections/why-we-created.tsx`
 
 - [ ] **Step 1: Create `components/sections/why-we-created.tsx`**
@@ -1773,12 +1808,12 @@ export function WhyWeCreated() {
   const t = useTranslations("WhyWeCreated");
   const paragraphs = t.raw("paragraphs") as string[];
   return (
-    <section className="border-t border-border bg-[url('/images/hero-bg.webp')] bg-[length:200px] bg-[position:calc(100%-45px)_60px] bg-no-repeat">
+    <section className="border-border border-t bg-[url('/images/hero-bg.webp')] bg-[length:200px] bg-[position:calc(100%-45px)_60px] bg-no-repeat">
       <div className="mx-auto max-w-[1300px] px-4 py-16 md:px-6 md:py-24">
-        <h2 className="max-w-2xl text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-tight tracking-tight">
+        <h2 className="max-w-2xl text-[clamp(1.875rem,4vw,3rem)] leading-tight font-semibold tracking-tight">
           {t("heading")} <span className="bg-highlight px-2">{t("headingHighlight")}</span>
         </h2>
-        <div className="mt-10 max-w-3xl space-y-6 text-base leading-[26px] text-muted-foreground">
+        <div className="text-muted-foreground mt-10 max-w-3xl space-y-6 text-base leading-[26px]">
           {paragraphs.map((p) => (
             <p key={p}>{p}</p>
           ))}
@@ -1801,6 +1836,7 @@ git commit -m "feat(section): add WhyWeCreated narrative section"
 ### Task 24: CTA section
 
 **Files:**
+
 - Create: `components/sections/cta.tsx`
 
 - [ ] **Step 1: Create `components/sections/cta.tsx`**
@@ -1814,7 +1850,7 @@ export function CTA() {
   const t = useTranslations("CTA");
   return (
     <section className="mx-auto max-w-[1300px] px-4 py-16 md:px-6 md:py-24">
-      <div className="relative overflow-hidden rounded-card bg-on-dark-bg px-6 py-20 md:px-12 md:py-28">
+      <div className="rounded-card bg-on-dark-bg relative overflow-hidden px-6 py-20 md:px-12 md:py-28">
         <Image
           src="/images/cta-bg.webp"
           alt=""
@@ -1824,33 +1860,30 @@ export function CTA() {
           aria-hidden
         />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-on-dark-muted">{t("eyebrow")}</p>
-          <h2 className="mt-4 text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-tight tracking-tight text-on-dark-foreground">
-            {t("heading")}{" "}
-            <span className="text-accent">{t("headingBrand")}</span>{" "}
-            {t("headingMiddle")}{" "}
-            <span className="text-accent">{t("headingSecure")}</span>
-            {t("headingTail")}{" "}
-            <span className="text-accent">{t("headingEmpowering")}</span>
+          <p className="text-on-dark-muted text-xs tracking-[0.2em] uppercase">{t("eyebrow")}</p>
+          <h2 className="text-on-dark-foreground mt-4 text-[clamp(1.875rem,4vw,3rem)] leading-tight font-semibold tracking-tight">
+            {t("heading")} <span className="text-accent">{t("headingBrand")}</span>{" "}
+            {t("headingMiddle")} <span className="text-accent">{t("headingSecure")}</span>
+            {t("headingTail")} <span className="text-accent">{t("headingEmpowering")}</span>
             {t("headingPeriod")}
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-base text-on-dark-muted">{t("body")}</p>
+          <p className="text-on-dark-muted mx-auto mt-6 max-w-xl text-base">{t("body")}</p>
           <div className="mt-8 flex justify-center">
             <SignupForm tone="on-dark" />
           </div>
-          <p className="mt-12 text-lg font-semibold text-on-dark-foreground">{t("comingSoon")}</p>
+          <p className="text-on-dark-foreground mt-12 text-lg font-semibold">{t("comingSoon")}</p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
             <span
               role="img"
               aria-label="App Store (coming soon)"
-              className="rounded-button bg-white/10 px-5 py-3 text-sm text-on-dark-foreground"
+              className="rounded-button text-on-dark-foreground bg-white/10 px-5 py-3 text-sm"
             >
               App Store
             </span>
             <span
               role="img"
               aria-label="Google Play (coming soon)"
-              className="rounded-button bg-white/10 px-5 py-3 text-sm text-on-dark-foreground"
+              className="rounded-button text-on-dark-foreground bg-white/10 px-5 py-3 text-sm"
             >
               Google Play
             </span>
@@ -1876,6 +1909,7 @@ git commit -m "feat(section): add CTA with on-dark signup and coming-soon badges
 ### Task 25: Footer section
 
 **Files:**
+
 - Create: `components/sections/footer.tsx`
 
 - [ ] **Step 1: Create `components/sections/footer.tsx`**
@@ -1895,14 +1929,14 @@ const SOCIAL = [
 function SocialRow({ label }: { label: string }) {
   return (
     <div>
-      <p className="font-semibold text-on-dark-foreground">{label}</p>
+      <p className="text-on-dark-foreground font-semibold">{label}</p>
       <div className="mt-4 flex gap-3">
         {SOCIAL.map(({ name, Icon }) => (
           <a
             key={name}
             href="#"
             aria-label={name}
-            className="flex h-12 w-12 items-center justify-center rounded-button bg-white text-black transition-colors hover:bg-primary hover:text-white"
+            className="rounded-button hover:bg-primary flex h-12 w-12 items-center justify-center bg-white text-black transition-colors hover:text-white"
           >
             <Icon className="h-5 w-5" />
           </a>
@@ -1921,7 +1955,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1300px] px-4 py-16 md:px-6 md:py-20">
         <Image src="/logo-white.svg" alt="Safolio" width={140} height={36} className="mb-10" />
 
-        <div className="flex flex-wrap items-center gap-3 text-[clamp(2.5rem,8vw,5rem)] font-semibold leading-[1.1] tracking-tight">
+        <div className="flex flex-wrap items-center gap-3 text-[clamp(2.5rem,8vw,5rem)] leading-[1.1] font-semibold tracking-tight">
           <span className="bg-on-dark-border px-2">{t("tagline.line1")}</span>
           <span>{t("tagline.line2")}</span>
           <span className="text-accent">{t("tagline.line3")}</span>
@@ -1929,19 +1963,19 @@ export function Footer() {
         </div>
 
         <div className="mt-16 grid gap-10 md:grid-cols-3">
-          <div className="text-sm leading-relaxed text-on-dark-muted">
-            <p className="font-semibold text-on-dark-foreground">{t("contact")}</p>
-            <a className="mt-2 block hover:text-on-dark-foreground" href="mailto:hello@safolio.com">
+          <div className="text-on-dark-muted text-sm leading-relaxed">
+            <p className="text-on-dark-foreground font-semibold">{t("contact")}</p>
+            <a className="hover:text-on-dark-foreground mt-2 block" href="mailto:hello@safolio.com">
               hello@safolio.com
             </a>
-            <p className="mt-6 font-semibold text-on-dark-foreground">{t("company")}</p>
+            <p className="text-on-dark-foreground mt-6 font-semibold">{t("company")}</p>
             <p>{t("address")}</p>
           </div>
           <SocialRow label={t("globalSocial")} />
           <SocialRow label={t("turkishSocial")} />
         </div>
 
-        <div className="my-12 h-px bg-on-dark-border" />
+        <div className="bg-on-dark-border my-12 h-px" />
 
         <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
           <li>
@@ -1971,7 +2005,7 @@ export function Footer() {
           </li>
         </ul>
 
-        <p className="mt-8 text-sm text-on-dark-muted">{t("copyright", { year })}</p>
+        <p className="text-on-dark-muted mt-8 text-sm">{t("copyright", { year })}</p>
       </div>
     </footer>
   );
@@ -1990,6 +2024,7 @@ git commit -m "feat(section): add Footer with tagline, contact, social and legal
 ### Task 26: Compose homepage with all sections
 
 **Files:**
+
 - Modify: `app/[locale]/page.tsx`
 
 - [ ] **Step 1: Replace `app/[locale]/page.tsx`**
@@ -2005,11 +2040,7 @@ import { CTA } from "@/components/sections/cta";
 import { Footer } from "@/components/sections/footer";
 import { SkipToMain } from "@/components/skip-to-main";
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -2037,6 +2068,7 @@ pnpm dev
 ```
 
 Visit `/tr` and `/en`. Scroll the page from top to footer. Verify:
+
 - All 7 sections render in order with no console errors
 - Images load (hero portrait, team, designed-for-you, cta-bg)
 - Theme toggle still works across all sections
@@ -2059,6 +2091,7 @@ git commit -m "feat(page): compose all section components on homepage"
 ### Task 27: Framer Motion scroll-in animations (optional pass)
 
 **Files:**
+
 - Create: `components/animated-section.tsx`
 - Modify: section components (wrap with AnimatedSection) — defer to one commit per section
 
@@ -2090,17 +2123,16 @@ export function AnimatedSection({ children }: { children: ReactNode }) {
 Inside each respective section file, wrap the top-level `<section>` content in `<AnimatedSection>`. Hero stays static (above the fold). Footer stays static.
 
 Example for `about.tsx`:
+
 ```tsx
 import { AnimatedSection } from "@/components/animated-section";
 
 export function About() {
   // ... existing logic
   return (
-    <section className="border-t border-border">
+    <section className="border-border border-t">
       <AnimatedSection>
-        <div className="mx-auto grid max-w-[1300px] ...">
-          {/* existing children */}
-        </div>
+        <div className="mx-auto grid max-w-[1300px] ...">{/* existing children */}</div>
       </AnimatedSection>
     </section>
   );
@@ -2133,6 +2165,7 @@ git commit -m "feat(motion): add scroll-in animations to non-hero sections"
 ### Task 28: Legal page layout
 
 **Files:**
+
 - Create: `components/legal-layout.tsx`
 
 - [ ] **Step 1: Create `components/legal-layout.tsx`**
@@ -2150,7 +2183,7 @@ export function LegalLayout({ title, children }: { title: string; children: Reac
       <main id="main" className="pt-24">
         <article className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-20">
           <h1 className="mb-8 text-3xl font-semibold tracking-tight">{title}</h1>
-          <div className="prose prose-neutral max-w-none dark:prose-invert">{children}</div>
+          <div className="prose prose-neutral dark:prose-invert max-w-none">{children}</div>
         </article>
       </main>
       <Footer />
@@ -2168,6 +2201,7 @@ pnpm add -D @tailwindcss/typography
 - [ ] **Step 3: Enable plugin in globals.css**
 
 Add at top of `app/globals.css` after the existing `@import "tailwindcss";`:
+
 ```css
 @plugin "@tailwindcss/typography";
 ```
@@ -2184,6 +2218,7 @@ git commit -m "feat(legal): add reusable LegalLayout with typography"
 ### Task 29: Privacy Policy page (placeholder)
 
 **Files:**
+
 - Create: `app/[locale]/privacy-policy/page.tsx`
 
 - [ ] **Step 1: Create `app/[locale]/privacy-policy/page.tsx`**
@@ -2192,11 +2227,7 @@ git commit -m "feat(legal): add reusable LegalLayout with typography"
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { LegalLayout } from "@/components/legal-layout";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Footer.legal" });
@@ -2212,12 +2243,12 @@ export default async function Page({
 
 Create the following four files with the **exact same shell** as the privacy policy file above. Only the `namespace` key in `getTranslations` and the value passed to `t()` changes:
 
-| File | Key |
-|---|---|
-| `app/[locale]/cookie-policy/page.tsx` | `t("cookie")` |
-| `app/[locale]/terms-and-conditions/page.tsx` | `t("terms")` |
-| `app/[locale]/acceptable-use-policy/page.tsx` | `t("aup")` |
-| `app/[locale]/eula/page.tsx` | `t("eula")` |
+| File                                          | Key           |
+| --------------------------------------------- | ------------- |
+| `app/[locale]/cookie-policy/page.tsx`         | `t("cookie")` |
+| `app/[locale]/terms-and-conditions/page.tsx`  | `t("terms")`  |
+| `app/[locale]/acceptable-use-policy/page.tsx` | `t("aup")`    |
+| `app/[locale]/eula/page.tsx`                  | `t("eula")`   |
 
 The full file body for each: copy the privacy file verbatim, change the `t("privacy")` argument to the matching key, and update the placeholder paragraph text accordingly (e.g. "Safolio cookie policy", "Safolio terms of service", etc.).
 
@@ -2241,6 +2272,7 @@ git commit -m "feat(legal): add 5 legal page placeholders"
 ### Task 30: 404 page
 
 **Files:**
+
 - Create: `app/[locale]/not-found.tsx`
 
 - [ ] **Step 1: Create `app/[locale]/not-found.tsx`**
@@ -2254,9 +2286,9 @@ export default function NotFound() {
   const t = useTranslations("NotFound");
   return (
     <main className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
-      <p className="text-8xl font-bold text-primary">{t("heading")}</p>
+      <p className="text-primary text-8xl font-bold">{t("heading")}</p>
       <h1 className="mt-6 text-2xl font-semibold">{t("title")}</h1>
-      <p className="mt-3 max-w-md text-muted-foreground">{t("description")}</p>
+      <p className="text-muted-foreground mt-3 max-w-md">{t("description")}</p>
       <Button asChild className="mt-8">
         <Link href="/">{t("back")}</Link>
       </Button>
@@ -2277,11 +2309,13 @@ git commit -m "feat(404): add localized not-found page"
 ### Task 31: Metadata API for homepage and legal pages
 
 **Files:**
+
 - Modify: `app/[locale]/page.tsx`, all 5 legal page files
 
 - [ ] **Step 1: Add `generateMetadata` to `app/[locale]/page.tsx`**
 
 Insert at top of file (after imports):
+
 ```tsx
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -2321,6 +2355,7 @@ export async function generateMetadata({
 - [ ] **Step 2: Add `generateMetadata` to each legal page**
 
 For each of the 5 legal pages, add at top of the file:
+
 ```tsx
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -2350,6 +2385,7 @@ git commit -m "feat(seo): add Metadata API to homepage and legal pages"
 ### Task 32: OpenGraph image generator
 
 **Files:**
+
 - Create: `app/[locale]/opengraph-image.tsx`
 
 - [ ] **Step 1: Create `app/[locale]/opengraph-image.tsx`**
@@ -2366,27 +2402,25 @@ export default async function OG({ params }: { params: Promise<{ locale: string 
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
   return new ImageResponse(
-    (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "linear-gradient(135deg, #2869F5 0%, #6461FC 100%)",
-          color: "#FFFFFF",
-          fontFamily: "sans-serif",
-          padding: 80,
-        }}
-      >
-        <div style={{ fontSize: 80, fontWeight: 700, letterSpacing: -2 }}>Safolio</div>
-        <div style={{ marginTop: 24, fontSize: 36, textAlign: "center", maxWidth: 900 }}>
-          {t("title").replace(/^Safolio — /, "")}
-        </div>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "linear-gradient(135deg, #2869F5 0%, #6461FC 100%)",
+        color: "#FFFFFF",
+        fontFamily: "sans-serif",
+        padding: 80,
+      }}
+    >
+      <div style={{ fontSize: 80, fontWeight: 700, letterSpacing: -2 }}>Safolio</div>
+      <div style={{ marginTop: 24, fontSize: 36, textAlign: "center", maxWidth: 900 }}>
+        {t("title").replace(/^Safolio — /, "")}
       </div>
-    ),
+    </div>,
     size,
   );
 }
@@ -2412,6 +2446,7 @@ git commit -m "feat(seo): generate dynamic OpenGraph image per locale"
 ### Task 33: sitemap and robots
 
 **Files:**
+
 - Create: `app/sitemap.ts`, `app/robots.ts`
 
 - [ ] **Step 1: Create `app/sitemap.ts`**
@@ -2439,9 +2474,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: route === "" ? 1.0 : 0.5,
       alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `${base}/${l}${route}`]),
-        ),
+        languages: Object.fromEntries(routing.locales.map((l) => [l, `${base}/${l}${route}`])),
       },
     })),
   );
@@ -2481,6 +2514,7 @@ git commit -m "feat(seo): add sitemap and robots"
 ### Task 34: JSON-LD structured data
 
 **Files:**
+
 - Create: `components/json-ld.tsx`
 - Modify: `app/[locale]/page.tsx` (inject JSON-LD)
 
@@ -2508,10 +2542,7 @@ export function OrganizationJsonLd({ locale }: { locale: string }) {
     parentOrganization: { "@type": "Organization", name: "Safolio B.V." },
   };
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }
 ```
@@ -2519,6 +2550,7 @@ export function OrganizationJsonLd({ locale }: { locale: string }) {
 - [ ] **Step 2: Inject into homepage**
 
 In `app/[locale]/page.tsx`, import and render at end of fragment:
+
 ```tsx
 import { OrganizationJsonLd } from "@/components/json-ld";
 // ... existing
@@ -2545,6 +2577,7 @@ git commit -m "feat(seo): add Organization JSON-LD structured data"
 ### Task 35: Cookie banner
 
 **Files:**
+
 - Create: `components/cookie-banner.tsx`
 - Modify: `app/[locale]/layout.tsx`
 
@@ -2577,8 +2610,8 @@ export function CookieBanner() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl rounded-card border border-border bg-card p-4 shadow-lg md:flex md:items-center md:gap-4">
-      <p className="text-sm text-muted-foreground">
+    <div className="rounded-card border-border bg-card fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl border p-4 shadow-lg md:flex md:items-center md:gap-4">
+      <p className="text-muted-foreground text-sm">
         {t("message")}{" "}
         <Link href="/cookie-policy" className="underline">
           {t("policyLink")}
@@ -2600,6 +2633,7 @@ export function CookieBanner() {
 - [ ] **Step 2: Mount in `app/[locale]/layout.tsx`**
 
 Inside `<NextIntlClientProvider>`, after `{children}`:
+
 ```tsx
 <CookieBanner />
 ```
@@ -2626,6 +2660,7 @@ git commit -m "feat(consent): add cookie banner with localStorage persistence"
 ### Task 36: Vitest + Testing Library setup
 
 **Files:**
+
 - Create: `vitest.config.ts`, `vitest.setup.ts`, `__tests__/lib/schemas.test.ts`
 - Modify: `package.json` (add scripts + devDeps)
 
@@ -2763,6 +2798,7 @@ git commit -m "test: add vitest setup, schema tests, and SignupForm smoke tests"
 ### Task 37: Playwright E2E for golden path
 
 **Files:**
+
 - Create: `playwright.config.ts`, `e2e/home.spec.ts`
 - Modify: `package.json` (add e2e script)
 
@@ -2817,15 +2853,27 @@ test.describe("homepage", () => {
 
   test("signup form shows success toast on valid email", async ({ page }) => {
     await page.goto("/en");
-    await page.getByPlaceholder(/E-Mail/i).first().fill("test@example.com");
-    await page.getByRole("button", { name: /Register/i }).first().click();
+    await page
+      .getByPlaceholder(/E-Mail/i)
+      .first()
+      .fill("test@example.com");
+    await page
+      .getByRole("button", { name: /Register/i })
+      .first()
+      .click();
     await expect(page.getByText(/Thanks!/i)).toBeVisible();
   });
 
   test("signup form rejects invalid email", async ({ page }) => {
     await page.goto("/en");
-    await page.getByPlaceholder(/E-Mail/i).first().fill("not-an-email");
-    await page.getByRole("button", { name: /Register/i }).first().click();
+    await page
+      .getByPlaceholder(/E-Mail/i)
+      .first()
+      .fill("not-an-email");
+    await page
+      .getByRole("button", { name: /Register/i })
+      .first()
+      .click();
     await expect(page.getByText(/valid email/i)).toBeVisible();
   });
 
@@ -2864,11 +2912,13 @@ git commit -m "test(e2e): add Playwright golden-path scenarios"
 ### Task 38: Lint & typecheck CI scripts
 
 **Files:**
+
 - Modify: `package.json`
 
 - [ ] **Step 1: Add scripts**
 
 Inside `"scripts"`:
+
 ```json
 "typecheck": "tsc --noEmit",
 "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test"
@@ -2911,6 +2961,7 @@ pnpm start
 Common issues to expect: missing image dimensions (already handled), color contrast on `--muted-foreground` (raise to `#555555` if AA fails), missing `lang` on html (already handled).
 
 If issues found, fix them, re-run, commit each fix separately:
+
 ```bash
 git commit -m "perf|a11y|seo: <specific fix>"
 ```
@@ -2922,11 +2973,12 @@ git commit -m "perf|a11y|seo: <specific fix>"
 ### Task 40: README and deploy notes
 
 **Files:**
+
 - Modify: `README.md`
 
 - [ ] **Step 1: Replace `README.md`**
 
-```markdown
+````markdown
 # Safolio Web
 
 Coming Soon landing page for Safolio, an independent investment portfolio platform.
@@ -2938,6 +2990,7 @@ pnpm install
 pnpm assets:download   # one-time, pulls brand assets from safolio.com
 pnpm dev
 ```
+````
 
 Open http://localhost:3000.
 
@@ -2966,14 +3019,15 @@ Deploy to Vercel. The included `@vercel/analytics` and `@vercel/speed-insights` 
 - `i18n/` — next-intl routing, navigation, request config
 - `messages/` — TR/EN translation catalogues
 - `lib/` — utilities and zod schemas
-```
+
+````
 
 - [ ] **Step 2: Commit**
 
 ```bash
 git add README.md
 git commit -m "docs: add README"
-```
+````
 
 ---
 
