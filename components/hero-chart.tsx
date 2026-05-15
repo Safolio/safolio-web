@@ -7,17 +7,25 @@ import { cn } from "@/lib/utils";
 const W = 560;
 const H = 220;
 
-function buildPoints() {
+const RANGE_DATA = [
+  { trend: 0.025, seed: 7, noise: 0.04, changeAbs: "+€842.10", changePct: "+0.34%", pos: true },
+  { trend: 0.09, seed: 23, noise: 0.05, changeAbs: "+€2,140.55", changePct: "+0.86%", pos: true },
+  { trend: 0.22, seed: 41, noise: 0.06, changeAbs: "+€4,128.21", changePct: "+1.69%", pos: true },
+  { trend: 0.62, seed: 89, noise: 0.07, changeAbs: "+€38,512.40", changePct: "+18.31%", pos: true },
+  { trend: 1.4, seed: 137, noise: 0.08, changeAbs: "+€124,820.18", changePct: "+101.05%", pos: true },
+];
+
+function buildPoints(seed: number, trendFactor: number, noise: number) {
   const n = 64;
   const arr: { x: number; y: number }[] = [];
   const r = (i: number) => {
-    const x = Math.sin(i * 12.9898 + 4.1414) * 43758.5453;
+    const x = Math.sin(i * 12.9898 + 4.1414 + seed) * 43758.5453;
     return x - Math.floor(x);
   };
   let y = 0.55;
   for (let i = 0; i < n; i++) {
-    const trend = (i / (n - 1)) * 0.22;
-    y = 0.55 - trend + (r(i) - 0.5) * 0.06;
+    const trend = (i / (n - 1)) * trendFactor;
+    y = 0.55 - trend + (r(i) - 0.5) * noise;
     arr.push({ x: (i / (n - 1)) * W, y: y * H + 30 });
   }
   return arr;
@@ -77,7 +85,14 @@ const TICKERS = [
 
 export function HeroChart() {
   const t = useTranslations("Chart");
-  const points = React.useMemo(buildPoints, []);
+  const [activeRange, setActiveRange] = React.useState(2);
+  const [hasMounted, setHasMounted] = React.useState(false);
+
+  const range = RANGE_DATA[activeRange]!;
+  const points = React.useMemo(
+    () => buildPoints(range.seed, range.trend, range.noise),
+    [range.seed, range.trend, range.noise],
+  );
   const linePath = React.useMemo(() => buildLinePath(points), [points]);
   const areaPath = React.useMemo(
     () => `${linePath} L ${W} ${H + 40} L 0 ${H + 40} Z`,
@@ -88,7 +103,6 @@ export function HeroChart() {
   const [progress, setProgress] = React.useState(0);
   const [dotPos, setDotPos] = React.useState({ x: W, y: 100 });
   const [total, setTotal] = React.useState(0);
-  const [activeRange, setActiveRange] = React.useState(2);
 
   React.useEffect(() => {
     const reduce =
@@ -96,12 +110,12 @@ export function HeroChart() {
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
       setProgress(1);
-      setTotal(248912);
       return;
     }
+    setProgress(0);
     let raf = 0;
     let start: number | null = null;
-    const dur = 1800;
+    const dur = hasMounted ? 700 : 1800;
     const step = (ts: number) => {
       if (start === null) start = ts;
       const p = Math.min(1, (ts - start) / dur);
@@ -111,6 +125,11 @@ export function HeroChart() {
     };
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeRange]);
+
+  React.useEffect(() => {
+    setHasMounted(true);
   }, []);
 
   React.useEffect(() => {
@@ -162,11 +181,19 @@ export function HeroChart() {
             </span>
             <span className="text-[20px] text-ink3">.42</span>
           </div>
-          <div className="mt-1 inline-flex items-center gap-1.5 text-[12px] font-medium text-pos">
+          <div
+            className={cn(
+              "mt-1 inline-flex items-center gap-1.5 text-[12px] font-medium",
+              range.pos ? "text-pos" : "text-neg",
+            )}
+          >
             <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-              <path d="M5 1 L9 7 L1 7 Z" fill="currentColor" />
+              <path
+                d={range.pos ? "M5 1 L9 7 L1 7 Z" : "M5 9 L9 3 L1 3 Z"}
+                fill="currentColor"
+              />
             </svg>
-            +€4,128.21 · +1.69% · {t("change")}
+            {range.changeAbs} · {range.changePct} · {t("change")}
           </div>
         </div>
         <div className="inline-flex gap-0.5 rounded-full bg-surface2 p-[3px]">
