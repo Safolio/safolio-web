@@ -1,16 +1,33 @@
+import { setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/sections/header";
+import { Hero } from "@/components/sections/hero";
+import { About } from "@/components/sections/about";
+import { DesignedForYou } from "@/components/sections/designed-for-you";
+import { WhyWeCreated } from "@/components/sections/why-we-created";
+import { CTA } from "@/components/sections/cta";
+import { Footer } from "@/components/sections/footer";
 import { SkipToMain } from "@/components/skip-to-main";
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <SkipToMain />
       <Header />
-      <main id="main" className="min-h-screen pt-16">
-        <div className="mx-auto max-w-[1300px] px-4 py-24">
-          <p className="text-muted-foreground">Sections coming…</p>
-        </div>
+      <main id="main">
+        <Hero />
+        <About />
+        <DesignedForYou />
+        <WhyWeCreated />
+        <CTA />
       </main>
+      <Footer />
     </>
   );
 }
