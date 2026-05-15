@@ -79,6 +79,11 @@
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "ss01", "cv11";
   }
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  a {
+    cursor: pointer;
+  }
   .font-mono {
     font-family: var(--font-mono);
     font-feature-settings: "tnum", "zero";
