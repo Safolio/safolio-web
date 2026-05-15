@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LegalLayout } from "@/components/legal-layout";
-import { LegalTRPlaceholder } from "@/components/legal-tr-placeholder";
 
 export async function generateMetadata({
   params,
@@ -21,7 +20,1036 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   if (locale === "tr") {
     return (
       <LegalLayout title={t("legal3")}>
-        <LegalTRPlaceholder docName={t("legal3")} />
+        <p className="text-sm text-ink3">Son güncelleme: 01 Şubat 2026</p>
+
+        <h2>Yasal koşullarımıza ilişkin sözleşme</h2>
+        <p>
+          Biz, Safolio (&apos;Şirket&apos;, &apos;biz&apos;, &apos;bize&apos; veya
+          &apos;bizim&apos;) ticari unvanıyla iş yapan, Hollanda&apos;da 2-A Abtstraat, Utrecht,
+          Utrecht 3512 AB adresinde kayıtlı bir şirket olan Safolio B.V.&apos;yiz. KDV
+          numaramız NL868276042B01&apos;dir.
+        </p>
+        <p>
+          <a href="https://safolio.com">https://safolio.com</a> web sitesini
+          (&apos;Site&apos;), Safolio mobil uygulamasını (&apos;Uygulama&apos;) ve bu yasal
+          koşullara (&apos;Yasal Koşullar&apos;) atıfta bulunan veya bağlantı veren diğer
+          ilgili ürün ve hizmetleri (topluca, &apos;Hizmetler&apos;) işletiyoruz.
+        </p>
+        <p>
+          Bize <a href="mailto:info@safolio.com">info@safolio.com</a> adresinden e-posta
+          yoluyla veya 2-A Abtstraat, Utrecht, Utrecht 3512 AB, Hollanda adresine posta
+          yoluyla ulaşabilirsiniz.
+        </p>
+        <p>
+          Bu Yasal Koşullar, ister şahsen ister bir tüzel kişilik adına olsun, sizinle
+          (&apos;siz&apos;) Safolio B.V. arasında Hizmetlere erişiminiz ve bunları
+          kullanmanız ile ilgili yasal olarak bağlayıcı bir sözleşme oluşturur. Hizmetlere
+          erişerek, bu Yasal Koşulların tamamını okuduğunuzu, anladığınızı ve bunlara bağlı
+          kalmayı kabul ettiğinizi onaylamış olursunuz. BU YASAL KOŞULLARIN TAMAMINI KABUL
+          ETMİYORSANIZ, HİZMETLERİ KULLANMANIZ KESİNLİKLE YASAKTIR VE KULLANIMI DERHAL
+          DURDURMALISINIZ.
+        </p>
+        <p>
+          Kullandığınız Hizmetlerde planlanan değişiklikler hakkında size önceden bildirimde
+          bulunacağız. Değiştirilen Yasal Koşullar, e-posta mesajında belirtildiği gibi
+          yayımlandığında veya noreply@safolio.com tarafından size bildirildiğinde yürürlüğe
+          girecektir. Herhangi bir değişikliğin yürürlük tarihinden sonra Hizmetleri
+          kullanmaya devam ederek, değiştirilen koşullara bağlı kalmayı kabul edersiniz.
+        </p>
+        <p>
+          Hizmetler en az 18 yaşında olan kullanıcılar için tasarlanmıştır. 18 yaşın altındaki
+          kişilerin Hizmetleri kullanmasına veya bunlara kaydolmasına izin verilmez.
+        </p>
+        <p>
+          Kayıtlarınız için bu Yasal Koşulların bir kopyasını yazdırmanızı tavsiye ederiz.
+        </p>
+
+        <h2>İçindekiler</h2>
+        <ol>
+          <li>Hizmetlerimiz</li>
+          <li>Fikri mülkiyet hakları</li>
+          <li>Kullanıcı beyanları</li>
+          <li>Kullanıcı kaydı</li>
+          <li>Satın alma ve ödeme</li>
+          <li>Abonelikler</li>
+          <li>Yasak faaliyetler</li>
+          <li>Kullanıcı tarafından oluşturulan katkılar</li>
+          <li>Katkı lisansı</li>
+          <li>İncelemeler için kurallar</li>
+          <li>Mobil uygulama lisansı</li>
+          <li>Sosyal medya</li>
+          <li>Üçüncü taraf web siteleri ve içerik</li>
+          <li>Reklam verenler</li>
+          <li>Hizmet yönetimi</li>
+          <li>Gizlilik politikası</li>
+          <li>Süre ve fesih</li>
+          <li>Değişiklikler ve kesintiler</li>
+          <li>Geçerli hukuk</li>
+          <li>Uyuşmazlık çözümü</li>
+          <li>Düzeltmeler</li>
+          <li>Sorumluluk reddi</li>
+          <li>Sorumluluk sınırlamaları</li>
+          <li>Tazminat</li>
+          <li>Kullanıcı verileri</li>
+          <li>Elektronik iletişim, işlemler ve imzalar</li>
+          <li>California kullanıcıları ve sakinleri</li>
+          <li>Çeşitli hükümler</li>
+          <li>Hizmetler</li>
+          <li>Veri doğruluğu, garanti verilmemesi ve sorumluluk sınırlaması</li>
+          <li>Garanti verilmemesi</li>
+          <li>Kullanıcı sorumluluğu ve doğrulama</li>
+          <li>Bağlı hesaplar ve üçüncü taraf veri kaynakları</li>
+          <li>Kullanıcı içeriği</li>
+          <li>Bize ulaşın</li>
+        </ol>
+
+        <h2>1. Hizmetlerimiz</h2>
+        <p>
+          Hizmetler kullanılırken sağlanan bilgiler, böyle bir dağıtım veya kullanımın yasa
+          veya yönetmeliğe aykırı olacağı veya bizi söz konusu yargı bölgesi veya ülkede
+          herhangi bir kayıt yükümlülüğüne tabi tutacak olan herhangi bir yargı bölgesi veya
+          ülkedeki herhangi bir kişi veya tüzel kişiliğe dağıtım veya bunlar tarafından
+          kullanım için tasarlanmamıştır. Buna göre, Hizmetlere diğer konumlardan erişmeyi
+          seçen kişiler bunu kendi inisiyatifleriyle yapar ve yerel yasalar uygulanabilir
+          olduğu ölçüde, yerel yasalara uyumdan yalnızca kendileri sorumludur.
+        </p>
+        <p>
+          Hizmetler, sektöre özgü düzenlemelere (Sağlık Sigortası Taşınabilirlik ve Hesap
+          Verebilirlik Yasası (HIPAA), Federal Bilgi Güvenliği Yönetim Yasası (FISMA) vb.)
+          uyacak şekilde tasarlanmamıştır; bu nedenle, etkileşimleriniz bu tür yasalara tabi
+          olacaksa, Hizmetleri kullanamazsınız. Hizmetleri Gramm-Leach-Bliley Yasası&apos;nı
+          (GLBA) ihlal edecek şekilde kullanamazsınız.
+        </p>
+
+        <h2>2. Fikri mülkiyet hakları</h2>
+        <h3>Fikri mülkiyetimiz</h3>
+        <p>
+          Hizmetlerimizdeki tüm fikri mülkiyet haklarının, Hizmetlerdeki tüm kaynak kodu,
+          veritabanları, işlevsellik, yazılım, web sitesi tasarımları, ses, video, metin,
+          fotoğraflar ve grafikler (topluca, &apos;İçerik&apos;) ile bunların içerdiği ticari
+          markaların, hizmet markalarının ve logoların (&apos;İşaretler&apos;) sahibi veya
+          lisans sahibiyiz.
+        </p>
+        <p>
+          İçeriğimiz ve İşaretlerimiz, Amerika Birleşik Devletleri ve dünyanın dört bir
+          yanında telif hakkı ve ticari marka yasaları (ve diğer çeşitli fikri mülkiyet
+          hakları ve haksız rekabet yasaları) ve antlaşmaları ile korunmaktadır.
+        </p>
+        <p>
+          İçerik ve İşaretler, yalnızca kişisel, ticari olmayan kullanımınız veya dahili iş
+          amacınız için Hizmetler aracılığıyla &apos;OLDUĞU GİBİ&apos; sağlanmaktadır.
+        </p>
+        <h3>Hizmetlerimizi kullanımınız</h3>
+        <p>
+          Aşağıdaki &apos;Yasak Faaliyetler&apos; bölümü dahil olmak üzere bu Yasal Koşullara
+          uymanız koşuluyla, size aşağıdakileri yapma konusunda münhasır olmayan,
+          devredilemez, geri alınabilir bir lisans veriyoruz:
+        </p>
+        <ul>
+          <li>Hizmetlere erişmek; ve</li>
+          <li>
+            Erişim hakkına usulüne uygun olarak sahip olduğunuz İçeriğin herhangi bir
+            kısmının bir kopyasını indirmek veya yazdırmak,
+          </li>
+        </ul>
+        <p>
+          yalnızca kişisel, ticari olmayan kullanımınız veya dahili iş amacınız için.
+        </p>
+        <p>
+          Bu bölümde veya Yasal Koşullarımızın başka bir yerinde belirtilenler dışında,
+          Hizmetlerin hiçbir bölümü ve hiçbir İçerik veya İşaret, açık önceden yazılı iznimiz
+          olmaksızın herhangi bir ticari amaçla kopyalanamaz, çoğaltılamaz, toplanamaz,
+          yeniden yayınlanamaz, yüklenemez, gönderilemez, kamuya açık olarak
+          görüntülenemez, kodlanamaz, çevrilemez, iletilemez, dağıtılamaz, satılamaz, lisans
+          verilemez veya başka bir şekilde işletilemez.
+        </p>
+        <p>
+          Hizmetleri, İçeriği veya İşaretleri bu bölümde veya Yasal Koşullarımızın başka bir
+          yerinde belirtilenler dışında kullanmak isterseniz, lütfen talebinizi şu adrese
+          yönlendirin: <a href="mailto:info@safolio.com">info@safolio.com</a>. Hizmetlerimizin
+          veya İçeriğimizin herhangi bir bölümünü yayınlama, çoğaltma veya kamuya açık olarak
+          görüntüleme izni verirsek, bizi Hizmetlerin, İçeriğin veya İşaretlerin sahipleri
+          veya lisans verenleri olarak tanımlamalı ve İçeriğimizi yayınlarken, çoğaltırken
+          veya görüntülerken herhangi bir telif hakkı veya mülkiyet bildiriminin görünür
+          olmasını sağlamalısınız.
+        </p>
+        <p>
+          Hizmetlere, İçeriğe ve İşaretlere ilişkin size açıkça verilmeyen tüm hakları saklı
+          tutarız.
+        </p>
+        <p>
+          Bu Fikri Mülkiyet Haklarının herhangi bir ihlali, Yasal Koşullarımızın esaslı bir
+          ihlali oluşturacak ve Hizmetlerimizi kullanma hakkınız derhal sona erecektir.
+        </p>
+        <h3>Gönderileriniz ve katkılarınız</h3>
+        <p>
+          Hizmetler aracılığıyla herhangi bir içerik yayınlamadan veya yüklemeden önce (a)
+          bize verdiğiniz hakları ve (b) sahip olduğunuz yükümlülükleri anlamak için lütfen
+          bu bölümü ve &apos;Yasak Faaliyetler&apos; bölümünü dikkatlice inceleyin.
+        </p>
+        <p>
+          <strong>Gönderiler:</strong> Hizmetlerle ilgili herhangi bir soru, yorum, öneri,
+          fikir, geri bildirim veya diğer bilgileri (&apos;Gönderiler&apos;) doğrudan bize
+          göndererek, bu tür Gönderilerdeki tüm fikri mülkiyet haklarını bize devretmeyi
+          kabul edersiniz. Bu Gönderinin bize ait olacağını ve ticari veya başka türlü yasal
+          herhangi bir amaç için, size karşı herhangi bir teşekkür veya tazminat olmaksızın
+          sınırsız kullanım ve dağıtım hakkına sahip olacağımızı kabul edersiniz.
+        </p>
+        <p>
+          <strong>Katkılar:</strong> Hizmetler sizi sohbet etmeye, bloglara, mesaj panolarına,
+          çevrimiçi forumlara ve diğer işlevlere katkıda bulunmaya veya katılmaya davet
+          edebilir; bu işlevler sırasında metin, yazılar, video, ses, fotoğraflar, müzik,
+          grafikler, yorumlar, incelemeler, derecelendirme önerileri, kişisel bilgiler veya
+          diğer materyaller (&apos;Katkılar&apos;) dahil ancak bunlarla sınırlı olmamak üzere
+          içerik ve materyaller oluşturabilir, gönderebilir, yayınlayabilir, görüntüleyebilir,
+          iletebilir, yayımlayabilir, dağıtabilir veya yayınlayabilirsiniz. Kamuya açık olarak
+          yayınlanan herhangi bir Gönderi de Katkı olarak değerlendirilecektir.
+        </p>
+        <p>
+          Katkıların Hizmetlerin diğer kullanıcıları tarafından ve muhtemelen üçüncü taraf
+          web siteleri aracılığıyla görüntülenebileceğini anlıyorsunuz.
+        </p>
+        <p>
+          <strong>Katkılar yayınladığınızda, bize bir lisans vermiş olursunuz (adınızın,
+          ticari markalarınızın ve logolarınızın kullanımı dahil):</strong>{" "}
+          Herhangi bir Katkı yayınlayarak, bize Katkılarınızı (görüntünüz, adınız ve sesiniz
+          dahil ancak bunlarla sınırlı olmamak üzere) ticari, reklam veya başka herhangi bir
+          amaçla kullanmak, kopyalamak, çoğaltmak, dağıtmak, satmak, yeniden satmak,
+          yayınlamak, yayımlamak, yeniden adlandırmak, depolamak, kamuya açık olarak icra
+          etmek, kamuya açık olarak görüntülemek, yeniden biçimlendirmek, çevirmek (tamamen
+          veya kısmen) alıntılamak ve işletmek; Katkılarınızın türev çalışmalarını
+          hazırlamak veya Katkılarınızı diğer çalışmalara dahil etmek ve bu bölümde verilen
+          lisansları alt lisanslamak için sınırsız, sınırsız, geri alınamaz, süresiz, münhasır
+          olmayan, devredilebilir, telifsiz, tamamı ödenmiş, dünya çapında bir hak ve lisans
+          vermiş olursunuz. Kullanımımız ve dağıtımımız herhangi bir medya formatında ve
+          herhangi bir medya kanalı aracılığıyla gerçekleşebilir.
+        </p>
+        <p>
+          Bu lisans, sağladığınız adınızın, şirket adınızın ve franchise adınızın ve ticari
+          markaların, hizmet markalarının, ticari adların, logoların ve kişisel ve ticari
+          görsellerin uygun şekilde kullanımını içerir.
+        </p>
+        <p>
+          <strong>Yayınladığınız veya yüklediğiniz şeylerden siz sorumlusunuz:</strong>{" "}
+          Hizmetlerin herhangi bir bölümü aracılığıyla bize Gönderi göndererek ve/veya
+          Katkılar yayınlayarak veya Hizmetlerdeki hesabınızı sosyal ağ hesaplarınızdan
+          herhangi birine bağlayarak Katkıları Hizmetler aracılığıyla erişilebilir hale
+          getirerek:
+        </p>
+        <ul>
+          <li>
+            &apos;Yasak Faaliyetler&apos;imizi okuduğunuzu ve kabul ettiğinizi onaylar ve
+            Hizmetler aracılığıyla yasadışı, taciz edici, nefret dolu, zararlı, iftira niteliğinde,
+            müstehcen, zorbalık niteliğinde, küfürlü, ayrımcı, herhangi bir kişiye veya gruba
+            yönelik tehdit edici, cinsel açıdan müstehcen, yanlış, hatalı, aldatıcı veya
+            yanıltıcı hiçbir Gönderi yayınlamayacağınızı, göndermeyeceğinizi,
+            yayımlamayacağınızı, yüklemeyeceğinizi veya iletmeyeceğinizi ve hiçbir Katkı
+            yayınlamayacağınızı taahhüt eder;
+          </li>
+          <li>
+            Geçerli yasaların izin verdiği ölçüde, bu tür Gönderiler ve/veya Katkılar
+            üzerindeki tüm manevi haklardan feragat eder;
+          </li>
+          <li>
+            Bu tür Gönderiler ve/veya Katkıların size özgü olduğunu veya bu tür Gönderileri
+            ve/veya Katkıları sunmak için gerekli haklara ve lisanslara sahip olduğunuzu ve
+            Gönderileriniz ve/veya Katkılarınız ile ilgili olarak yukarıda belirtilen hakları
+            bize verme konusunda tam yetkiye sahip olduğunuzu garanti eder; ve
+          </li>
+          <li>
+            Gönderilerinizin ve/veya Katkılarınızın gizli bilgi oluşturmadığını garanti eder
+            ve beyan edersiniz.
+          </li>
+        </ul>
+        <p>
+          Gönderilerinizden ve/veya Katkılarınızdan yalnızca siz sorumlusunuz ve (a) bu
+          bölümün, (b) herhangi bir üçüncü tarafın fikri mülkiyet haklarının veya (c)
+          geçerli yasanın ihlali nedeniyle uğrayabileceğimiz tüm kayıpları bize tazmin etmeyi
+          açıkça kabul edersiniz.
+        </p>
+        <p>
+          <strong>İçeriğinizi kaldırabilir veya düzenleyebiliriz:</strong> Herhangi bir
+          Katkıyı izleme yükümlülüğümüz olmamakla birlikte, makul görüşümüze göre bu tür
+          Katkıları zararlı veya bu Yasal Koşulları ihlal eder nitelikte değerlendirirsek,
+          herhangi bir zamanda bildirimde bulunmadan herhangi bir Katkıyı kaldırma veya
+          düzenleme hakkına sahip olacağız. Bu tür Katkıları kaldırır veya düzenlersek,
+          hesabınızı da askıya alabilir veya devre dışı bırakabilir ve sizi yetkililere
+          bildirebiliriz.
+        </p>
+
+        <h2>3. Kullanıcı beyanları</h2>
+        <p>
+          Hizmetleri kullanarak şunları beyan ve garanti edersiniz: (1) gönderdiğiniz tüm
+          kayıt bilgileri doğru, kesin, güncel ve eksiksiz olacaktır; (2) bu tür bilgilerin
+          doğruluğunu koruyacak ve gerektiğinde bu tür kayıt bilgilerini derhal
+          güncelleyeceksiniz; (3) yasal ehliyetiniz vardır ve bu Yasal Koşullara uymayı
+          kabul edersiniz; (4) ikamet ettiğiniz yargı bölgesinde reşit değilsiniz; (5)
+          Hizmetlere bot, komut dosyası veya başka bir yöntemle otomatik veya insan dışı
+          araçlarla erişmeyeceksiniz; (6) Hizmetleri yasadışı veya yetkisiz herhangi bir amaç
+          için kullanmayacaksınız; ve (7) Hizmetleri kullanımınız geçerli herhangi bir yasayı
+          veya yönetmeliği ihlal etmeyecektir.
+        </p>
+        <p>
+          Doğru olmayan, hatalı, güncel olmayan veya eksik herhangi bir bilgi sağlarsanız,
+          hesabınızı askıya alma veya sonlandırma ve Hizmetlerin (veya bunların herhangi bir
+          bölümünün) mevcut veya gelecekteki herhangi bir kullanımını reddetme hakkına
+          sahibiz.
+        </p>
+
+        <h2>4. Kullanıcı kaydı</h2>
+        <p>
+          Hizmetleri kullanmak için kaydolmanız gerekebilir. Şifrenizi gizli tutmayı kabul
+          eder ve hesabınızın ve şifrenizin tüm kullanımından siz sorumlu olursunuz.
+          Seçtiğiniz bir kullanıcı adının uygunsuz, müstehcen veya başka bir şekilde sakıncalı
+          olduğuna kendi takdirimize göre karar verirsek, bu kullanıcı adını kaldırma, geri
+          alma veya değiştirme hakkını saklı tutarız.
+        </p>
+
+        <h2>5. Satın alma ve ödeme</h2>
+        <p>Aşağıdaki ödeme biçimlerini kabul ediyoruz:</p>
+        <ul>
+          <li>Visa</li>
+          <li>Mastercard</li>
+          <li>American Express</li>
+          <li>PayPal</li>
+        </ul>
+        <p>
+          Hizmetler aracılığıyla yapılan tüm satın almalar için güncel, eksiksiz ve doğru
+          satın alma ve hesap bilgilerini sağlamayı kabul edersiniz. Ayrıca, işlemlerinizi
+          tamamlayabilmemiz ve gerektiğinde sizinle iletişime geçebilmemiz için e-posta
+          adresi, ödeme yöntemi ve ödeme kartı son kullanma tarihi dahil olmak üzere hesap
+          ve ödeme bilgilerini derhal güncellemeyi kabul edersiniz. Tarafımızca gerekli
+          görülen şekilde satın alma fiyatına satış vergisi eklenecektir. Fiyatları herhangi
+          bir zamanda değiştirebiliriz. Tüm ödemeler USD, EUR, TRY cinsinden olacaktır.
+        </p>
+        <p>
+          Satın almalarınız ve geçerli kargo ücretleri için o sırada geçerli olan fiyatlardan
+          tüm ücretleri ödemeyi kabul edersiniz ve siparişinizi verirken seçtiğiniz ödeme
+          sağlayıcısını bu tür tutarlar için ücretlendirmemize yetki verirsiniz. Halihazırda
+          ödeme talep etmiş veya almış olsak bile, fiyatlandırmadaki hataları veya yanlışları
+          düzeltme hakkını saklı tutarız.
+        </p>
+        <p>
+          Hizmetler aracılığıyla verilen herhangi bir siparişi reddetme hakkını saklı
+          tutarız. Kendi takdirimize bağlı olarak, kişi başına, hane başına veya sipariş
+          başına satın alınan miktarları sınırlandırabilir veya iptal edebiliriz. Bu
+          kısıtlamalar, aynı müşteri hesabı, aynı ödeme yöntemi tarafından veya altında
+          verilen siparişleri ve/veya aynı fatura veya gönderim adresini kullanan siparişleri
+          içerebilir. Kendi takdirimize göre satıcılar, yeniden satıcılar veya distribütörler
+          tarafından verildiği görünen siparişleri sınırlandırma veya yasaklama hakkını saklı
+          tutarız.
+        </p>
+
+        <h2>6. Abonelikler</h2>
+        <h3>Faturalandırma ve yenileme</h3>
+        <p>
+          Aboneliğiniz iptal edilmediği sürece devam edecek ve otomatik olarak yenilenecektir.
+          İlgili siparişi iptal edinceye kadar, her bir tekrarlanan ücretlendirme için
+          önceden onayınızı almadan ödeme yönteminizden tekrarlayan bir şekilde ücret
+          almamıza onay verirsiniz. Faturalandırma döngünüzün uzunluğu, Hizmetlere abone
+          olduğunuzda seçtiğiniz abonelik planının türüne bağlı olacaktır.
+        </p>
+        <h3>Ücretsiz deneme</h3>
+        <p>
+          Hizmetlere kaydolan yeni kullanıcılara 7 günlük ücretsiz deneme sunuyoruz.
+          Ücretsiz deneme süresinin sonunda hesap, kullanıcının seçtiği aboneliğe göre
+          ücretlendirilecektir.
+        </p>
+        <h3>İptal</h3>
+        <p>
+          Aşağıda verilen iletişim bilgilerini kullanarak bizimle iletişime geçerek
+          aboneliğinizi istediğiniz zaman iptal edebilirsiniz. İptaliniz mevcut ücretli
+          dönemin sonunda geçerli olacaktır. Herhangi bir sorunuz varsa veya Hizmetlerimizden
+          memnun değilseniz, lütfen <a href="mailto:info@safolio.com">info@safolio.com</a>
+          {" "}adresinden bize e-posta gönderin.
+        </p>
+        <h3>Ücret değişiklikleri</h3>
+        <p>
+          Zaman zaman abonelik ücretinde değişiklikler yapabiliriz ve fiyat değişikliklerini
+          size geçerli yasalara uygun olarak bildireceğiz.
+        </p>
+
+        <h2>7. Yasak faaliyetler</h2>
+        <p>
+          Hizmetlere, Hizmetleri kullanıma sunduğumuz amaç dışında herhangi bir amaçla
+          erişemez veya bunları kullanamazsınız. Hizmetler, özellikle tarafımızca onaylanan
+          veya kabul edilenler dışında herhangi bir ticari girişimle bağlantılı olarak
+          kullanılamaz.
+        </p>
+        <p>Hizmetlerin bir kullanıcısı olarak şunları yapmamayı kabul edersiniz:</p>
+        <ul>
+          <li>Yazılı iznimiz olmadan doğrudan veya dolaylı olarak bir koleksiyon, derleme, veritabanı veya dizin oluşturmak veya derlemek için Hizmetlerden verileri veya diğer içerikleri sistematik olarak almak.</li>
+          <li>Özellikle kullanıcı şifreleri gibi hassas hesap bilgilerini öğrenme girişiminde bizi ve diğer kullanıcıları kandırmak, dolandırmak veya yanıltmak.</li>
+          <li>Herhangi bir İçeriğin kullanımını veya kopyalanmasını önleyen veya kısıtlayan veya Hizmetlerin ve/veya içerdiği İçeriğin kullanımına ilişkin sınırlamaları uygulayan özellikler dahil olmak üzere, Hizmetlerin güvenlikle ilgili özelliklerini atlatmak, devre dışı bırakmak veya başka bir şekilde bunlara müdahale etmek.</li>
+          <li>Görüşümüze göre bize ve/veya Hizmetlere karşı küçümseyici, kötüleyici veya başka bir şekilde zarar verici eylemlerde bulunmak.</li>
+          <li>Başka bir kişiyi taciz etmek, istismar etmek veya zarar vermek için Hizmetlerden elde edilen bilgileri kullanmak.</li>
+          <li>Destek hizmetlerimizi uygunsuz şekilde kullanmak veya istismar veya yanlış davranış hakkında yanlış raporlar göndermek.</li>
+          <li>Hizmetleri geçerli yasa veya yönetmeliklerle tutarsız bir şekilde kullanmak.</li>
+          <li>Hizmetlerin yetkisiz çerçeveleme veya bağlantı vermesinde bulunmak.</li>
+          <li>Herhangi bir tarafın Hizmetleri kesintisiz kullanımına ve bunlardan faydalanmasına müdahale eden veya Hizmetlerin kullanımını, özelliklerini, işlevlerini, çalışmasını veya bakımını değiştiren, bozan, kesintiye uğratan, değiştiren veya bunlara müdahale eden virüsler, Truva atları veya büyük harf ve istenmeyen postaların aşırı kullanımı (tekrarlayan metinlerin sürekli olarak yayınlanması) dahil diğer materyalleri yüklemek veya iletmek (veya yüklemeye veya iletmeye çalışmak).</li>
+          <li>Yorumlar veya mesajlar göndermek için komut dosyaları kullanmak veya herhangi bir veri madenciliği, robot veya benzer veri toplama ve çıkarma araçları kullanmak gibi sistemin otomatik kullanımında bulunmak.</li>
+          <li>Herhangi bir İçerikten telif hakkı veya diğer mülkiyet hakları bildirimini silmek.</li>
+          <li>Başka bir kullanıcıyı veya kişiyi taklit etmeye çalışmak veya başka bir kullanıcının kullanıcı adını kullanmak.</li>
+          <li>Sınırsız, açık grafik değişim formatları (&apos;gif&apos;ler), 1×1 piksel, web hataları, çerezler veya diğer benzer cihazlar (bazen &apos;casus yazılım&apos; veya &apos;pasif toplama mekanizmaları&apos; veya &apos;pcm&apos;ler olarak adlandırılır) dahil olmak üzere, pasif veya aktif bilgi toplama veya iletim mekanizması olarak işlev gören herhangi bir materyali yüklemek veya iletmek (veya yüklemeye veya iletmeye çalışmak).</li>
+          <li>Hizmetlere veya Hizmetlere bağlı ağlara veya hizmetlere müdahale etmek, bunları bozmak veya gereksiz bir yük oluşturmak.</li>
+          <li>Hizmetlerin herhangi bir bölümünü size sağlamada görevli çalışanlarımızı veya temsilcilerimizi taciz etmek, rahatsız etmek, korkutmak veya tehdit etmek.</li>
+          <li>Hizmetlere veya Hizmetlerin herhangi bir bölümüne erişimi engellemek veya kısıtlamak için tasarlanmış Hizmet önlemlerinin herhangi birini atlatmaya çalışmak.</li>
+          <li>Flash, PHP, HTML, JavaScript veya diğer kod dahil ancak bunlarla sınırlı olmamak üzere Hizmetlerin yazılımını kopyalamak veya uyarlamak.</li>
+          <li>Geçerli yasaların izin verdiği durumlar dışında, Hizmetleri oluşturan veya bir parçası olan herhangi bir yazılımı çözmek, derlemek, demonte etmek veya tersine mühendislik yapmak.</li>
+          <li>Standart arama motoru veya İnternet tarayıcısı kullanımının sonucu olabileceği durumlar dışında, Hizmetlere erişen herhangi bir örümcek, robot, hile programı, kazıyıcı veya çevrimdışı okuyucu dahil ancak bunlarla sınırlı olmamak üzere herhangi bir otomatik sistemi kullanmak, başlatmak, geliştirmek veya dağıtmak veya herhangi bir yetkisiz komut dosyası veya başka yazılım kullanmak veya başlatmak.</li>
+          <li>Hizmetlerde alımlar yapmak için bir satın alma temsilcisi veya satın alma aracısı kullanmak.</li>
+          <li>İstenmeyen e-posta gönderme amacıyla kullanıcı adlarını ve/veya e-posta adreslerini elektronik veya başka yollarla toplamak veya otomatik yollarla veya yanlış beyanlarla kullanıcı hesapları oluşturmak dahil olmak üzere Hizmetlerin yetkisiz kullanımında bulunmak.</li>
+          <li>Bizimle rekabet etmek için veya başka bir şekilde Hizmetleri ve/veya İçeriği gelir getirici herhangi bir girişim veya ticari işletme için kullanmak.</li>
+          <li>Profilinizi satmak veya başka bir şekilde devretmek.</li>
+          <li>Diğer kullanıcılara veya üçüncü taraflara finansal, yatırım, vergi veya yasal tavsiye sağlamak, yayınlamak veya dağıtmak;</li>
+          <li>Kendinizi finansal danışman, broker, portföy yöneticisi veya diğer düzenlenmiş finansal profesyonel olarak sunmak;</li>
+          <li>Herhangi bir finansal araç, dijital varlık veya yatırım ürününün satın alınmasını, satılmasını veya elde tutulmasını önermek, onaylamak, talep etmek veya teşvik etmek;</li>
+          <li>Yatırım hizmetleri, sinyaller, copy-trading, yönetilen portföyler veya danışmanlık hizmetleri sunmak veya düzenlemek;</li>
+          <li>Finansal araçların, yatırım ürünlerinin veya ilgili hizmetlerin reklamını yapmak, pazarlamak veya satmak;</li>
+          <li>Platformu, finansal ürünler veya hizmetlerle ilgili müşteri adayı oluşturma, talep etme veya tanıtım faaliyetleri için kullanmak.</li>
+        </ul>
+
+        <h2>8. Kullanıcı tarafından oluşturulan katkılar</h2>
+        <p>
+          Hizmetler sizi sohbet etmeye, bloglara, mesaj panolarına, çevrimiçi forumlara ve
+          diğer işlevlere katkıda bulunmaya veya katılmaya davet edebilir ve metin, yazılar,
+          video, ses, fotoğraflar, grafikler, yorumlar, öneriler veya kişisel bilgiler veya
+          diğer materyaller (topluca, &apos;Katkılar&apos;) dahil ancak bunlarla sınırlı
+          olmamak üzere bize veya Hizmetlerde içerik ve materyaller oluşturma, gönderme,
+          yayınlama, görüntüleme, iletme, icra etme, yayımlama, dağıtma veya yayınlama
+          fırsatı sunabilir. Katkılar, Hizmetlerin diğer kullanıcıları ve üçüncü taraf web
+          siteleri aracılığıyla görüntülenebilir. Bu nedenle, ilettiğiniz tüm Katkılar gizli
+          olmayan ve özel olmayan olarak değerlendirilebilir. Herhangi bir Katkı oluşturduğunuzda
+          veya kullanıma sunduğunuzda, bu nedenle şunları beyan ve garanti edersiniz:
+        </p>
+        <ul>
+          <li>Katkılarınızın oluşturulması, dağıtılması, iletilmesi, kamuya açık olarak görüntülenmesi veya icra edilmesi ve Katkılarınıza erişilmesi, indirilmesi veya kopyalanması, herhangi bir üçüncü tarafın telif hakkı, patent, ticari marka, ticari sır veya manevi hakları dahil ancak bunlarla sınırlı olmamak üzere mülkiyet haklarını ihlal etmez ve etmeyecektir.</li>
+          <li>Katkılarınızı, Hizmetler ve bu Yasal Koşullar tarafından düşünülen herhangi bir şekilde kullanmak ve bize, Hizmetlere ve Hizmetlerin diğer kullanıcılarına kullanma yetkisi vermek için gerekli lisanslara, haklara, izinlere, muafiyetlere ve onaylara sahip olan yaratıcı ve sahibisiniz.</li>
+          <li>Katkılarınızı, Hizmetler ve bu Yasal Koşullar tarafından düşünülen herhangi bir şekilde dahil etmeyi ve kullanmayı sağlamak için, Katkılarınızdaki her tanımlanabilir bireysel kişinin adını veya benzerliğini kullanmak için bu tür her tanımlanabilir bireysel kişiden yazılı onay, muafiyet ve/veya izne sahipsiniz.</li>
+          <li>Katkılarınız yanlış, hatalı veya yanıltıcı değildir.</li>
+          <li>Katkılarınız istenmeyen veya yetkisiz reklam, tanıtım materyalleri, piramit şemaları, zincirleme mektuplar, spam, toplu posta veya diğer talep biçimleri değildir.</li>
+          <li>Katkılarınız müstehcen, açık saçık, şehvet uyandırıcı, kirli, şiddet içerikli, taciz edici, iftira niteliğinde, hakaret niteliğinde veya başka bir şekilde sakıncalı (tarafımızca belirlendiği üzere) değildir.</li>
+          <li>Katkılarınız kimseyi alaya almaz, dalga geçmez, küçümsemez, korkutmaz veya istismar etmez.</li>
+          <li>Katkılarınız başka herhangi bir kişiyi (bu terimlerin yasal anlamında) taciz etmek veya tehdit etmek ve belirli bir kişiye veya kişi grubuna karşı şiddeti teşvik etmek için kullanılmaz.</li>
+          <li>Katkılarınız geçerli bir yasa, yönetmelik veya kural ihlal etmez.</li>
+          <li>Katkılarınız herhangi bir üçüncü tarafın gizlilik veya tanıtım haklarını ihlal etmez.</li>
+          <li>Katkılarınız çocuk pornografisi ile ilgili geçerli yasaları veya başka bir şekilde reşit olmayanların sağlığını veya refahını korumaya yönelik yasaları ihlal etmez.</li>
+          <li>Katkılarınız ırk, ulusal köken, cinsiyet, cinsel tercih veya fiziksel engelle ilgili saldırgan yorumlar içermez.</li>
+          <li>Katkılarınız bu Yasal Koşulların herhangi bir hükmünü veya geçerli bir yasa veya yönetmeliği ihlal eden materyallere bağlantı vermez veya başka bir şekilde ihlal etmez.</li>
+        </ul>
+        <p>
+          Yukarıdakileri ihlal eden Hizmetlerin herhangi bir kullanımı bu Yasal Koşulları
+          ihlal eder ve diğer şeylerin yanı sıra Hizmetleri kullanma haklarınızın sona
+          ermesine veya askıya alınmasına neden olabilir.
+        </p>
+
+        <h2>9. Katkı lisansı</h2>
+        <p>
+          Hizmetlerin herhangi bir bölümüne Katkılarınızı yayınlayarak veya Hizmetlerdeki
+          hesabınızı sosyal ağ hesaplarınızdan herhangi birine bağlayarak Katkıları
+          Hizmetlere erişilebilir hale getirerek, bize bu tür Katkıları (görüntünüz ve sesiniz
+          dahil ancak bunlarla sınırlı olmamak üzere) ticari, reklam veya başka herhangi bir
+          amaçla barındırmak, kullanmak, kopyalamak, çoğaltmak, ifşa etmek, satmak, yeniden
+          satmak, yayınlamak, yayımlamak, yeniden adlandırmak, arşivlemek, depolamak,
+          önbelleğe almak, kamuya açık olarak icra etmek, kamuya açık olarak görüntülemek,
+          yeniden biçimlendirmek, çevirmek, iletmek, alıntılamak (tamamen veya kısmen) ve
+          dağıtmak ve Katkıların türev çalışmalarını hazırlamak veya bunları diğer çalışmalara
+          dahil etmek ve yukarıdakilerin alt lisanslarını vermek ve yetkilendirmek için
+          sınırsız, sınırsız, geri alınamaz, süresiz, münhasır olmayan, devredilebilir,
+          telifsiz, tamamı ödenmiş, dünya çapında bir hak ve lisans otomatik olarak vermiş
+          olur ve bu hakkı vermeye yetkili olduğunuzu beyan ve garanti edersiniz. Kullanım ve
+          dağıtım, herhangi bir medya formatında ve herhangi bir medya kanalı aracılığıyla
+          gerçekleşebilir.
+        </p>
+        <p>
+          Bu lisans şu anda bilinen veya bundan sonra geliştirilecek herhangi bir biçim, medya
+          veya teknoloji için geçerli olacaktır ve sağladığınız adınızın, şirket adınızın ve
+          franchise adınızın ve ticari markaların, hizmet markalarının, ticari adların,
+          logoların ve kişisel ve ticari görsellerin uygun şekilde kullanımını içerir.
+          Katkılarınızdaki tüm manevi haklardan feragat edersiniz ve manevi hakların
+          Katkılarınızda başka bir şekilde ileri sürülmediğini garanti edersiniz.
+        </p>
+        <p>
+          Katkılarınız üzerinde herhangi bir mülkiyet iddia etmeyiz. Katkılarınızın ve
+          Katkılarınızla ilgili herhangi bir fikri mülkiyet hakkının veya diğer mülkiyet
+          haklarının tam mülkiyetini elinizde tutarsınız. Hizmetlerin herhangi bir alanında
+          tarafınızca sağlanan Katkılarınızdaki herhangi bir ifade veya beyandan sorumlu
+          değiliz. Hizmetlere Katkılarınızdan yalnızca siz sorumlusunuz ve bizi tüm
+          sorumluluktan beraat ettirmeyi ve Katkılarınız ile ilgili olarak bize karşı herhangi
+          bir yasal işlemden kaçınmayı açıkça kabul edersiniz.
+        </p>
+        <p>
+          Kendi mutlak takdirimize göre, (1) herhangi bir Katkıyı düzenleme, sansürleme veya
+          başka bir şekilde değiştirme; (2) Hizmetler üzerinde daha uygun konumlara
+          yerleştirmek için herhangi bir Katkıyı yeniden kategorize etme; ve (3) herhangi bir
+          zamanda ve herhangi bir nedenle, önceden bildirimde bulunmadan herhangi bir Katkıyı
+          önceden tarama veya silme hakkına sahibiz. Katkılarınızı izleme yükümlülüğümüz
+          yoktur.
+        </p>
+
+        <h2>10. İncelemeler için kurallar</h2>
+        <p>
+          Size Hizmetlerde inceleme veya derecelendirme bırakma alanları sağlayabiliriz. Bir
+          inceleme yayınlarken aşağıdaki kriterlere uymalısınız: (1) incelenen kişi/varlık
+          ile birinci elden deneyiminiz olmalıdır; (2) incelemeleriniz saldırgan küfür veya
+          küfürlü, ırkçı, saldırgan veya nefret içeren bir dil içermemelidir; (3)
+          incelemeleriniz din, ırk, cinsiyet, ulusal köken, yaş, medeni durum, cinsel
+          yönelim veya engellilik nedeniyle ayrımcı referanslar içermemelidir; (4)
+          incelemeleriniz yasadışı faaliyetlere atıflar içermemelidir; (5) olumsuz incelemeler
+          yayınlıyorsanız rakiplerle bağlantılı olmamalısınız; (6) davranışın yasallığına
+          ilişkin herhangi bir sonuç çıkarmamalısınız; (7) yanlış veya yanıltıcı ifadeler
+          yayınlayamazsınız; ve (8) başkalarını incelemeler yayınlamaya, olumlu veya olumsuz,
+          teşvik eden bir kampanya düzenleyemezsiniz.
+        </p>
+        <p>
+          Kendi takdirimize bağlı olarak incelemeleri kabul edebilir, reddedebilir veya
+          kaldırabiliriz. İnceleme yapan herhangi biri incelemeleri sakıncalı veya hatalı
+          bulsa bile, incelemeleri tarama veya silme yükümlülüğümüz kesinlikle yoktur.
+          İncelemeler tarafımızca onaylanmamıştır ve görüşlerimizi veya bağlı kuruluşlarımızın
+          veya ortaklarımızın görüşlerini mutlaka temsil etmemektedir. Herhangi bir inceleme
+          veya herhangi bir incelemeden kaynaklanan iddialar, yükümlülükler veya kayıplar için
+          herhangi bir sorumluluk üstlenmiyoruz. Bir inceleme yayınlayarak, incelemeyle ilgili
+          tüm içeriği çoğaltmak, değiştirmek, çevirmek, herhangi bir yolla iletmek,
+          görüntülemek, icra etmek ve/veya dağıtmak için size kalıcı, münhasır olmayan, dünya
+          çapında, telifsiz, tamamı ödenmiş, devredilebilir ve alt lisanslanabilir bir hak ve
+          lisans verirsiniz.
+        </p>
+
+        <h2>11. Mobil uygulama lisansı</h2>
+        <h3>Kullanım lisansı</h3>
+        <p>
+          Hizmetlere Uygulama aracılığıyla erişirseniz, Uygulamayı sahip olduğunuz veya
+          kontrol ettiğiniz kablosuz elektronik cihazlara yüklemek ve kullanmak ve bu Yasal
+          Koşullarda yer alan bu mobil uygulama lisansının şart ve koşullarına kesinlikle
+          uygun olarak bu tür cihazlarda Uygulamaya erişmek ve kullanmak için geri alınabilir,
+          münhasır olmayan, devredilemez, sınırlı bir hak veriyoruz. Şunları yapmamalısınız:
+          (1) geçerli yasaların izin verdiği durumlar dışında, Uygulamayı derlememek, tersine
+          mühendislik yapmamak, demonte etmemek, kaynak kodunu türetmeye çalışmamak veya
+          şifresini çözmemek; (2) Uygulamadan herhangi bir değişiklik, uyarlama, iyileştirme,
+          geliştirme, çeviri veya türev çalışma yapmamak; (3) Uygulamaya erişiminiz veya
+          kullanımınız ile bağlantılı olarak geçerli yasaları, kuralları veya yönetmelikleri
+          ihlal etmemek; (4) tarafımızca veya Uygulamanın lisans verenleri tarafından
+          gönderilen herhangi bir mülkiyet bildirimini (telif hakkı veya ticari marka
+          bildirimi dahil) kaldırmamak, değiştirmemek veya gizlememek; (5) Uygulamayı,
+          tasarlanmadığı veya amaçlanmadığı herhangi bir gelir getirici girişim, ticari
+          işletme veya başka amaç için kullanmamak; (6) Uygulamayı, aynı anda birden fazla
+          cihaz veya kullanıcı tarafından erişimine veya kullanımına izin veren bir ağ veya
+          başka bir ortam üzerinden kullanılabilir hale getirmemek; (7) Uygulamayı, doğrudan
+          veya dolaylı olarak Uygulama ile rekabet eden veya herhangi bir şekilde Uygulamanın
+          yerine geçen bir ürün, hizmet veya yazılım oluşturmak için kullanmamak; (8)
+          Uygulamayı herhangi bir web sitesine otomatik sorgular göndermek veya istenmeyen
+          ticari e-posta göndermek için kullanmamak; veya (9) Uygulama ile kullanılmak üzere
+          herhangi bir uygulama, aksesuar veya cihazın tasarımında, geliştirilmesinde,
+          üretiminde, lisanslanmasında veya dağıtımında herhangi bir özel bilgiyi veya
+          arayüzlerimizi veya diğer fikri mülkiyetimizi kullanmamak.
+        </p>
+        <h3>Apple ve Android cihazları</h3>
+        <p>
+          Hizmetlere erişmek için Apple Store veya Google Play&apos;den (her biri bir
+          &apos;Uygulama Dağıtıcısı&apos;) edindiğiniz Uygulamayı kullandığınızda aşağıdaki
+          şartlar geçerlidir: (1) Uygulamamız için size verilen lisans, Apple iOS veya Android
+          işletim sistemlerini kullanan bir cihazda uygun şekilde ve geçerli Uygulama
+          Dağıtıcısının hizmet şartlarında belirtilen kullanım kurallarına uygun olarak
+          uygulamayı kullanmak için devredilemez bir lisansla sınırlıdır; (2) bu Yasal
+          Koşullarda yer alan bu mobil uygulama lisansının şart ve koşullarında veya geçerli
+          yasalar uyarınca aksi belirtildiği gibi Uygulama ile ilgili herhangi bir bakım ve
+          destek hizmetini sağlamaktan biz sorumluyuz ve her Uygulama Dağıtıcısının Uygulama
+          ile ilgili herhangi bir bakım ve destek hizmeti sağlama konusunda hiçbir
+          yükümlülüğü olmadığını kabul edersiniz; (3) Uygulamanın geçerli herhangi bir
+          garantiye uymaması durumunda, geçerli Uygulama Dağıtıcısını bilgilendirebilirsiniz
+          ve Uygulama Dağıtıcısı, şart ve politikalarına uygun olarak, Uygulama için ödenen
+          satın alma fiyatını (varsa) iade edebilir ve geçerli yasaların izin verdiği maksimum
+          ölçüde, Uygulama Dağıtıcısının Uygulama ile ilgili başka herhangi bir garanti
+          yükümlülüğü olmayacaktır; (4) (i) ABD hükümeti ambargosuna tabi olan veya ABD
+          hükümeti tarafından &apos;terörizmi destekleyen&apos; bir ülke olarak belirlenmiş
+          bir ülkede bulunmadığınızı ve (ii) yasaklı veya kısıtlı tarafların herhangi bir ABD
+          hükümeti listesinde yer almadığınızı beyan ve garanti edersiniz; (5) Uygulamayı
+          kullanırken geçerli üçüncü taraf sözleşme şartlarına uymalısınız, örneğin bir VoIP
+          uygulamanız varsa, Uygulamayı kullanırken kablosuz veri hizmet sözleşmelerini ihlal
+          etmemelisiniz; ve (6) Uygulama Dağıtıcılarının, bu Yasal Koşullarda yer alan bu
+          mobil uygulama lisansının şart ve koşullarının üçüncü taraf yararlanıcıları
+          olduğunu ve her Uygulama Dağıtıcısının, bu Yasal Koşullarda yer alan bu mobil
+          uygulama lisansının şart ve koşullarını size karşı üçüncü taraf yararlanıcısı olarak
+          uygulama hakkına sahip olacağını (ve bu hakkı kabul etmiş sayılacağını) kabul eder
+          ve onaylarsınız.
+        </p>
+
+        <h2>12. Sosyal medya</h2>
+        <p>
+          Hizmetlerin işlevselliğinin bir parçası olarak, hesabınızı üçüncü taraf hizmet
+          sağlayıcılarınızla sahip olduğunuz çevrimiçi hesaplara (her böyle bir hesap, bir
+          &apos;Üçüncü Taraf Hesabı&apos;) şu yollarla bağlayabilirsiniz: (1) Üçüncü Taraf
+          Hesabı oturum açma bilgilerinizi Hizmetler aracılığıyla sağlayarak; veya (2) her
+          Üçüncü Taraf Hesabınızın kullanımını düzenleyen geçerli şart ve koşullara izin
+          verildiği şekilde Üçüncü Taraf Hesabınıza erişmemize izin vererek. Üçüncü Taraf
+          Hesap oturum açma bilgilerinizi bize açıklama ve/veya Üçüncü Taraf Hesabınıza
+          erişim izni verme yetkisine sahip olduğunuzu, geçerli Üçüncü Taraf Hesabının
+          kullanımını düzenleyen herhangi bir şart ve koşulu ihlal etmeden ve bizi herhangi
+          bir ücret ödemekle yükümlü kılmadan veya Üçüncü Taraf Hesabının üçüncü taraf hizmet
+          sağlayıcısı tarafından uygulanan kullanım sınırlamalarına tabi tutmadan beyan ve
+          garanti edersiniz. Herhangi bir Üçüncü Taraf Hesabına erişim izni vererek, (1)
+          Üçüncü Taraf Hesabınıza sağladığınız ve sakladığınız tüm içeriği (&apos;Sosyal Ağ
+          İçeriği&apos;) erişebileceğimizi, kullanılabilir hale getirebileceğimizi ve
+          (uygunsa) saklayabileceğimizi ve böylece hesabınız aracılığıyla Hizmetlerde
+          erişilebilir olduğunu, arkadaş listeleri dahil ve (2) hesabınızı Üçüncü Taraf
+          Hesabınızla bağladığınızda size bildirildiği ölçüde Üçüncü Taraf Hesabınıza ek
+          bilgi gönderebileceğimizi ve alabileceğimizi anlıyorsunuz. Seçtiğiniz Üçüncü Taraf
+          Hesaplarına ve bu Üçüncü Taraf Hesaplarında belirlediğiniz gizlilik ayarlarına
+          bağlı olarak, Üçüncü Taraf Hesaplarınıza yayınladığınız kişisel tanımlayıcı
+          bilgiler, Hizmetlerdeki hesabınız aracılığıyla erişilebilir olabilir. Bir Üçüncü
+          Taraf Hesabı veya ilişkili hizmet kullanılamaz hale gelirse veya bu tür bir Üçüncü
+          Taraf Hesabına erişimimiz üçüncü taraf hizmet sağlayıcısı tarafından sonlandırılırsa,
+          Sosyal Ağ İçeriği artık Hizmetlerde erişilebilir olmayabilir. Hizmetlerdeki
+          hesabınız ile Üçüncü Taraf Hesaplarınız arasındaki bağlantıyı istediğiniz zaman
+          devre dışı bırakma yeteneğine sahip olacaksınız. LÜTFEN ÜÇÜNCÜ TARAF
+          HESAPLARINIZLA İLİŞKİLİ ÜÇÜNCÜ TARAF HİZMET SAĞLAYICILARI İLE OLAN İLİŞKİNİZİN
+          YALNIZCA BU ÜÇÜNCÜ TARAF HİZMET SAĞLAYICILARI İLE OLAN SÖZLEŞMENİZ(LERİNİZ) İLE
+          DÜZENLENDİĞİNİ UNUTMAYIN. Herhangi bir amaçla, doğruluk, yasallık veya ihlal etmeme
+          dahil ancak bunlarla sınırlı olmamak üzere, herhangi bir Sosyal Ağ İçeriğini
+          incelemek için hiçbir çaba göstermeyiz ve herhangi bir Sosyal Ağ İçeriğinden sorumlu
+          değiliz. Bir Üçüncü Taraf Hesabı ile ilişkili e-posta adres defterinize ve mobil
+          cihazınızda veya tablet bilgisayarınızda saklanan kişi listenize, yalnızca
+          Hizmetleri kullanmak için kaydolan kişileri tanımlamak ve size bildirmek amacıyla
+          erişebileceğimizi kabul eder ve onaylarsınız. Aşağıdaki iletişim bilgilerini
+          kullanarak bizimle iletişime geçerek veya hesap ayarlarınızdan (varsa) Hizmetler
+          ile Üçüncü Taraf Hesabınız arasındaki bağlantıyı devre dışı bırakabilirsiniz. Bu
+          tür Üçüncü Taraf Hesabı aracılığıyla elde edilen ve sunucularımızda saklanan
+          herhangi bir bilgiyi, hesabınızla ilişkilendirilen kullanıcı adı ve profil resmi
+          dışında silmeye çalışacağız.
+        </p>
+
+        <h2>13. Üçüncü taraf web siteleri ve içerik</h2>
+        <p>
+          Hizmetler, diğer web sitelerine bağlantılar (&apos;Üçüncü Taraf Web Siteleri&apos;)
+          ve üçüncü taraflara ait veya üçüncü taraflardan kaynaklanan makaleler, fotoğraflar,
+          metinler, grafikler, resimler, tasarımlar, müzik, ses, video, bilgi, uygulamalar,
+          yazılım ve diğer içerik veya öğeleri (&apos;Üçüncü Taraf İçeriği&apos;) içerebilir
+          (veya size Site veya Uygulama aracılığıyla gönderilebilir). Bu tür Üçüncü Taraf Web
+          Siteleri ve Üçüncü Taraf İçeriği, tarafımızca doğruluk, uygunluk veya eksiksizlik
+          için araştırılmamış, izlenmemiş veya kontrol edilmemiştir ve Hizmetler aracılığıyla
+          erişilen herhangi bir Üçüncü Taraf Web Sitesinden veya Hizmetler aracılığıyla
+          yayınlanan, erişilebilen veya yüklenen herhangi bir Üçüncü Taraf İçeriğinden,
+          Üçüncü Taraf Web Sitelerinde veya Üçüncü Taraf İçeriğinde yer alan veya içerdiği
+          içerik, doğruluk, saldırganlık, görüş, güvenilirlik, gizlilik uygulamaları veya
+          diğer politikalar dahil olmak üzere sorumlu değiliz. Herhangi bir Üçüncü Taraf Web
+          Sitesinin veya Üçüncü Taraf İçeriğinin dahil edilmesi, bağlanması veya
+          kullanılmasına veya yüklenmesine izin verilmesi, tarafımızca onaylandığı veya
+          desteklendiği anlamına gelmez. Hizmetlerden ayrılmaya ve Üçüncü Taraf Web Sitelerine
+          erişmeye veya herhangi bir Üçüncü Taraf İçeriğini kullanmaya veya yüklemeye karar
+          verirseniz, bunu kendi sorumluluğunuzda yaparsınız ve bu Yasal Koşulların artık
+          geçerli olmadığını bilmelisiniz. Hizmetlerden gezindiğiniz herhangi bir web sitesi
+          veya Hizmetlerden kullandığınız veya yüklediğiniz herhangi bir uygulama ile ilgili
+          gizlilik ve veri toplama uygulamaları dahil olmak üzere geçerli şart ve politikaları
+          incelemelisiniz. Üçüncü Taraf Web Siteleri aracılığıyla yaptığınız tüm satın almalar,
+          başka web siteleri aracılığıyla ve diğer şirketlerden olacaktır ve yalnızca sizin ve
+          ilgili üçüncü taraf arasında olan bu tür satın almalarla ilgili olarak hiçbir
+          sorumluluk üstlenmiyoruz. Üçüncü Taraf Web Sitelerinde sunulan ürünleri veya
+          hizmetleri onaylamadığımızı kabul eder ve onaylarsınız ve bu tür ürün veya
+          hizmetlerin satın alınmasından kaynaklanan herhangi bir zarardan bizi sorumlu
+          tutmayacaksınız. Ayrıca, herhangi bir Üçüncü Taraf İçeriğinden veya Üçüncü Taraf Web
+          Siteleri ile herhangi bir temastan kaynaklanan veya herhangi bir şekilde ilgili
+          olarak uğradığınız kayıplardan veya size verilen zararlardan bizi sorumlu
+          tutmayacaksınız.
+        </p>
+
+        <h2>14. Reklam verenler</h2>
+        <p>
+          Reklam verenlerin reklamlarını ve diğer bilgilerini Hizmetlerin belirli alanlarında,
+          örneğin yan çubuk reklamları veya banner reklamları gibi alanlarda görüntülemesine
+          izin veriyoruz. Bu tür reklamları yerleştirmek için yalnızca alan sağlıyoruz ve
+          reklam verenlerle başka bir ilişkimiz yok.
+        </p>
+
+        <h2>15. Hizmet yönetimi</h2>
+        <p>
+          Aşağıdaki haklarımızı, yükümlülüğümüz olmamakla birlikte saklı tutarız: (1) Bu Yasal
+          Koşulların ihlali açısından Hizmetleri izlemek; (2) kendi takdirimize göre yasayı
+          veya bu Yasal Koşulları ihlal eden herhangi birine karşı, kolluk kuvvetlerine bu tür
+          kullanıcıyı bildirmek dahil ancak bunlarla sınırlı olmamak üzere uygun yasal işlem
+          yapmak; (3) kendi takdirimize göre ve sınırlama olmaksızın, Katkılarınızdan herhangi
+          birinin veya herhangi bir bölümünün kullanılabilirliğini reddetmek, kısıtlamak,
+          sınırlandırmak veya (teknolojik olarak mümkün olduğu ölçüde) devre dışı bırakmak;
+          (4) kendi takdirimize göre ve sınırlama, bildirim veya sorumluluk olmaksızın,
+          Hizmetlerden, boyut olarak aşırı olan veya sistemlerimize herhangi bir şekilde yük
+          oluşturan tüm dosyaları ve içeriği kaldırmak veya başka bir şekilde devre dışı
+          bırakmak; ve (5) haklarımızı ve mülkümüzü korumak ve Hizmetlerin düzgün
+          işleyişini kolaylaştırmak için tasarlanmış bir şekilde Hizmetleri başka bir şekilde
+          yönetmek.
+        </p>
+
+        <h2>16. Gizlilik politikası</h2>
+        <p>
+          Veri gizliliğine ve güvenliğine önem veriyoruz. Lütfen{" "}
+          <Link href="/privacy-policy">Gizlilik Politikamızı</Link> inceleyin. Hizmetleri
+          kullanarak, bu Yasal Koşullara dahil edilen Gizlilik Politikamıza bağlı kalmayı
+          kabul edersiniz. Hizmetlerin Almanya ve Hollanda&apos;da barındırıldığını bildirmek
+          isteriz. Hizmetlere, kişisel veri toplama, kullanım veya ifşası ile ilgili
+          Almanya ve Hollanda&apos;da geçerli yasalardan farklı yasalar veya diğer
+          gereksinimler içeren dünyanın başka bir bölgesinden erişiyorsanız, Hizmetleri
+          kullanmaya devam ederek, verilerinizi Almanya ve Hollanda&apos;ya aktarıyorsunuz ve
+          verilerinizin Almanya ve Hollanda&apos;ya aktarılmasına ve burada işlenmesine açıkça
+          onay veriyorsunuz.
+        </p>
+
+        <h2>17. Süre ve fesih</h2>
+        <p>
+          Bu Yasal Koşullar, Hizmetleri kullandığınız sürece tam yürürlükte ve etkide
+          kalacaktır. BU YASAL KOŞULLARIN HERHANGİ BİR HÜKMÜNÜ SINIRLAMADAN, KENDİ TAKDİRİMİZE
+          GÖRE VE BİLDİRİMDE BULUNMADAN VEYA SORUMLULUK ALMADAN HİZMETLERE ERİŞİMİ VE
+          KULLANIMI (BELİRLİ IP ADRESLERİNİ ENGELLEMEK DAHİL) HERHANGİ BİR KİŞİYE HERHANGİ BİR
+          NEDENLE VEYA HİÇBİR NEDENLE, BU YASAL KOŞULLARDA YER ALAN HERHANGİ BİR BEYAN,
+          GARANTİ VEYA TAAHHÜDÜN VEYA GEÇERLİ HERHANGİ BİR YASA VEYA YÖNETMELİĞİN İHLALİ DAHİL
+          ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE REDDETME HAKKINI SAKLI TUTARIZ. HİZMETLERDEKİ
+          KULLANIMINIZI VEYA KATILIMINIZI SONLANDIRABİLİR VEYA HESABINIZI VE HERHANGİ BİR
+          ZAMANDA YAYINLADIĞINIZ HERHANGİ BİR İÇERİK VEYA BİLGİYİ, UYARI OLMADAN, KENDİ
+          TAKDİRİMİZE GÖRE SİLEBİLİRİZ.
+        </p>
+        <p>
+          Hesabınızı herhangi bir nedenle sonlandırırsak veya askıya alırsak, üçüncü tarafın
+          adına hareket ediyor olsanız bile, kendi adınızla, sahte veya ödünç alınmış bir
+          adla veya herhangi bir üçüncü tarafın adıyla yeni bir hesaba kaydolmanız ve
+          oluşturmanız yasaktır. Hesabınızı sonlandırmaya veya askıya almaya ek olarak,
+          medeni, cezai ve ihtiyati tedbir başvurusu dahil ancak bunlarla sınırlı olmamak
+          üzere uygun yasal işlem yapma hakkını saklı tutarız.
+        </p>
+
+        <h2>18. Değişiklikler ve kesintiler</h2>
+        <p>
+          Hizmetlerin içeriğini herhangi bir zamanda veya herhangi bir nedenle, bildirimde
+          bulunmaksızın kendi takdirimize göre değiştirme, modifiye etme veya kaldırma hakkını
+          saklı tutarız. Ancak, Hizmetlerimizdeki herhangi bir bilgiyi güncelleme
+          yükümlülüğümüz yoktur. Hizmetlerin herhangi bir değişikliği, fiyat değişikliği,
+          askıya alınması veya durdurulmasından size veya herhangi bir üçüncü tarafa karşı
+          sorumlu olmayacağız.
+        </p>
+        <p>
+          Hizmetlerin her zaman kullanılabilir olmasını garanti edemeyiz. Donanım, yazılım
+          veya diğer sorunlar yaşayabiliriz veya Hizmetlerle ilgili bakım yapmamız
+          gerekebilir, bu da kesintilere, gecikmelere veya hatalara neden olabilir.
+          Hizmetleri herhangi bir zamanda veya herhangi bir nedenle, size bildirimde
+          bulunmaksızın değiştirme, gözden geçirme, güncelleme, askıya alma, durdurma veya
+          başka bir şekilde değiştirme hakkını saklı tutarız. Hizmetlerin herhangi bir
+          duraklama süresi veya durdurulması sırasında erişememeniz veya kullanamamanız
+          nedeniyle uğradığınız herhangi bir kayıp, hasar veya rahatsızlıktan dolayı hiçbir
+          sorumluluğumuzun olmadığını kabul edersiniz. Bu Yasal Koşullardaki hiçbir şey, bizi
+          Hizmetleri korumakla ve desteklemekle veya bunlarla ilgili düzeltmeler, güncellemeler
+          veya sürümler sağlamakla yükümlü kılacak şekilde yorumlanmayacaktır.
+        </p>
+
+        <h2>19. Geçerli hukuk</h2>
+        <p>
+          Bu Yasal Koşullar, Hollanda yasalarına tabidir ve bunlara göre yorumlanır ve
+          Uluslararası Mal Satışına İlişkin Sözleşmeler Hakkında Birleşmiş Milletler
+          Sözleşmesinin kullanımı açıkça hariç tutulmuştur. Mutat ikametgahınız AB&apos;de
+          ise ve bir tüketiciyseniz, ek olarak ikamet ettiğiniz ülkedeki yasanın zorunlu
+          hükümleri tarafından size sağlanan korumadan yararlanırsınız. Safolio B.V. ve siz,
+          Amsterdam mahkemelerinin münhasır olmayan yargı yetkisine boyun eğmeyi kabul
+          edersiniz; bu, bu Yasal Koşullarla ilgili tüketici koruma haklarınızı savunmak için
+          Hollanda&apos;da veya ikamet ettiğiniz AB ülkesinde dava açabileceğiniz anlamına
+          gelir.
+        </p>
+
+        <h2>20. Uyuşmazlık çözümü</h2>
+        <h3>Resmi olmayan müzakereler</h3>
+        <p>
+          Sizin veya bizim tarafımızdan (münferiden bir &apos;Taraf&apos; ve topluca
+          &apos;Taraflar&apos;) açılan bu Yasal Koşullarla ilgili herhangi bir uyuşmazlık,
+          ihtilaf veya talebin (her biri bir &apos;Uyuşmazlık&apos; ve topluca,
+          &apos;Uyuşmazlıklar&apos;) çözümünü hızlandırmak ve maliyetini kontrol etmek için
+          Taraflar, tahkim başlatmadan önce en az otuz (30) gün boyunca herhangi bir
+          Uyuşmazlığı (aşağıda açıkça belirtilen Uyuşmazlıklar hariç) resmi olmayan bir
+          şekilde müzakere etmeye ilk önce çalışmayı kabul ederler. Bu tür resmi olmayan
+          müzakereler, bir Taraftan diğer Tarafa yazılı bildirim üzerine başlar.
+        </p>
+        <h3>Bağlayıcı tahkim</h3>
+        <p>
+          Bu Yasal Koşullara Taraflar arasındaki ilişkilerden kaynaklanan herhangi bir
+          uyuşmazlık, Strazburg merkezli Avrupa Tahkim Merkezi&apos;nin bir parçası olan
+          Avrupa Tahkim Mahkemesi&apos;nin Tahkim ve İç Kurallarına göre seçilecek bir hakem
+          tarafından karara bağlanacak ve tahkim başvurusunun yapıldığı tarihte yürürlükte
+          olan ve bu maddenin kabulü kabul anlamına gelen kurallar uygulanacaktır. Tahkim
+          yeri Amsterdam, Hollanda olacaktır. Yargılama dili İngilizce olacaktır. Geçerli
+          maddi hukuk kuralları Hollanda hukuku olacaktır.
+        </p>
+        <h3>Kısıtlamalar</h3>
+        <p>
+          Taraflar, herhangi bir tahkimin Taraflar arasındaki Uyuşmazlıkla bireysel olarak
+          sınırlı olacağını kabul eder. Yasaların izin verdiği tam ölçüde, (a) hiçbir tahkim
+          başka bir işlemle birleştirilmeyecektir; (b) herhangi bir Uyuşmazlığın toplu dava
+          temelinde tahkime götürülmesi veya toplu dava prosedürlerinin kullanılması için
+          hiçbir hak veya yetki yoktur; ve (c) herhangi bir Uyuşmazlığın genel halk veya başka
+          kişiler adına temsilci sıfatıyla açılması için hiçbir hak veya yetki yoktur.
+        </p>
+        <h3>Resmi olmayan müzakerelere ve tahkime istisnalar</h3>
+        <p>
+          Taraflar, aşağıdaki Uyuşmazlıkların resmi olmayan müzakereler ve bağlayıcı tahkim
+          ile ilgili yukarıdaki hükümlere tabi olmadığını kabul eder: (a) bir Tarafın fikri
+          mülkiyet haklarının herhangi birinin geçerliliği ile ilgili olarak bunları yürürlüğe
+          koymaya veya korumaya çalışan herhangi bir Uyuşmazlık; (b) hırsızlık, korsanlık,
+          gizlilik ihlali veya yetkisiz kullanım iddialarıyla ilgili veya bunlardan
+          kaynaklanan herhangi bir Uyuşmazlık; ve (c) ihtiyati tedbir için herhangi bir
+          talep. Bu hüküm yasadışı veya uygulanamaz bulunursa, hiçbir Taraf, bu hükmün
+          yasadışı veya uygulanamaz bulunan bölümüne giren herhangi bir Uyuşmazlığı tahkim
+          etmeyi seçmeyecek ve bu tür Uyuşmazlık, yukarıda yargı yetkisi için listelenen
+          mahkemeler içinde yetkili bir mahkeme tarafından karara bağlanacaktır ve Taraflar,
+          o mahkemenin kişisel yargı yetkisine boyun eğmeyi kabul eder.
+        </p>
+
+        <h2>21. Düzeltmeler</h2>
+        <p>
+          Hizmetlerde, açıklamalar, fiyatlandırma, kullanılabilirlik ve diğer çeşitli bilgiler
+          dahil olmak üzere yazım hataları, yanlışlıklar veya eksiklikler içeren bilgiler
+          olabilir. Hizmetlerdeki herhangi bir hatayı, yanlışlığı veya eksikliği düzeltme ve
+          bilgileri herhangi bir zamanda, önceden bildirimde bulunmadan değiştirme veya
+          güncelleme hakkını saklı tutarız.
+        </p>
+
+        <h2>22. Sorumluluk reddi</h2>
+        <p>
+          HİZMETLER OLDUĞU GİBİ VE MEVCUT OLDUĞU GİBİ SAĞLANMAKTADIR. HİZMETLERİ KULLANIMINIZIN
+          KENDİ SORUMLULUĞUNUZDA OLACAĞINI KABUL EDERSİNİZ. YASALARIN İZİN VERDİĞİ ÖLÇÜDE,
+          HİZMETLER VE BUNLARI KULLANIMINIZ İLE BAĞLANTILI OLARAK AÇIK VEYA ZIMNİ TÜM
+          GARANTİLERİ, SATILABİLİRLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME ZIMNİ
+          GARANTİLERİ DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE REDDEDİYORUZ. HİZMETLERİN
+          İÇERİĞİNİN VEYA HİZMETLERE BAĞLI HERHANGİ BİR WEB SİTESİNİN VEYA MOBİL UYGULAMANIN
+          İÇERİĞİNİN DOĞRULUĞU VEYA EKSİKSİZLİĞİ HAKKINDA HİÇBİR GARANTİ VEYA BEYANDA
+          BULUNMUYORUZ VE (1) İÇERİK VE MATERYALLERDEKİ HATALAR, YANLIŞLIKLAR VEYA
+          YANLIŞLIKLAR, (2) HİZMETLERE ERİŞİMİNİZ VE BUNLARI KULLANIMINIZDAN KAYNAKLANAN
+          HERHANGİ BİR NİTELİKTEKİ KİŞİSEL YARALANMA VEYA MAL HASARI, (3) GÜVENLİ
+          SUNUCULARIMIZA VE/VEYA ORADA SAKLANAN HERHANGİ BİR VE TÜM KİŞİSEL BİLGİLERE VE/VEYA
+          MALİ BİLGİLERE YETKİSİZ ERİŞİM VEYA KULLANIM, (4) HİZMETLERE VEYA HİZMETLERDEN
+          İLETİMİN HERHANGİ BİR KESİNTİSİ VEYA DURDURULMASI, (5) HERHANGİ BİR ÜÇÜNCÜ TARAF
+          TARAFINDAN HİZMETLERE VEYA HİZMETLER ARACILIĞIYLA İLETİLEBİLECEK HERHANGİ BİR HATA,
+          VİRÜS, TRUVA ATI VEYA BENZERLERİ VE/VEYA (6) HERHANGİ BİR İÇERİK VE MATERYALDEKİ
+          HATALAR VEYA EKSİKLİKLER VEYA HİZMETLER ARACILIĞIYLA YAYINLANAN, İLETİLEN VEYA
+          BAŞKA BİR ŞEKİLDE KULLANIMA SUNULAN HERHANGİ BİR İÇERİĞİN KULLANIMI SONUCUNDA
+          UĞRANAN HERHANGİ BİR NİTELİKTEKİ KAYIP VEYA HASAR İÇİN HİÇBİR SORUMLULUK
+          ÜSTLENMİYORUZ. HİZMETLER ARACILIĞIYLA BİR ÜÇÜNCÜ TARAF TARAFINDAN REKLAMI YAPILAN
+          VEYA SUNULAN HERHANGİ BİR ÜRÜN VEYA HİZMET, BAĞLANTILI HERHANGİ BİR WEB SİTESİ VEYA
+          HERHANGİ BİR BANNER VEYA DİĞER REKLAMDA YER ALAN HERHANGİ BİR WEB SİTESİ VEYA MOBİL
+          UYGULAMA İÇİN GARANTİ VERMİYORUZ, ONAYLAMIYORUZ, GARANTİ ETMİYORUZ VEYA SORUMLULUK
+          ÜSTLENMİYORUZ VE SİZ VE ÜRÜN VEYA HİZMETLERİN HERHANGİ BİR ÜÇÜNCÜ TARAF SAĞLAYICISI
+          ARASINDAKİ HERHANGİ BİR İŞLEMİ İZLEMEKTEN BİZ TARAF OLMAYACAĞIMIZ VEYA HERHANGİ BİR
+          ŞEKİLDE SORUMLU OLMAYACAĞIMIZ. HERHANGİ BİR MEDYA ARACILIĞIYLA VEYA HERHANGİ BİR
+          ORTAMDA BİR ÜRÜN VEYA HİZMETİN SATIN ALINMASINDA OLDUĞU GİBİ, EN İYİ MUHAKEMENİZİ
+          KULLANMALI VE UYGUN YERLERDE DİKKATLİ OLMALISINIZ.
+        </p>
+
+        <h2>23. Sorumluluk sınırlamaları</h2>
+        <p>
+          HİÇBİR DURUMDA BİZ VEYA YÖNETİCİLERİMİZ, ÇALIŞANLARIMIZ VEYA TEMSİLCİLERİMİZ, KAYIP
+          KAR, KAYIP GELİR, VERİ KAYBI VEYA HİZMETLERİ KULLANIMINIZDAN KAYNAKLANAN DİĞER
+          HASARLAR DAHİL HERHANGİ BİR DOĞRUDAN, DOLAYLI, SONUÇSAL, ÖRNEK NİTELİĞİNDEKİ, ARIZİ,
+          ÖZEL VEYA CEZA İÇEREN HASARLAR İÇİN, BÖYLE HASARLARIN OLASILIĞI HAKKINDA
+          BİLGİLENDİRİLMİŞ OLSAK BİLE, SİZE VEYA HERHANGİ BİR ÜÇÜNCÜ TARAFA SORUMLU
+          OLMAYACAĞIZ. BURADA YER ALAN AKSİNE HERHANGİ BİR ŞEYE BAKILMAKSIZIN, SİZE KARŞI
+          HERHANGİ BİR NEDENLE VE EYLEMİN BİÇİMİ NE OLURSA OLSUN SORUMLULUĞUMUZ, HER ZAMAN,
+          HERHANGİ BİR DAVA NEDENİNİN ORTAYA ÇIKMASINDAN ÖNCEKİ ALTI (6) AYLIK SÜRE BOYUNCA
+          BİZE ÖDEDİĞİNİZ TUTAR (VARSA) VEYA 250 € (HANGİSİ DAHA AZSA) İLE SINIRLI OLACAKTIR.
+          BELİRLİ ABD EYALET YASALARI VE ULUSLARARASI YASALAR, ZIMNİ GARANTİLERE
+          SINIRLAMALAR VEYA BELİRLİ HASARLARIN HARİÇ TUTULMASI VEYA SINIRLANDIRILMASINA İZİN
+          VERMEZ. BU YASALAR SİZE UYGULANIYORSA, YUKARIDAKİ SORUMLULUK REDLERİNİN VEYA
+          SINIRLAMALARIN BAZILARI VEYA TÜMÜ SİZE UYGULANMAYABİLİR VE EK HAKLARA SAHİP
+          OLABİLİRSİNİZ.
+        </p>
+
+        <h2>24. Tazminat</h2>
+        <p>
+          (1) Katkılarınız; (2) Hizmetlerin kullanımı; (3) bu Yasal Koşulların ihlali; (4) bu
+          Yasal Koşullarda belirtilen beyan ve garantilerinizin herhangi birinin ihlali; (5)
+          fikri mülkiyet hakları dahil ancak bunlarla sınırlı olmamak üzere bir üçüncü tarafın
+          haklarının ihlali; veya (6) Hizmetler aracılığıyla bağlantı kurduğunuz Hizmetlerin
+          herhangi bir başka kullanıcısına yönelik herhangi bir bariz zararlı eylem nedeniyle
+          veya bunlardan kaynaklanan herhangi bir üçüncü taraf tarafından yapılan makul
+          avukatlık ücretleri ve giderleri dahil herhangi bir kayıp, hasar, sorumluluk, talep
+          veya talebe karşı, bağlı kuruluşlarımız ve sırasıyla yetkililerimiz, temsilcilerimiz,
+          ortaklarımız ve çalışanlarımız dahil olmak üzere bizi savunmayı, tazmin etmeyi ve
+          zararsız tutmayı kabul edersiniz. Yukarıdakine bakılmaksızın, bizi tazmin etmenizin
+          gerekli olduğu herhangi bir konuda münhasır savunmayı ve kontrolü, sizin masrafınız
+          karşılığında üstlenme hakkını saklı tutarız ve bu tür taleplerin savunmasında bize
+          sizin masrafınız karşılığında işbirliği yapmayı kabul edersiniz. Bu tazminata tabi
+          olan herhangi bir talep, dava veya yargılamadan haberdar olduğumuzda size bildirmek
+          için makul çaba göstereceğiz.
+        </p>
+
+        <h2>25. Kullanıcı verileri</h2>
+        <p>
+          Hizmetlerin performansını yönetmek amacıyla Hizmetlere ilettiğiniz belirli verileri
+          ve Hizmetleri kullanımınızla ilgili verileri saklayacağız. Verilerin düzenli rutin
+          yedeklemelerini yapsak da, ilettiğiniz veya Hizmetleri kullanarak yaptığınız
+          herhangi bir faaliyetle ilgili tüm verilerden yalnızca siz sorumlusunuz. Bu tür
+          verilerin herhangi bir kaybı veya bozulması için size karşı hiçbir sorumluluğumuz
+          olmayacağını kabul edersiniz ve bu tür verilerin kaybı veya bozulmasından
+          kaynaklanan bize karşı herhangi bir dava hakkından feragat edersiniz.
+        </p>
+
+        <h2>26. Elektronik iletişim, işlemler ve imzalar</h2>
+        <p>
+          Hizmetleri ziyaret etmek, bize e-postalar göndermek ve çevrimiçi formları doldurmak
+          elektronik iletişim oluşturur. Elektronik iletişimleri almayı kabul edersiniz ve
+          size elektronik olarak, e-posta yoluyla ve Hizmetlerde sağladığımız tüm
+          sözleşmelerin, bildirimlerin, açıklamaların ve diğer iletişimlerin, bu tür
+          iletişimin yazılı olması gerektiği yönündeki herhangi bir yasal gereksinimi karşıladığını
+          kabul edersiniz. ELEKTRONİK İMZALAR, SÖZLEŞMELER, SİPARİŞLER VE DİĞER KAYITLARIN
+          KULLANIMINA VE TARAFIMIZCA VEYA HİZMETLER ARACILIĞIYLA BAŞLATILAN VEYA TAMAMLANAN
+          İŞLEMLERİN BİLDİRİMLERİNİN, POLİTİKALARININ VE KAYITLARININ ELEKTRONİK OLARAK
+          TESLİMİNE BURADA KABUL EDERSİNİZ. Herhangi bir yargı bölgesindeki herhangi bir
+          tüzük, yönetmelik, kural, talimat veya diğer yasalar uyarınca, orijinal bir imza
+          veya elektronik olmayan kayıtların teslim edilmesini veya saklanmasını veya
+          ödemelerin veya kredilerin elektronik araçlardan başka herhangi bir yolla
+          verilmesini gerektiren herhangi bir hak veya gereksinimden feragat edersiniz.
+        </p>
+
+        <h2>27. California kullanıcıları ve sakinleri</h2>
+        <p>
+          Bizimle ilgili herhangi bir şikayet tatmin edici bir şekilde çözülmezse, California
+          Tüketici İşleri Departmanı Tüketici Hizmetleri Bölümü&apos;nün Şikayet Yardım
+          Birimi&apos;ne yazılı olarak 1625 North Market Blvd., Suite N 112, Sacramento,
+          California 95834 adresinden veya (800) 952-5210 veya (916) 445-1254 telefon
+          numarasından ulaşabilirsiniz.
+        </p>
+
+        <h2>28. Çeşitli hükümler</h2>
+        <p>
+          Bu Yasal Koşullar ve Hizmetlerde veya Hizmetlerle ilgili olarak bizim tarafımızdan
+          yayınlanan herhangi bir politika veya işletim kuralı, sizinle bizim aramızdaki tüm
+          sözleşmeyi ve anlayışı oluşturur. Bu Yasal Koşulların herhangi bir hakkını veya
+          hükmünü uygulamamamız veya yürürlüğe koymamamız, bu tür bir haktan veya hükümden
+          feragat anlamına gelmez. Bu Yasal Koşullar, yasaların izin verdiği tam ölçüde
+          işler. Tüm haklarımızı ve yükümlülüklerimizi herhangi bir zamanda başkalarına
+          devredebiliriz. Makul kontrolümüz dışındaki herhangi bir nedenden kaynaklanan
+          herhangi bir kayıp, hasar, gecikme veya hareketsizlikten sorumlu veya yükümlü
+          olmayacağız. Bu Yasal Koşulların herhangi bir hükmü veya hükmünün bir kısmı yasadışı,
+          geçersiz veya uygulanamaz olarak belirlenirse, o hüküm veya hükmün bir kısmı, bu
+          Yasal Koşullardan ayrılabilir kabul edilir ve kalan hükümlerin geçerliliğini ve
+          uygulanabilirliğini etkilemez. Bu Yasal Koşullar veya Hizmetlerin kullanımı sonucu
+          olarak sizinle bizim aramızda hiçbir ortak girişim, ortaklık, istihdam veya
+          temsilcilik ilişkisi oluşturulmamıştır. Bu Yasal Koşulların bunları hazırlamış olmamız
+          nedeniyle aleyhimize yorumlanmayacağını kabul edersiniz. Bu Yasal Koşulların
+          elektronik biçimine ve bu Yasal Koşulları uygulamak için tarafların imzalanmamasına
+          dayalı olarak sahip olabileceğiniz tüm savunmalardan feragat edersiniz.
+        </p>
+
+        <h2>29. Hizmetler</h2>
+        <p>
+          Safolio, kullanıcıların birden fazla varlık sınıfı ve finansal kurum arasında
+          kişisel yatırım portföylerini izlemelerine, birleştirmelerine ve analiz etmelerine
+          olanak tanıyan bir hizmet olarak yazılım (SaaS) platformudur. Platform,
+          kullanıcıların hisse senetleri, borsa yatırım fonları (ETF&apos;ler), fonlar,
+          tahviller, kripto paralar, nakit pozisyonları ve diğer finansal araçlar gibi
+          varlıklarını kaydetmelerine ve izlemelerine olanak tanır. Safolio, portföy
+          değerlemelerini, geçmiş performansı, varlık tahsis dökümlerini ve riskle ilgili
+          analizleri sunmak için kullanıcı tarafından sağlanan girdilerden ve üçüncü taraf
+          veri kaynaklarından portföy verilerini toplar. Safolio bir alım satım platformu
+          değildir, işlem yapmaz, müşteri fonu tutmaz ve yatırım tavsiyesi vermez. Platformda
+          görüntülenen tüm bilgiler yalnızca bilgilendirme ve analiz amaçlıdır. Kullanıcılar,
+          yatırım kararlarından ve platforma girdikleri veya bağladıkları verilerin
+          doğruluğundan tek başına sorumlu olmaya devam ederler. Platform, performans
+          karşılaştırmaları, hipotetik senaryo (&ldquo;ne olursa&rdquo;) hesaplamaları ve
+          portföy risk göstergeleri gibi analitik araçları içerebilir. Bu araçlar matematiksel
+          modellere ve geçmiş veya simüle edilmiş verilere dayanmaktadır ve kişiselleştirilmiş
+          finansal tavsiye veya gelecekteki performansın garantisi oluşturmaz. Safolio yalnızca
+          bir portföy izleme ve analiz aracı olarak çalışır ve broker, saklama, varlık
+          yöneticisi veya finansal aracı olarak hareket etmez.
+        </p>
+
+        <h2>30. Veri doğruluğu, garanti verilmemesi ve sorumluluk sınırlaması</h2>
+        <p>
+          Safolio, kullanıcı tarafından sağlanan verilere, üçüncü taraf veri kaynaklarına ve
+          otomatik işleme sistemlerine dayalı portföy izleme, toplama ve analitik araçlar
+          sağlar. Platformda görüntülenen tüm veriler, fiyatlar, değerlemeler, performans
+          ölçümleri, döviz kurları, kurumsal işlemler ve türev analizler dahil ancak bunlarla
+          sınırlı olmamak üzere, yalnızca bilgilendirme ve portföy izleme amaçlı sağlanır.
+        </p>
+
+        <h2>31. Garanti verilmemesi</h2>
+        <p>
+          Platform ve aracılığıyla kullanılabilen tüm veriler &ldquo;olduğu gibi&rdquo; ve
+          &ldquo;mevcut olduğu gibi&rdquo; sağlanır. Geçerli yasaların izin verdiği tam
+          ölçüde, Safolio, doğruluk, eksiksizlik, güvenilirlik, zamanındalık, satılabilirlik,
+          belirli bir amaca uygunluk, ihlal etmeme veya kullanılabilirliğin zımni garantileri
+          dahil ancak bunlarla sınırlı olmamak üzere açık, zımni, yasal veya başka türlü
+          herhangi bir türden tüm garantileri açıkça reddeder. Safolio şunları garanti etmez:
+        </p>
+        <ul>
+          <li>görüntülenen verilerin doğru, eksiksiz, güncel veya hatasız olacağını;</li>
+          <li>platformun kesintisiz veya gecikmelerden, kusurlardan veya teknik sorunlardan arınmış olacağını;</li>
+          <li>verilerdeki herhangi bir hata veya tutarsızlığın tanımlanacağını veya düzeltileceğini; veya</li>
+          <li>platformun kullanımının belirli bir finansal sonuca yol açacağını.</li>
+        </ul>
+        <p>
+          Piyasa verileri ve finansal bilgiler gecikmeli, tahmini, toplu, ayarlanmış veya yanlış
+          olabilir ve Safolio, bu tür verilerin karar verme amaçları için kalitesi veya
+          uygunluğu hakkında hiçbir beyanda bulunmaz.
+        </p>
+
+        <h2>32. Kullanıcı sorumluluğu ve doğrulama</h2>
+        <p>
+          Kullanıcılar, herhangi bir finansal, yatırım, vergi veya yasal karar için
+          dayanmadan önce tüm verileri inceleme, doğrulama ve geçerliliğini kontrol etmekten
+          yalnızca kendilerinin sorumlu olduğunu kabul ve onaylar. Kullanıcılar, brokerlar,
+          borsalar, ihraççılar, resmi piyasa veri sağlayıcıları veya lisanslı profesyoneller
+          dahil ancak bunlarla sınırlı olmamak üzere yetkili ve güvenilir harici kaynakları
+          kullanarak tüm ilgili bilgileri bağımsız olarak doğrulamalıdır. Safolio, herhangi
+          bir varlığın, stratejinin veya işlemin uygunluğu hakkında yatırım tavsiyesi,
+          kişiselleştirilmiş öneriler veya güvenceler sağlamaz.
+        </p>
+
+        <h2>33. Bağlı hesaplar ve üçüncü taraf veri kaynakları</h2>
+        <p>
+          Safolio, kullanıcıların üçüncü taraf hizmet sağlayıcıları aracılığıyla harici banka
+          hesaplarını, aracı kurum hesaplarını veya diğer finansal hesapları bağlamalarına
+          izin verebilir. Bu tür bağlantılar etkinleştirildiğinde, Safolio, portföy izleme ve
+          analitik amaçlar için yalnızca salt okunur olarak hesap bilgilerine erişir. Safolio,
+          bağlı hesaplarda işlem başlatmaz, fon hareketi yapmaz, sipariş vermez veya hesap
+          ayarlarını değiştirmez. Bağlı hesaplardan alınan veriler, üçüncü taraf kurumlar ve
+          aracılar tarafından sağlanır ve eksik, gecikmeli, toplu, yeniden biçimlendirilmiş
+          veya yanlış olabilir. Safolio, bu tür üçüncü taraflardan elde edilen verilerin
+          doğruluğunu, kullanılabilirliğini veya sürekliliğini kontrol etmez, doğrulamaz veya
+          garanti etmez. Safolio şunlardan sorumlu olmayacaktır:
+        </p>
+        <ul>
+          <li>bankalardan, brokerlardan veya veri toplama sağlayıcılarından kaynaklanan hatalardan, eksikliklerden veya yanlışlıklardan;</li>
+          <li>bağlı hesap hizmetlerinin geçici veya kalıcı olarak kullanılamamasından;</li>
+          <li>üçüncü taraf API&apos;lerinde, kimlik doğrulama yöntemlerinde veya veri erişim izinlerinde yapılan değişikliklerden;</li>
+          <li>kullanıcı tarafından bağlı hesap verilerine dayanılarak alınan herhangi bir karardan.</li>
+        </ul>
+        <p>
+          Kullanıcılar, herhangi bir finansal, yatırım, vergi veya yasal karar için
+          dayanmadan önce bağlı hesaplar aracılığıyla elde edilen tüm bilgileri inceleme ve
+          doğrulamaktan yalnızca kendilerinin sorumlu olmaya devam ederler.
+        </p>
+
+        <h2>34. Kullanıcı içeriği</h2>
+        <p>
+          Platform aracılığıyla kullanılabilir hale getirilen kullanıcı tarafından oluşturulan
+          herhangi bir içerik, iletişim, açıklama veya paylaşılan bilgi, profesyonel tavsiye
+          veya öneri olarak yorumlanmamalıdır. Safolio, kullanıcı tarafından oluşturulan
+          içeriği incelemez, onaylamaz veya desteklemez ve bu tür içerik için herhangi bir
+          sorumluluk üstlenmez. Safolio, bu kısıtlamaları ihlal eden veya platformu kullanımı
+          Safolio&apos;yu düzenleyici, yasal veya itibar riski altına alabilen kullanıcılar
+          için platforma erişimi kısıtlama, askıya alma veya sonlandırma hakkını kendi
+          takdirine bağlı olarak saklı tutar. Safolio, platformun düzenlenmiş finansal
+          faaliyetler için bir pazar yeri, danışma forumu veya dağıtım kanalı olarak
+          kullanılmasına izin vermez.
+        </p>
+
+        <h2>35. Bize ulaşın</h2>
+        <p>
+          Hizmetler ile ilgili bir şikayeti çözmek veya Hizmetlerin kullanımı hakkında daha
+          fazla bilgi almak için lütfen aşağıdaki adresten bizimle iletişime geçin:
+        </p>
+        <p>
+          Safolio B.V.
+          <br />
+          2-A Abtstraat
+          <br />
+          Utrecht, Utrecht 3512 AB
+          <br />
+          Hollanda
+          <br />
+          <a href="mailto:info@safolio.com">info@safolio.com</a>
+        </p>
       </LegalLayout>
     );
   }
