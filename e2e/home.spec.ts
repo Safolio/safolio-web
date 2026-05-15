@@ -18,14 +18,6 @@ test.describe("Safolio landing — golden path", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText(/İçgörüyle/);
   });
 
-  test("language toggle switches /en → /tr", async ({ page }) => {
-    await page.goto("/en");
-    // The LangToggle is a single pill button cycling EN ↔ TR
-    await page.getByRole("button", { name: /select language|dil/i }).click();
-    await expect(page).toHaveURL(/\/tr$/);
-    await expect(page.getByRole("heading", { level: 1 })).toContainText(/İçgörüyle/);
-  });
-
   test("hero email form shows success after valid submit", async ({ page }) => {
     await page.goto("/en");
     await page.getByPlaceholder("you@email.com").fill("test@example.com");

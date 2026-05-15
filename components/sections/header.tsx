@@ -5,7 +5,6 @@ import { Menu } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { Logo } from "@/components/logo";
-import { LangToggle } from "@/components/lang-toggle";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
@@ -35,7 +34,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <LangToggle />
           <ThemeToggle />
           <a
             href="#waitlist"
