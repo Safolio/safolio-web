@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { LegalLayout } from "@/components/legal-layout";
+import { LegalTRPlaceholder } from "@/components/legal-tr-placeholder";
 
 export async function generateMetadata({
   params,
@@ -16,6 +17,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Footer" });
+  if (locale === "tr") {
+    return (
+      <LegalLayout title={t("legal2")}>
+        <LegalTRPlaceholder docName={t("legal2")} />
+      </LegalLayout>
+    );
+  }
+
   return (
     <LegalLayout title={t("legal2")}>
       <p className="text-sm text-ink3">Last updated May 02, 2026</p>
