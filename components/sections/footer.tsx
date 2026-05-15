@@ -36,7 +36,10 @@ export function Footer() {
   return (
     <footer className="bg-on-dark-bg text-on-dark-foreground">
       <div className="mx-auto max-w-[1300px] px-4 py-16 md:px-6 md:py-20">
-        <Image src="/logo-white.svg" alt="Safolio" width={140} height={36} className="mb-10" />
+        <div className="mb-10 flex items-center gap-2">
+          <Image src="/logo-white.svg" alt="" width={36} height={36} className="h-9 w-9" />
+          <span className="text-2xl font-semibold tracking-tight">Safolio</span>
+        </div>
 
         <div className="flex flex-wrap items-center gap-3 text-[clamp(2.5rem,8vw,5rem)] leading-[1.1] font-semibold tracking-tight">
           <span className="bg-on-dark-border px-2">{t("tagline.line1")}</span>

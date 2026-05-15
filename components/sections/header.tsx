@@ -33,23 +33,24 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-[1300px] items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center" aria-label="Safolio">
+        <Link href="/" className="flex items-center gap-2" aria-label="Safolio">
           <Image
             src="/logo.svg"
-            alt="Safolio"
-            width={140}
-            height={26}
+            alt=""
+            width={32}
+            height={32}
             priority
-            className="block dark:hidden"
+            className="block h-8 w-8 dark:hidden"
           />
           <Image
             src="/logo-white.svg"
-            alt="Safolio"
-            width={140}
-            height={26}
+            alt=""
+            width={32}
+            height={32}
             priority
-            className="hidden dark:block"
+            className="hidden h-8 w-8 dark:block"
           />
+          <span className="text-xl font-semibold tracking-tight">Safolio</span>
         </Link>
 
         <nav className="hidden items-center gap-2 md:flex">
