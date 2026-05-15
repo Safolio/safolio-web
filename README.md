@@ -1,69 +1,70 @@
 # Safolio Web
 
-Coming Soon landing page for Safolio, an independent investment portfolio platform.
+Pre-launch landing page for **Safolio** — an independent multi-asset investment platform (stocks, crypto, ETFs, gold) with built-in risk analysis. Captures waitlist sign-ups.
+
+## Stack
+
+- **Next.js 15** App Router, TypeScript (strict), Tailwind CSS v4
+- **next-intl** (`/en`, `/tr` — default `en`)
+- **next-themes** (light/dark/system)
+- **Geist** + **Geist Mono** + **Instrument Serif** via `next/font/google`
+- **shadcn/ui** (base-ui primitives)
+- **lucide-react** icons
+- **sonner** toasts
+- **@vercel/analytics** + **@vercel/speed-insights**
 
 ## Development
 
 ```bash
 pnpm install
-pnpm assets:download   # one-time, pulls brand assets from safolio.com
 pnpm dev
 ```
 
-Open <http://localhost:3000> — root redirects to `/tr` by default.
+Open <http://localhost:3000>. Root redirects to `/en`.
 
 ## Scripts
 
 - `pnpm dev` — start dev server (Turbopack)
 - `pnpm build` — production build
 - `pnpm start` — serve production build
-- `pnpm lint` — Next.js ESLint check
-- `pnpm format` — Prettier write
-- `pnpm format:check` — Prettier dry-run
+- `pnpm lint` — ESLint
+- `pnpm format` / `pnpm format:check` — Prettier write / check
+- `pnpm test:e2e` — Playwright golden-path tests (if installed)
 - `pnpm assets:download` — fetch brand assets from safolio.com into `public/`
-
-## Stack
-
-- **Next.js 15** App Router, TypeScript (strict), Tailwind v4
-- **shadcn/ui** (base-ui primitives)
-- **next-intl** for TR/EN routing and translations
-- **next-themes** with light/dark/system
-- **react-hook-form + zod** for the signup form (UI only — submit shows a fake success toast)
-- **sonner** for toasts, **lucide-react** for icons
-- **@vercel/analytics + @vercel/speed-insights** for production telemetry
 
 ## Structure
 
-- `app/[locale]/` — locale-scoped routes (homepage + 5 legal pages + 404)
-- `app/layout.tsx` — pass-through root layout
-- `app/sitemap.ts`, `app/robots.ts` — generated SEO endpoints
-- `app/[locale]/opengraph-image.tsx` — dynamic OG image
-- `components/sections/` — page section components (Header, Hero, About, DesignedForYou, WhyWeCreated, CTA, Footer)
-- `components/ui/` — shadcn primitives
-- `components/{theme-provider,theme-toggle,locale-switcher,signup-form,skip-to-main,cookie-banner,legal-layout,json-ld}.tsx`
-- `i18n/` — `routing.ts`, `navigation.ts`, `request.ts`
-- `messages/` — TR/EN translation catalogues
-- `lib/` — `utils.ts` (cn helper), `schemas.ts` (zod)
-- `scripts/download-assets.mjs` — brand asset fetcher
+- `app/[locale]/` — locale-scoped routes (homepage, 4 legal pages, 404, dynamic OG image)
+- `app/{sitemap,robots,icon.svg}` — SEO endpoints + favicon
+- `components/sections/` — Hero, Features, ProductPreview, HowItWorks, Personas, Manifesto, FinalCTA, Footer, Header
+- `components/{hero-chart,dashboard-mock,logo,lang-toggle,theme-toggle,cookie-banner,skip-to-main,json-ld,theme-provider,legal-layout}.tsx`
+- `components/ui/` — shadcn primitives (button, dropdown-menu, sheet, accordion, tabs, sonner, input)
+- `i18n/{routing,navigation,request}.ts` — next-intl wiring
+- `messages/{en,tr}.json` — translation catalogues
+- `lib/utils.ts` — `cn` helper
+- `public/{logo,logo-white}.svg`, `public/images/*` — brand assets
 
-## Deploy
+## Design tokens
 
-Production target: `safolio.com` on Vercel.
+The full token system lives in `app/globals.css`. Highlights:
 
-1. Push to GitHub.
-2. Import in Vercel — framework auto-detected.
-3. No env vars required.
-4. Add `safolio.com` and `www.safolio.com` as production domains in Vercel.
-5. Update DNS at registrar to point to Vercel.
+- Light: `--bg #F7F8FB`, `--ink #0A1530`, `--accent #2150E0`, `--brand-blue #2150E0`, `--brand-cyan #00B6FF`
+- Dark: `--bg #080C18`, `--ink #ECF0F8`, `--accent #5A86FF`
+- Type: H1 `clamp(40,5.4vw,72px)/500/-0.025em`, body `16/1.55`, mono labels `11px uppercase 0.08em`
 
-`@vercel/analytics` and `@vercel/speed-insights` activate automatically on Vercel.
+## Deploy (production target: `safolio.com`)
 
-## Status
+1. Push to GitHub
+2. Import the repo in Vercel — framework auto-detected
+3. No env vars required for this MVP
+4. Add `safolio.com` (+ `www.safolio.com`) as production domains
+5. Point DNS at Vercel
+6. `@vercel/analytics` + `@vercel/speed-insights` activate automatically
 
-MVP complete. Pending follow-ups before launch:
+## Open items before launch
 
-- Real social media URLs (Footer currently uses `#` placeholders)
-- Final legal copy for the 5 legal pages (placeholder text in place)
-- Confirm `hello@safolio.com` is the right contact email
-- Optional: hook the signup form to a real backend (Resend / Supabase / Mailchimp)
-- Optional: official App Store / Google Play badge SVGs (CTA currently uses text fallback)
+- Real social media URLs (Footer uses `#` placeholders)
+- Real legal copy for the 4 legal pages (currently placeholder text)
+- Confirm `hello@safolio.com` is the right contact
+- Optional: wire the waitlist email form to a real backend (Resend, Mailchimp, Loops, etc.). Today it's UI-only.
+- Optional: official App Store / Google Play badge SVGs (we don't ship any badges in the current CTA — text-only "Coming Soon")
