@@ -1,142 +1,134 @@
 {
   "Metadata": {
-    "title": "Safolio — Invest with Insight",
-    "description": "An independent platform designed for smart investors. Unify your assets, manage with ease, and decide with risk analysis. Stocks, crypto, ETFs — all in Safolio."
+    "title": "Safolio — Invest with insight",
+    "description": "Safolio is an independent platform that brings all your assets — stocks, crypto, ETFs, gold — together in one place, helping you make the right decisions through advanced risk analysis."
   },
   "Nav": {
-    "home": "Home"
-  },
-  "a11y": {
-    "skipToMain": "Skip to main content",
+    "product": "Product",
+    "how": "How it works",
+    "manifesto": "Manifesto",
+    "signup": "Join waitlist",
     "toggleTheme": "Toggle theme",
     "selectLanguage": "Select language",
     "openMenu": "Open menu"
   },
-  "ThemeToggle": {
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System"
-  },
   "Hero": {
-    "heading": "Empower Your Financial Future!",
-    "description": "Designed for smart investors, Safolio is an independent platform that brings all your assets together in one place, helps you manage them with ease, and supports you in making the best decisions through risk analysis. Stocks, crypto, ETFs… all in Safolio.",
-    "signUpLabel": "Sign Up Early",
-    "signUpHint": "Be Among the First to Try:",
-    "comingSoon": "Coming Soon…",
-    "comingSoonReady": "Get Ready for the Safolio Experience!"
+    "preLabel": "Coming soon · Empower your financial future",
+    "h1_a": "Invest with",
+    "h1_b": "insight,",
+    "h1_c": "not noise.",
+    "sub": "Safolio is an independent platform that brings all your assets — stocks, crypto, ETFs, gold — together in one place, helping you manage them with ease and make the right decisions through advanced risk analysis.",
+    "emailPlaceholder": "you@email.com",
+    "signupBtn": "Sign up early",
+    "ctaNote": "Be among the first to try. No spam, ever.",
+    "successMessage": "You're on the list — we'll be in touch.",
+    "waitlistLabel": "Waitlist",
+    "waitlistCaption": "to public beta",
+    "trustA": "Independent — not tied to any bank or broker",
+    "trustB": "Built by investors, for investors",
+    "trustC": "Multi-asset by default"
   },
-  "About": {
-    "heading": "What is",
-    "headingHighlight": "Safolio?",
-    "body": "Safolio is an independent investment platform that brings together all your assets — stocks, crypto, ETFs, gold, and more — into one place. With advanced risk analysis, it helps you make smarter decisions and guides you on your path to financial freedom.",
-    "features": {
-      "intro": {
-        "title": "Independent, empowering, simple and risk-smart",
-        "body": "Safolio is more than just a portfolio tracker — it's your companion on the path to financial freedom. No matter what assets you hold, Safolio helps you see the bigger picture, understand your risks, refine your strategy, and take action with ease."
-      },
-      "independent": {
-        "title": "Truly Independent",
-        "body": "Not tied to any bank or broker. Every calculation and analysis is built for your benefit and trust."
-      },
-      "multiAsset": {
-        "title": "Multi-Asset Support",
-        "body": "From stocks to crypto, funds to gold, manage and evaluate all your investments in one place."
-      },
-      "journal": {
-        "title": "Integrated Trading Journal",
-        "body": "Learn from your past and plan your future. Track all your moves in the simplest way."
-      },
-      "risk": {
-        "title": "Smart Risk Analysis",
-        "body": "No surprises. Let advanced tools work for you, so you can stay in control and enjoy managing your investments yourself."
-      },
-      "community": {
-        "title": "Community Driven",
-        "body": "Learn, share, and grow together. Safolio opens the doors to a community of investors managing their own portfolios."
-      }
-    }
+  "Features": {
+    "eyebrow": "Why Safolio",
+    "h": "Independent, empowering, simple and risk-smart.",
+    "sub": "Safolio is more than just a portfolio tracker. It's your companion on the path to financial freedom — see the bigger picture, understand your risks, refine your strategy, and act with ease.",
+    "f1_t": "Truly independent",
+    "f1_b": "Not tied to any bank or broker. Every calculation and analysis is built for your benefit and trust.",
+    "f2_t": "Multi-asset support",
+    "f2_b": "From stocks to crypto, funds to gold, manage and evaluate all your investments in one place.",
+    "f3_t": "Integrated trading journal",
+    "f3_b": "Learn from your past and plan your future. Track every move with the reason behind it, in the simplest way.",
+    "f4_t": "Smart risk analysis",
+    "f4_b": "No surprises. Advanced tools work for you so you stay in control and enjoy managing your investments yourself.",
+    "f5_t": "Community driven",
+    "f5_b": "Learn, share and grow together. A community of investors managing their own portfolios — no gurus, no signals."
   },
-  "DesignedForYou": {
-    "heading": "Designed",
-    "headingHighlight": "For You",
-    "tabs": {
-      "audience": {
-        "label": "Who is Safolio for?",
-        "items": [
-          "New investors taking their very first steps into the world of investing",
-          "Experienced investors and traders looking for smarter tools and deeper insights",
-          "Those managing both crypto and traditional assets together",
-          "Investment communities that love to share knowledge",
-          "Savers who want to turn their money into investments with reliable insights",
-          "Financial professionals seeking advanced analysis and clarity",
-          "Thought leaders and influencers shaping the future of finance"
-        ],
-        "outro": "Wherever you are on your investment journey, Safolio gives you the tools to guide your way and a community to walk alongside you."
-      },
-      "why": {
-        "label": "Why Safolio?",
-        "items": [
-          "Independent and unbiased",
-          "Informative and educational",
-          "Community-driven",
-          "Transparent with a simple, intuitive experience",
-          "Advanced and detailed risk analysis",
-          "Trustworthy — you stay in control of your own decisions",
-          "Enables those with small savings to start investing",
-          "Provides professionals with all the tools they need in one place"
-        ]
-      }
-    }
+  "Preview": {
+    "eyebrow": "Product",
+    "h": "A dashboard that shows what matters first.",
+    "sub": "Designed around the questions investors actually ask: How am I doing? Where is my risk? What changed?"
   },
-  "WhyWeCreated": {
-    "heading": "Why Did We Create",
-    "headingHighlight": "Safolio?",
-    "paragraphs": [
-      "We believe investing is a right for everyone, no matter the size of their savings. Too many investors get lost in scattered platforms and overwhelming information. As investors ourselves, searching for the best way to grow our money, we built Safolio.",
-      "Safolio is a trustworthy, independent platform that empowers you to make your own decisions with confidence — backed by unbiased analysis and advanced risk insights. As you plan for your future, you're no longer alone. Safolio is with you 24/7, helping you take control and make the right moves on your investment journey."
-    ]
+  "How": {
+    "eyebrow": "How it works",
+    "h": "Set up in minutes. Use it for years.",
+    "s1_t": "Connect or import",
+    "s1_b": "Add positions manually, via CSV, or by linking accounts. Your data, your control.",
+    "s2_t": "See the full picture",
+    "s2_b": "Safolio normalises across asset classes and currencies, then surfaces risk you couldn't see before.",
+    "s3_t": "Decide with insight",
+    "s3_b": "Stress-test changes, journal your reasoning, and revisit your strategy with the data in front of you."
+  },
+  "Personas": {
+    "eyebrow": "Designed for you",
+    "h": "Wherever you are on your investment journey.",
+    "p1": "New investors taking their very first steps into the world of investing",
+    "p2": "Experienced investors and traders looking for smarter tools and deeper insights",
+    "p3": "Those managing both crypto and traditional assets together",
+    "p4": "Investment communities that love to share knowledge",
+    "p5": "Savers who want to turn their money into investments with reliable insights",
+    "p6": "Financial professionals seeking advanced analysis and clarity",
+    "p7": "Thought leaders and influencers shaping the future of finance"
+  },
+  "Manifesto": {
+    "eyebrow": "Why we created Safolio",
+    "p1": "We believe investing is a right for everyone, no matter the size of their savings.",
+    "p2": "Too many investors get lost in scattered platforms and overwhelming information. As investors ourselves, searching for the best way to grow our money, we built Safolio — a trustworthy, independent platform that empowers you to make your own decisions, backed by unbiased analysis and advanced risk insights.",
+    "p3": "As you plan for your future, you're no longer alone. Safolio is with you 24/7, helping you take control and make the right moves on your investment journey."
   },
   "CTA": {
-    "eyebrow": "WELCOME TO FINANCIAL FREEDOM!",
-    "heading": "Join the",
-    "headingBrand": "Safolio",
-    "headingMiddle": "community and discover an investment experience that's",
-    "headingSecure": "secure",
-    "headingTail": ", effortless, and",
-    "headingEmpowering": "empowering",
-    "headingPeriod": ".",
-    "body": "Forget what you thought you knew about finance — a new era is beginning, and this time, you're in control.",
-    "comingSoon": "Coming Soon!"
+    "h_a": "Welcome to financial",
+    "h_b": "freedom.",
+    "sub": "Forget what you thought you knew about finance — a new era is beginning, and this time, you're in control.",
+    "btn": "Sign up early"
   },
   "Footer": {
-    "tagline": {
-      "line1": "Unify your",
-      "line2": "investments,",
-      "line3": "empower",
-      "line4": "your decisions."
-    },
+    "tag_a": "Unify your investments,",
+    "tag_b": "empower your decisions.",
     "contact": "Contact",
-    "address": "Vinkenburgstraat 2 A, 3512AB Utrecht",
     "company": "Safolio B.V.",
-    "globalSocial": "Global Social",
-    "turkishSocial": "Turkish Social",
-    "legal": {
-      "privacy": "Privacy Policy",
-      "cookie": "Cookie Policy",
-      "terms": "Terms and Conditions",
-      "aup": "Acceptable Use Policy",
-      "eula": "EULA"
-    },
-    "copyright": "© Safolio {year}. All rights reserved."
+    "address": "Vinkenburgstraat 2 A, 3512AB Utrecht",
+    "legal": "Legal",
+    "legal1": "Privacy",
+    "legal2": "Cookies",
+    "legal3": "Terms",
+    "legal4": "EULA",
+    "social": "Social",
+    "social1": "X / Twitter",
+    "social2": "LinkedIn",
+    "social3": "Instagram",
+    "copyright": "© Safolio 2026. All rights reserved.",
+    "version": "v0.1 · pre-launch"
   },
-  "Form": {
-    "emailPlaceholder": "E-Mail",
-    "submit": "Register",
-    "submitting": "Sending…",
-    "successTitle": "Thanks!",
-    "successMessage": "We'll keep you posted.",
-    "errorRequired": "Email is required",
-    "errorInvalid": "Please enter a valid email"
+  "Chart": {
+    "total": "Portfolio value",
+    "change": "Today",
+    "risk": "Risk score",
+    "alloc": "Allocation",
+    "alloc_eq": "Equities",
+    "alloc_etf": "ETFs",
+    "alloc_cr": "Crypto",
+    "alloc_au": "Gold",
+    "alloc_cash": "Cash",
+    "range_1d": "1D",
+    "range_1w": "1W",
+    "range_1m": "1M",
+    "range_1y": "1Y",
+    "range_all": "All",
+    "moderate": "Moderate"
+  },
+  "Dashboard": {
+    "overview": "Overview",
+    "positions": "Positions",
+    "risk": "Risk",
+    "journal": "Journal",
+    "community": "Community",
+    "search": "Search or add…",
+    "asset": "Asset",
+    "qty": "Qty",
+    "avg": "Avg",
+    "price": "Price",
+    "value": "Value",
+    "return": "Return"
   },
   "CookieBanner": {
     "message": "We use cookies for analytics. Read more in our cookie policy.",
@@ -149,5 +141,8 @@
     "title": "Page not found",
     "description": "The page you're looking for doesn't exist or has been moved.",
     "back": "Back to home"
+  },
+  "a11y": {
+    "skipToMain": "Skip to main content"
   }
 }

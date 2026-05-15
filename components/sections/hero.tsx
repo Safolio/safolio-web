@@ -1,53 +1,109 @@
-import Image from "next/image";
+"use client";
+
+import * as React from "react";
 import { useTranslations } from "next-intl";
-import { SignupForm } from "@/components/signup-form";
+import { HeroChart } from "@/components/hero-chart";
 
 export function Hero() {
   const t = useTranslations("Hero");
-  return (
-    <section
-      id="home"
-      className="relative overflow-hidden bg-[url('/images/hero-bg.webp')] bg-top-left bg-no-repeat pt-24 md:pt-32"
-    >
-      <div className="mx-auto grid max-w-[1300px] gap-12 px-4 pb-24 md:grid-cols-2 md:px-6 md:pb-32">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-[clamp(2rem,5vw,3.25rem)] leading-[1.15] font-semibold tracking-tight text-foreground">
-            {t("heading")}
-          </h1>
-          <p className="mt-6 max-w-md text-sm leading-[26px] text-muted-foreground">
-            {t("description")}
-          </p>
-          <div className="my-8 h-px w-1/4 bg-border" />
-          <p className="mb-3 text-base font-semibold">
-            <strong>{t("signUpLabel")}</strong>{" "}
-            <span className="font-normal text-muted-foreground">| {t("signUpHint")}</span>
-          </p>
-          <SignupForm tone="on-light" />
-        </div>
+  const [email, setEmail] = React.useState("");
+  const [submitted, setSubmitted] = React.useState(false);
 
-        <div className="relative">
-          <div className="rounded-card bg-primary/95 px-6 py-5 text-primary-foreground md:max-w-sm">
-            <p className="text-sm">{t("comingSoonReady")}</p>
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!email) return;
+    await new Promise((r) => setTimeout(r, 600));
+    setSubmitted(true);
+  };
+
+  return (
+    <section id="waitlist" className="mx-auto max-w-[1240px] px-8 pt-16 pb-24">
+      <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_1.1fr]">
+        <div>
+          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 pl-2.5 text-[12.5px] tracking-[-0.005em] text-ink2">
+            <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_22%,transparent)]" />
+            {t("preLabel")}
+          </span>
+
+          <h1 className="my-[22px] text-[clamp(40px,5.4vw,72px)] leading-[1.02] font-medium tracking-[-0.025em] text-balance">
+            {t("h1_a")} <em className="serif text-[1.04em]">{t("h1_b")}</em>
+            <br />
+            {t("h1_c")}
+          </h1>
+
+          <p className="mb-7 max-w-[540px] text-[18px] leading-[1.55] text-ink2 text-pretty">
+            {t("sub")}
+          </p>
+
+          {!submitted ? (
+            <form
+              onSubmit={onSubmit}
+              className="grid max-w-[480px] grid-cols-[1fr_auto] gap-1.5 rounded-full border border-line bg-surface p-1.5 transition-colors focus-within:border-line-strong focus-within:shadow-[0_0_0_4px_color-mix(in_oklab,var(--accent)_12%,transparent)]"
+            >
+              <input
+                type="email"
+                required
+                placeholder={t("emailPlaceholder")}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border-0 bg-transparent px-3.5 text-[14.5px] text-ink outline-none placeholder:text-ink3"
+              />
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center rounded-full bg-ink px-[18px] py-2.5 text-[14px] font-medium text-bg transition-colors hover:bg-accent hover:text-accent-ink"
+              >
+                {t("signupBtn")}
+              </button>
+            </form>
+          ) : (
+            <div className="inline-flex max-w-[480px] items-center gap-2.5 rounded-full bg-accent-soft px-[18px] py-3.5 text-[14px] font-medium text-accent">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12l4 4 10-10"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span>{t("successMessage")}</span>
+            </div>
+          )}
+
+          <p className="mt-2.5 text-[12.5px] text-ink3">{t("ctaNote")}</p>
+
+          <div className="mt-9 grid max-w-[480px] grid-cols-[auto_1fr_auto] items-center gap-4 rounded-card border border-line bg-surface px-[18px] py-3.5">
+            <div>
+              <div className="text-[12px] font-medium text-ink2">{t("waitlistLabel")}</div>
+              <div className="text-[11px] text-ink3">{t("waitlistCaption")}</div>
+            </div>
+            <div className="relative h-1.5 overflow-hidden rounded-full bg-surface2">
+              <div
+                className="h-full animate-fill-in rounded-full bg-accent"
+                style={{ width: "75%" }}
+              />
+            </div>
+            <div className="font-mono text-[13px] font-medium text-ink tnum">75%</div>
           </div>
-          <div className="relative mt-6 overflow-hidden rounded-card">
-            <Image
-              src="/images/hero-portrait.png"
-              alt=""
-              width={566}
-              height={1008}
-              priority
-              className="mx-auto h-auto w-full max-w-md object-contain dark:brightness-[0.7]"
-            />
-            <div className="absolute inset-x-4 bottom-4 rounded-card bg-card/95 p-5 shadow-lg backdrop-blur">
-              <p className="text-xs tracking-wide text-muted-foreground uppercase">
-                {t("comingSoon")}
-              </p>
-              <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-highlight">
-                <div className="h-full w-3/4 rounded-full bg-primary" />
-              </div>
-              <p className="mt-2 text-xs font-semibold text-foreground">75%</p>
+
+          <div className="mt-9 flex flex-wrap gap-x-7 gap-y-4 text-[12.5px] text-ink3">
+            <div className="inline-flex items-center gap-2">
+              <span className="h-px w-3.5 bg-ink3" />
+              {t("trustA")}
+            </div>
+            <div className="inline-flex items-center gap-2">
+              <span className="h-px w-3.5 bg-ink3" />
+              {t("trustB")}
+            </div>
+            <div className="inline-flex items-center gap-2">
+              <span className="h-px w-3.5 bg-ink3" />
+              {t("trustC")}
             </div>
           </div>
+        </div>
+
+        <div>
+          <HeroChart />
         </div>
       </div>
     </section>

@@ -1,142 +1,134 @@
 {
   "Metadata": {
-    "title": "Safolio — İçgörüyle Yatırım Yapın",
-    "description": "Akıllı yatırımcılar için tasarlanmış bağımsız platform. Varlıklarınızı birleştirin, kolayca yönetin, risk analiziyle karar verin. Hisse, kripto, ETF — hepsi Safolio'da."
+    "title": "Safolio — İçgörüyle yatırım yap",
+    "description": "Safolio; akıllı yatırımcılar için tasarlanmış bağımsız bir platform. Hisseler, kripto, ETF, altın — tüm varlıklarını tek yerde toplar ve gelişmiş risk analiziyle doğru kararlar almana destek olur."
   },
   "Nav": {
-    "home": "Ana Sayfa"
-  },
-  "a11y": {
-    "skipToMain": "Ana içeriğe atla",
+    "product": "Ürün",
+    "how": "Nasıl çalışır",
+    "manifesto": "Manifesto",
+    "signup": "Listeye katıl",
     "toggleTheme": "Temayı değiştir",
     "selectLanguage": "Dil seç",
     "openMenu": "Menüyü aç"
   },
-  "ThemeToggle": {
-    "light": "Açık",
-    "dark": "Koyu",
-    "system": "Sistem"
-  },
   "Hero": {
-    "heading": "Finansal Geleceğinizi Güçlendirin!",
-    "description": "Akıllı yatırımcılar için tasarlanan Safolio, tüm varlıklarınızı tek yerde bir araya getiren, kolay yönetmenize yardımcı olan ve risk analiziyle en doğru kararları almanızı destekleyen bağımsız bir platformdur. Hisse, kripto, ETF… hepsi Safolio'da.",
-    "signUpLabel": "Erken Kayıt",
-    "signUpHint": "İlk deneyenlerden olun:",
-    "comingSoon": "Çok Yakında…",
-    "comingSoonReady": "Safolio Deneyimine Hazırlanın!"
+    "preLabel": "Çok yakında · Finansal geleceğine güç kat",
+    "h1_a": "İçgörüyle",
+    "h1_b": "yatırım yap,",
+    "h1_c": "gürültüyle değil.",
+    "sub": "Safolio; akıllı yatırımcılar için tasarlanmış bağımsız bir platform. Hisseler, kripto, ETF, altın — tüm varlıklarını tek yerde toplar, kolayca yönetmeni sağlar ve gelişmiş risk analiziyle doğru kararlar almana destek olur.",
+    "emailPlaceholder": "sen@eposta.com",
+    "signupBtn": "Erken kayıt",
+    "ctaNote": "İlk denemek isteyenlerden biri ol. Spam yok.",
+    "successMessage": "Listedesin — yakında haber vereceğiz.",
+    "waitlistLabel": "Bekleme listesi",
+    "waitlistCaption": "açık beta'ya",
+    "trustA": "Bağımsız — hiçbir banka ya da aracı kuruma bağlı değil",
+    "trustB": "Yatırımcılar tarafından, yatırımcılar için",
+    "trustC": "Varsayılan olarak çok varlıklı"
   },
-  "About": {
-    "heading": "Safolio",
-    "headingHighlight": "nedir?",
-    "body": "Safolio, hisse senedi, kripto, ETF, altın ve daha fazlası dahil tüm varlıklarınızı tek yerde toplayan bağımsız bir yatırım platformudur. Gelişmiş risk analiziyle daha akıllı kararlar almanıza yardımcı olur ve finansal özgürlük yolunda size rehberlik eder.",
-    "features": {
-      "intro": {
-        "title": "Bağımsız, güçlendirici, basit ve risk-akıllı",
-        "body": "Safolio sadece bir portföy takipçisi değil — finansal özgürlüğe giden yolda yol arkadaşınızdır. Hangi varlıklara sahip olursanız olun, Safolio büyük resmi görmenize, risklerinizi anlamanıza, stratejinizi geliştirmenize ve kolayca harekete geçmenize yardımcı olur."
-      },
-      "independent": {
-        "title": "Gerçekten Bağımsız",
-        "body": "Hiçbir banka veya aracı kuruma bağlı değil. Her hesaplama ve analiz sizin yararınız ve güveniniz için inşa edildi."
-      },
-      "multiAsset": {
-        "title": "Çoklu Varlık Desteği",
-        "body": "Hisseden kriptoya, fondan altına, tüm yatırımlarınızı tek bir yerden yönetin ve değerlendirin."
-      },
-      "journal": {
-        "title": "Entegre Trading Günlüğü",
-        "body": "Geçmişinizden öğrenin ve geleceğinizi planlayın. Tüm hamlelerinizi en basit şekilde takip edin."
-      },
-      "risk": {
-        "title": "Akıllı Risk Analizi",
-        "body": "Sürprizler yok. Gelişmiş araçlar sizin için çalışsın, böylece kontrolde kalın ve yatırımlarınızı kendiniz yönetmenin keyfini çıkarın."
-      },
-      "community": {
-        "title": "Topluluk Odaklı",
-        "body": "Öğrenin, paylaşın ve birlikte büyüyün. Safolio, portföylerini yöneten bir yatırımcı topluluğunun kapılarını aralar."
-      }
-    }
+  "Features": {
+    "eyebrow": "Neden Safolio",
+    "h": "Bağımsız, güçlendiren, basit ve risk açısından akıllı.",
+    "sub": "Safolio bir portföy takip aracından fazlası; finansal özgürlük yolundaki yol arkadaşın. Büyük resmi gör, risklerini anla, stratejini bileştir ve kolaylıkla harekete geç.",
+    "f1_t": "Gerçekten bağımsız",
+    "f1_b": "Hiçbir banka ya da aracı kuruma bağlı değil. Her hesaplama ve analiz senin yararın ve güvenin için tasarlandı.",
+    "f2_t": "Çok varlıklı destek",
+    "f2_b": "Hisseden kriptoya, fonlardan altına — tüm yatırımlarını tek yerde yönet ve değerlendir.",
+    "f3_t": "Entegre işlem günlüğü",
+    "f3_b": "Geçmişinden öğren, geleceğini planla. Tüm hamlelerini en sade şekilde, gerekçesiyle birlikte kaydet.",
+    "f4_t": "Akıllı risk analizi",
+    "f4_b": "Sürpriz yok. Gelişmiş araçlar senin için çalışır; kontrolü elinde tutar, yatırımını keyifle yönetirsin.",
+    "f5_t": "Toplulukla gelişen",
+    "f5_b": "Öğren, paylaş ve birlikte büyü. Kendi portföyünü yöneten yatırımcıların sakin odası — guru yok, sinyal yok."
   },
-  "DesignedForYou": {
-    "heading": "Sizin",
-    "headingHighlight": "için tasarlandı",
-    "tabs": {
-      "audience": {
-        "label": "Safolio kimler için?",
-        "items": [
-          "Yatırım dünyasına ilk adımlarını atan yeni yatırımcılar",
-          "Daha akıllı araçlar ve derin içgörüler arayan deneyimli yatırımcı ve trader'lar",
-          "Kripto ve geleneksel varlıkları birlikte yönetenler",
-          "Bilgi paylaşmayı seven yatırım toplulukları",
-          "Tasarruflarını güvenilir içgörülerle yatırıma dönüştürmek isteyenler",
-          "Gelişmiş analiz ve netlik arayan finans profesyonelleri",
-          "Finansın geleceğini şekillendiren düşünce liderleri ve influencer'lar"
-        ],
-        "outro": "Yatırım yolculuğunuzun neresinde olursanız olun, Safolio size yön gösterecek araçları ve birlikte yürüyeceğiniz bir topluluğu sunar."
-      },
-      "why": {
-        "label": "Neden Safolio?",
-        "items": [
-          "Bağımsız ve tarafsız",
-          "Bilgilendirici ve eğitici",
-          "Topluluk odaklı",
-          "Şeffaf, basit ve sezgisel deneyim",
-          "Gelişmiş ve detaylı risk analizi",
-          "Güvenilir — kararlarınızın kontrolü sizde",
-          "Küçük tasarruflarla bile yatırıma başlamayı sağlar",
-          "Profesyonellere ihtiyaçları olan tüm araçları tek yerde sunar"
-        ]
-      }
-    }
+  "Preview": {
+    "eyebrow": "Ürün",
+    "h": "Önemli olanı önce gösteren bir panel.",
+    "sub": "Yatırımcıların gerçekten sorduğu sorulara göre tasarlandı: Nasıl gidiyor? Riskim nerede? Ne değişti?"
   },
-  "WhyWeCreated": {
-    "heading": "Safolio'yu",
-    "headingHighlight": "neden yarattık?",
-    "paragraphs": [
-      "Yatırımın, tasarrufun büyüklüğüne bakılmaksızın herkesin hakkı olduğuna inanıyoruz. Çok fazla yatırımcı dağınık platformlarda ve bilgi yığınında kayboluyor. Kendimiz de yatırımcı olarak, paramızı büyütmenin en iyi yolunu ararken Safolio'yu inşa ettik.",
-      "Safolio, kendi kararlarınızı güvenle vermenizi sağlayan güvenilir ve bağımsız bir platformdur — tarafsız analiz ve gelişmiş risk içgörüleriyle desteklenir. Geleceğinizi planlarken artık yalnız değilsiniz. Safolio yatırım yolculuğunuzda 7/24 yanınızda; kontrolü ele almanıza ve doğru hamleleri yapmanıza yardımcı olur."
-    ]
+  "How": {
+    "eyebrow": "Nasıl çalışır",
+    "h": "Dakikalar içinde kur. Yıllarca kullan.",
+    "s1_t": "Bağla veya içe aktar",
+    "s1_b": "Pozisyonlarını elle, CSV ile veya hesaplarını bağlayarak ekle. Veri senin, kontrol senin.",
+    "s2_t": "Bütünü gör",
+    "s2_b": "Safolio varlık sınıfları ve para birimleri arasında normalize eder, sonra önce göremediğin riski gün yüzüne çıkarır.",
+    "s3_t": "İçgörüyle karar ver",
+    "s3_b": "Değişiklikleri stres testinden geçir, gerekçeni günlüğe yaz ve stratejine veriye bakarak geri dön."
+  },
+  "Personas": {
+    "eyebrow": "Senin için tasarlandı",
+    "h": "Yatırım yolculuğunda nerede olursan ol.",
+    "p1": "Yatırım dünyasına ilk adımını atan yeni yatırımcılar",
+    "p2": "Daha akıllı araçlar ve derin içgörü arayan deneyimli yatırımcılar ve trader'lar",
+    "p3": "Kripto ve geleneksel varlıkları birlikte yönetenler",
+    "p4": "Bilgi paylaşmayı seven yatırımcı toplulukları",
+    "p5": "Parasını yatırıma dönüştürmek isteyen birikim sahipleri",
+    "p6": "Gelişmiş analiz ve netlik arayan finans profesyonelleri",
+    "p7": "Finansın geleceğini şekillendiren düşünce önderleri ve etkileyiciler"
+  },
+  "Manifesto": {
+    "eyebrow": "Safolio'yu neden yarattık",
+    "p1": "Yatırımın; birikiminin büyüklüğünden bağımsız, herkesin hakkı olduğuna inanıyoruz.",
+    "p2": "Çok fazla yatırımcı dağınık platformlar ve bıktırıcı bilgi yığınları arasında kaybolur. Biz de kendi paramızı büyütmenin en iyi yolunu arayan yatırımcılar olarak Safolio'yu kurduk — güvenilir, bağımsız; tarafsız analiz ve gelişmiş risk içgörüsüyle desteklenen, kendi kararlarını vermeni güçlendiren bir platform.",
+    "p3": "Geleceğini planlarken artık yalnız değilsin. Safolio 7/24 yanında; kontrolü senin elinde tutmana ve doğru hamleleri yapmana yardım ediyor."
   },
   "CTA": {
-    "eyebrow": "FİNANSAL ÖZGÜRLÜĞE HOŞ GELDİNİZ!",
-    "heading": "Safolio",
-    "headingBrand": "topluluğuna",
-    "headingMiddle": "katılın ve",
-    "headingSecure": "güvenli",
-    "headingTail": ", zahmetsiz ve",
-    "headingEmpowering": "güçlendirici",
-    "headingPeriod": " bir yatırım deneyimini keşfedin.",
-    "body": "Finans hakkında bildiğinizi sandığınız her şeyi unutun — yeni bir çağ başlıyor ve bu kez kontrol sizde.",
-    "comingSoon": "Çok Yakında!"
+    "h_a": "Finansal özgürlüğe",
+    "h_b": "hoş geldin.",
+    "sub": "Finans hakkında bildiğini sandıklarını unut — yeni bir çağ başlıyor ve bu kez kontrol sende.",
+    "btn": "Erken kayıt"
   },
   "Footer": {
-    "tagline": {
-      "line1": "Yatırımlarınızı",
-      "line2": "birleştirin,",
-      "line3": "kararlarınızı",
-      "line4": "güçlendirin."
-    },
+    "tag_a": "Yatırımlarını birleştir,",
+    "tag_b": "kararlarını güçlendir.",
     "contact": "İletişim",
-    "address": "Vinkenburgstraat 2 A, 3512AB Utrecht",
     "company": "Safolio B.V.",
-    "globalSocial": "Global Sosyal",
-    "turkishSocial": "Türkiye Sosyal",
-    "legal": {
-      "privacy": "Gizlilik Politikası",
-      "cookie": "Çerez Politikası",
-      "terms": "Hüküm ve Koşullar",
-      "aup": "Kabul Edilebilir Kullanım Politikası",
-      "eula": "EULA"
-    },
-    "copyright": "© Safolio {year}. Tüm hakları saklıdır."
+    "address": "Vinkenburgstraat 2 A, 3512AB Utrecht",
+    "legal": "Yasal",
+    "legal1": "Gizlilik",
+    "legal2": "Çerezler",
+    "legal3": "Koşullar",
+    "legal4": "EULA",
+    "social": "Sosyal",
+    "social1": "X / Twitter",
+    "social2": "LinkedIn",
+    "social3": "Instagram",
+    "copyright": "© Safolio 2026. Tüm hakları saklıdır.",
+    "version": "v0.1 · ön-lansman"
   },
-  "Form": {
-    "emailPlaceholder": "E-Posta",
-    "submit": "Kayıt Ol",
-    "submitting": "Gönderiliyor…",
-    "successTitle": "Teşekkürler!",
-    "successMessage": "Sizi haberdar edeceğiz.",
-    "errorRequired": "E-posta gerekli",
-    "errorInvalid": "Geçerli bir e-posta girin"
+  "Chart": {
+    "total": "Portföy değeri",
+    "change": "Bugün",
+    "risk": "Risk skoru",
+    "alloc": "Dağılım",
+    "alloc_eq": "Hisseler",
+    "alloc_etf": "ETF",
+    "alloc_cr": "Kripto",
+    "alloc_au": "Altın",
+    "alloc_cash": "Nakit",
+    "range_1d": "1G",
+    "range_1w": "1H",
+    "range_1m": "1A",
+    "range_1y": "1Y",
+    "range_all": "Tümü",
+    "moderate": "Orta"
+  },
+  "Dashboard": {
+    "overview": "Genel bakış",
+    "positions": "Pozisyonlar",
+    "risk": "Risk",
+    "journal": "Günlük",
+    "community": "Topluluk",
+    "search": "Ara veya ekle…",
+    "asset": "Varlık",
+    "qty": "Adet",
+    "avg": "Ort.",
+    "price": "Fiyat",
+    "value": "Değer",
+    "return": "Getiri"
   },
   "CookieBanner": {
     "message": "Analitik için çerez kullanıyoruz. Detaylar çerez politikamızda.",
@@ -149,5 +141,8 @@
     "title": "Sayfa bulunamadı",
     "description": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
     "back": "Ana sayfaya dön"
+  },
+  "a11y": {
+    "skipToMain": "Ana içeriğe atla"
   }
 }

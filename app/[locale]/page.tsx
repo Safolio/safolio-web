@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
-import { About } from "@/components/sections/about";
-import { DesignedForYou } from "@/components/sections/designed-for-you";
-import { WhyWeCreated } from "@/components/sections/why-we-created";
-import { CTA } from "@/components/sections/cta";
+import { Features } from "@/components/sections/features";
+import { ProductPreview } from "@/components/sections/product-preview";
+import { HowItWorks } from "@/components/sections/how-it-works";
+import { Personas } from "@/components/sections/personas";
+import { Manifesto } from "@/components/sections/manifesto";
+import { FinalCTA } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 import { SkipToMain } from "@/components/skip-to-main";
 import { OrganizationJsonLd } from "@/components/json-ld";
@@ -55,10 +57,12 @@ export default async function HomePage({
       <Header />
       <main id="main">
         <Hero />
-        <About />
-        <DesignedForYou />
-        <WhyWeCreated />
-        <CTA />
+        <Features />
+        <ProductPreview />
+        <HowItWorks />
+        <Personas />
+        <Manifesto />
+        <FinalCTA />
       </main>
       <Footer />
       <OrganizationJsonLd locale={locale} />

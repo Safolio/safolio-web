@@ -13,10 +13,14 @@ export function LegalLayout({
     <>
       <SkipToMain />
       <Header />
-      <main id="main" className="pt-24">
-        <article className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-20">
-          <h1 className="mb-8 text-3xl font-semibold tracking-tight">{title}</h1>
-          <div className="prose prose-neutral max-w-none dark:prose-invert">{children}</div>
+      <main id="main" className="pt-12">
+        <article className="mx-auto max-w-3xl px-8 py-12 md:py-20">
+          <h1 className="mb-8 text-[clamp(30px,3.6vw,48px)] font-medium tracking-[-0.02em]">
+            {title}
+          </h1>
+          <div className="prose prose-neutral max-w-none text-ink2 dark:prose-invert">
+            {children}
+          </div>
         </article>
       </main>
       <Footer />

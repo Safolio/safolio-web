@@ -8,16 +8,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Footer.legal" });
-  return { title: `${t("eula")} — Safolio` };
+  const t = await getTranslations({ locale, namespace: "Footer" });
+  return { title: `${t("legal4")} — Safolio` };
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "Footer.legal" });
+  const t = await getTranslations({ locale, namespace: "Footer" });
   return (
-    <LegalLayout title={t("eula")}>
+    <LegalLayout title={t("legal4")}>
       <p>This page will contain the Safolio EULA. Final copy pending legal review.</p>
     </LegalLayout>
   );

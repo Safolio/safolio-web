@@ -6,7 +6,6 @@ const ROUTES = [
   "/privacy-policy",
   "/cookie-policy",
   "/terms-and-conditions",
-  "/acceptable-use-policy",
   "/eula",
 ];
 
