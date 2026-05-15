@@ -49,9 +49,14 @@ export function Footer() {
                 {t("legal3")}
               </Link>
             </div>
+            <div className="mb-1.5 text-[14px] text-ink">
+              <Link className="hover:text-accent" href="/acceptable-use-policy">
+                {t("legal4")}
+              </Link>
+            </div>
             <div className="text-[14px] text-ink">
               <Link className="hover:text-accent" href="/eula">
-                {t("legal4")}
+                {t("legal5")}
               </Link>
             </div>
           </div>

@@ -39,6 +39,7 @@ test.describe("Safolio landing — golden path", () => {
         "/privacy-policy",
         "/cookie-policy",
         "/terms-and-conditions",
+        "/acceptable-use-policy",
         "/eula",
       ]) {
         const res = await page.goto(`/${locale}${route}`);
@@ -47,11 +48,11 @@ test.describe("Safolio landing — golden path", () => {
     }
   });
 
-  test("sitemap returns 200 and lists 10 URLs", async ({ page }) => {
+  test("sitemap returns 200 and lists 12 URLs", async ({ page }) => {
     const res = await page.goto("/sitemap.xml");
     expect(res?.status()).toBe(200);
     const xml = await page.content();
     const matches = xml.match(/<loc>/g) || [];
-    expect(matches.length).toBe(10);
+    expect(matches.length).toBe(12);
   });
 });
