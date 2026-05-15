@@ -1,8 +1,18 @@
 "use client";
 
 import * as React from "react";
+import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
-import { HeroChart } from "@/components/hero-chart";
+
+const HeroChart = dynamic(
+  () => import("@/components/hero-chart").then((m) => ({ default: m.HeroChart })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[680px] rounded-chart border border-line bg-surface shadow-[0_24px_60px_-32px_rgba(15,19,17,0.18)]" />
+    ),
+  },
+);
 
 export function Hero() {
   const t = useTranslations("Hero");
