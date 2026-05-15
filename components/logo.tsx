@@ -5,9 +5,16 @@ interface LogoProps {
   mono?: boolean;
   className?: string;
   hideWordmark?: boolean;
+  wordmarkClassName?: string;
 }
 
-export function Logo({ size = 22, mono = false, className, hideWordmark = false }: LogoProps) {
+export function Logo({
+  size = 22,
+  mono = false,
+  className,
+  hideWordmark = false,
+  wordmarkClassName,
+}: LogoProps) {
   const blue = mono ? "currentColor" : "var(--brand-blue)";
   const cyan = mono ? "currentColor" : "var(--brand-cyan)";
   return (
@@ -27,7 +34,14 @@ export function Logo({ size = 22, mono = false, className, hideWordmark = false 
         </g>
       </svg>
       {!hideWordmark && (
-        <span className="text-[18px] font-semibold tracking-[-0.015em]">Safolio</span>
+        <span
+          className={cn(
+            "text-[18px] font-semibold tracking-[-0.015em]",
+            wordmarkClassName,
+          )}
+        >
+          Safolio
+        </span>
       )}
     </div>
   );

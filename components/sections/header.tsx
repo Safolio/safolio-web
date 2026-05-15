@@ -19,7 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-[color-mix(in_oklab,var(--bg)_80%,transparent)] backdrop-blur-md backdrop-saturate-[1.8]">
       <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-4 px-4 py-[14px] md:gap-8 md:px-8">
         <Link href="/" aria-label="Safolio">
-          <Logo />
+          <Logo wordmarkClassName="hidden min-[400px]:inline" />
         </Link>
 
         <nav className="hidden items-center gap-7 text-[14px] text-ink2 md:flex">
