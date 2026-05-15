@@ -1,5 +1,15 @@
 # Safolio Coming Soon Landing — Tasarım Belgesi
 
+> **Not (2026-05-15 sonradan):** Bu spec ilk dizaynı kapsıyor. Daha sonra geliştirici çantasında high-fidelity bir handoff (`design_handoff_safolio_landing`) geldi ve şu kararlar yenilendi:
+>
+> - Renk paleti: yeni accent `#2150E0`, ink `#0A1530`, brand-cyan `#00B6FF` (eski `#2869F5`/`#6461FC` değil).
+> - Font: **Geist** + **Geist Mono** + **Instrument Serif** (Inter değil).
+> - Varsayılan locale: **EN** (TR değil).
+> - Yeni section'lar: animated `HeroChart`, `DashboardMock`, Personas (7-item), 3-step HowItWorks. Eski About/DesignedForYou/WhyWeCreated/CTA section'ları kaldırıldı; yeni karşılıkları farklı şekilde uygulandı.
+> - `/acceptable-use-policy` route kaldırıldı (yeni tasarımda yok).
+>
+> Implementasyon bu yeni handoff'a göre yapılmıştır; spec sadece referans olarak tutulmaktadır.
+
 **Tarih:** 2026-05-15
 **Durum:** v2 (review sonrası revize) — Kullanıcı incelemesi bekliyor
 **Hedef:** Mevcut [safolio.com](https://safolio.com)'un yerine geçecek, Next.js 15 ile yeniden yazılmış, modern fintech estetiğinde bir "Coming Soon" landing page.
