@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LegalLayout } from "@/components/legal-layout";
-import { LegalTRPlaceholder } from "@/components/legal-tr-placeholder";
 
 export async function generateMetadata({
   params,
@@ -21,7 +20,305 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   if (locale === "tr") {
     return (
       <LegalLayout title={t("legal4")}>
-        <LegalTRPlaceholder docName={t("legal4")} />
+        <p className="text-sm text-ink3">Son güncelleme: 01 Şubat 2026</p>
+
+        <p>
+          Bu Kabul Edilebilir Kullanım Politikası (&apos;Politika&apos;), Hizmet Koşullarımızın
+          (&apos;Yasal Koşullar&apos;) bir parçasıdır ve bu nedenle ana{" "}
+          <Link href="/terms-and-conditions">Yasal Koşullar</Link> belgemizle birlikte
+          okunmalıdır. Safolio B.V. tarafından sağlanan yapay zeka destekli hizmetleri
+          (&apos;Yapay Zeka Ürünleri&apos;) kullandığınızda, bu belgeye, Yasal Koşullarımıza
+          ve yapay zekayı düzenleyen tüm geçerli yasa ve yönetmeliklere uyacağınızı garanti
+          edersiniz. Yapay Zeka Ürünlerimizi kullanmanız, platformumuzla yasal, etik ve
+          sorumlu bir şekilde, tüm bireylerin haklarına ve onuruna saygılı olarak etkileşim
+          kurmayı kabul ettiğiniz anlamına gelir. Bu Yasal Koşulları kabul etmiyorsanız,
+          lütfen Hizmetlerimizi kullanmaktan kaçının. Hizmetlerimizi kullanmaya devam etmeniz,
+          bu Yasal Koşulları kabul ettiğiniz anlamına gelir.
+        </p>
+        <p>Lütfen aşağıdakilerin tümüne uygulanan bu Politikayı dikkatlice inceleyin:</p>
+        <ul>
+          <li>(a) Hizmetlerimizin kullanımları (&apos;Yasal Koşullar&apos;da tanımlandığı şekilde)</li>
+          <li>
+            (b) Hizmetler üzerinde bulunan formlar, materyaller, onay araçları, yorumlar,
+            gönderiler ve diğer tüm içerikler (&apos;İçerik&apos;)
+          </li>
+          <li>
+            (c) Hizmetlere katkıda bulunduğunuz, herhangi bir forum, sohbet odası, inceleme
+            ve bunlarla ilişkili herhangi bir etkileşimli hizmetteki yükleme, gönderi,
+            inceleme, ifşa, derecelendirme, yorum, sohbet vb. dahil olmak üzere herhangi
+            bir materyal (&apos;Katkı&apos;)
+          </li>
+          <li>(d) Hizmetlerimiz içinde Yapay Zeka Ürünlerinin sorumlu uygulanması ve yönetimi</li>
+        </ul>
+
+        <h2>Biz kimiz</h2>
+        <p>
+          Biz, Hollanda&apos;da 2-A Abtstraat, Utrecht, Utrecht 3512 AB adresinde kayıtlı,
+          Safolio adıyla iş yapan Safolio B.V. (&apos;Şirket&apos;, &apos;biz&apos;,
+          &apos;bize&apos; veya &apos;bizim&apos;) şirketiyiz.{" "}
+          <a href="https://safolio.com">https://safolio.com</a> web sitesini
+          (&apos;Site&apos;), Safolio mobil uygulamasını (&apos;Uygulama&apos;) ve bu
+          Politikaya atıfta bulunan veya bağlantı veren diğer tüm ilgili ürün ve hizmetleri
+          (toplu olarak &apos;Hizmetler&apos;) işletmekteyiz.
+        </p>
+
+        <h2>Hizmetlerin Kullanımı</h2>
+        <p>
+          Hizmetleri kullandığınızda, bu Politikaya ve tüm geçerli yasalara uyacağınızı
+          garanti edersiniz.
+        </p>
+        <p>Ayrıca aşağıdakileri yapmayacağınızı kabul edersiniz:</p>
+        <ul>
+          <li>Bizden yazılı izin almadan, doğrudan veya dolaylı olarak bir koleksiyon, derleme, veritabanı veya dizin oluşturmak veya derlemek için Hizmetlerden sistematik olarak veri veya diğer içerikleri almak.</li>
+          <li>İstenmeyen e-posta göndermek amacıyla elektronik veya diğer yollarla kullanıcıların kullanıcı adlarını ve/veya e-posta adreslerini toplamak ya da otomatik yollarla veya sahte iddialarla kullanıcı hesapları oluşturmak da dahil olmak üzere Hizmetlerin yetkisiz herhangi bir şekilde kullanılması.</li>
+          <li>Herhangi bir İçeriğin kullanımını veya kopyalanmasını engelleyen ya da Hizmetlerin ve/veya içerdiği İçeriğin kullanımına ilişkin sınırlamaları uygulayan özellikler dahil, Hizmetlerin güvenlikle ilgili özelliklerini atlatmak, devre dışı bırakmak veya başka bir şekilde bunlara müdahale etmek.</li>
+          <li>Hizmetlere yetkisiz çerçeveleme veya bağlantı verme eylemlerinde bulunmak.</li>
+          <li>Özellikle kullanıcı parolaları gibi hassas hesap bilgilerini öğrenmek amacıyla bizi ve diğer kullanıcıları kandırmak, dolandırmak veya yanıltmak.</li>
+          <li>Destek hizmetlerimiz dahil olmak üzere Hizmetlerimizi uygunsuz şekilde kullanmak veya yanlış kötüye kullanım ya da uygunsuz davranış raporları göndermek.</li>
+          <li>Yorum veya mesaj göndermek için komut dosyaları kullanmak ya da veri madenciliği, robotlar veya benzer veri toplama ve çıkarma araçlarını kullanmak gibi Hizmetlerin herhangi bir otomatik kullanımında bulunmak.</li>
+          <li>Hizmetlere veya Hizmetlere bağlı ağlara müdahale etmek, bunları aksatmak veya aşırı yük bindirmek.</li>
+          <li>Başka bir kullanıcının veya kişinin kimliğine bürünmeye çalışmak ya da başka bir kullanıcının kullanıcı adını kullanmak.</li>
+          <li>Hizmetlerden elde edilen herhangi bir bilgiyi başka bir kişiyi taciz etmek, kötüye kullanmak veya zarar vermek amacıyla kullanmak.</li>
+          <li>Hizmetleri bizimle rekabet etme çabasının bir parçası olarak kullanmak veya başka bir şekilde Hizmetleri ve/veya İçeriği herhangi bir gelir getirici çaba ya da ticari girişim için kullanmak.</li>
+          <li>Yürürlükteki yasaların açıkça izin verdiği durumlar dışında, Hizmetleri oluşturan veya herhangi bir şekilde bunların bir parçasını oluşturan yazılımı çözmek, kaynak koda dönüştürmek, parçalarına ayırmak veya tersine mühendislik yapmak.</li>
+          <li>Hizmetlerin veya Hizmetlerin herhangi bir bölümüne erişimi engellemek ya da kısıtlamak için tasarlanmış önlemleri atlamaya çalışmak.</li>
+          <li>Hizmetlerin herhangi bir bölümünü size sunan çalışanlarımızı veya temsilcilerimizi taciz etmek, rahatsız etmek, tehdit etmek veya korkutmak.</li>
+          <li>Herhangi bir İçerikten telif hakkı veya diğer mülkiyet hakları bildirimini silmek.</li>
+          <li>Flash, PHP, HTML, JavaScript veya diğer kodlar dahil ancak bunlarla sınırlı olmamak üzere Hizmetlerin yazılımını kopyalamak veya uyarlamak.</li>
+          <li>Aşırı büyük harf kullanımı ve spam (tekrarlayan metnin sürekli gönderilmesi) dahil olmak üzere, herhangi bir tarafın Hizmetleri kesintisiz kullanımını ve bundan yararlanmasını engelleyen veya Hizmetlerin kullanımını, özelliklerini, işlevlerini, çalışmasını ya da bakımını değiştiren, bozan, aksatan veya bunlara müdahale eden virüsler, Truva atları veya diğer materyalleri yüklemek ya da iletmek (veya yüklemeye veya iletmeye çalışmak).</li>
+          <li>Pasif veya aktif bir bilgi toplama ya da iletme mekanizması olarak işlev gören, açık grafik değişim formatları (&apos;gifs&apos;), 1×1 pikseller, web hataları, çerezler veya diğer benzer cihazlar (bazen &apos;casus yazılım&apos; veya &apos;pasif toplama mekanizmaları&apos; ya da &apos;pcms&apos; olarak adlandırılır) dahil olmak üzere herhangi bir materyali yüklemek veya iletmek (ya da yüklemeye veya iletmeye çalışmak).</li>
+          <li>Standart arama motoru veya İnternet tarayıcısı kullanımının bir sonucu olabilecek durumlar dışında, Hizmetlere erişen herhangi bir örümcek, robot, hile aracı, kazıyıcı veya çevrimdışı okuyucu dahil olmak üzere herhangi bir otomatik sistemi kullanmak, başlatmak, geliştirmek veya dağıtmak ya da herhangi bir yetkisiz komut dosyası veya diğer yazılımı kullanmak veya başlatmak.</li>
+          <li>Bize ve/veya Hizmetlere, görüşümüze göre, itibarsızlaştırmak, kötülemek veya başka bir şekilde zarar vermek.</li>
+          <li>Hizmetleri yürürlükteki yasalara veya yönetmeliklere aykırı bir şekilde kullanmak.</li>
+          <li>Hizmetlerde satın alma yapmak için bir satın alma temsilcisi veya satın alma aracısı kullanmak.</li>
+          <li>Profilinizi satmak veya başka şekilde devretmek.</li>
+        </ul>
+
+        <h3>Abonelikler</h3>
+        <p>
+          Hizmetlerimize abone olursanız, açıkça izin verilmediği sürece aşağıdakileri
+          yapamayacağınızı anladığınızı, kabul ettiğinizi ve onayladığınızı belirtirsiniz:
+        </p>
+        <ul>
+          <li>Safolio B.V.&apos;nin kendi takdirine bağlı olarak verebileceği veya reddedebileceği önceden yazılı izni olmaksızın, bu Politikanın açıkça izin verdiği durumlar dışında, Hizmetlerin herhangi bir bölümünün değiştirilmesi, kopyalanması, yeniden dağıtılması, yayınlanması, görüntülenmesi, sunulması veya yeniden iletilmesi dahil olmak üzere herhangi bir kullanımda bulunmak.</li>
+          <li>Hizmetlerin veya herhangi bir bölümünün kaynak kodunu ya da algoritmalarını herhangi bir yolla yeniden oluşturmaya veya keşfetmeye çalışmak.</li>
+          <li>Hizmetleri herhangi bir üçüncü tarafa sağlamak veya başka şekilde erişilebilir kılmak.</li>
+          <li>Size yönelik olmayan herhangi bir veriyi yakalamak.</li>
+          <li>Herhangi bir kullanıcının verilerine ya da başka bir kişi veya kuruluşla ilgili diğer donanım, yazılım veya bilgilere zarar vermek, bunları ifşa etmek veya değiştirmek.</li>
+        </ul>
+        <p>
+          Ek yasaklı faaliyetler için lütfen{" "}
+          <Link href="/terms-and-conditions">Hizmet Koşulları</Link>&apos;na bakın.
+        </p>
+
+        <h3>Yapay Zeka Ürünleri</h3>
+        <p>
+          Safolio B.V. tarafından sağlanan Yapay Zeka Ürünlerini kullandığınızda,
+          aşağıdakileri yapmayacağınızı garanti edersiniz:
+        </p>
+        <ul>
+          <li>Davranışları çarpıtmak ve bilinçli karar vermeyi bozmak için tasarlanmış bilinçaltı, manipülatif veya aldatıcı yöntemler kullanan yapay zeka tekniklerini, özellikle bu eylemler bireylere önemli zararlar verdiğinde, uygulamak.</li>
+          <li>Yaş, engellilik veya sosyo-ekonomik koşullarla ilgili güvenlik açıklarını yapay zeka aracılığıyla, özellikle bireye önemli zararlar verecek şekilde davranışları veya karar vermeyi bozacak biçimde istismar etmek.</li>
+          <li>Yasal olarak edinilmiş veri kümelerinin etiketlenmesi veya filtrelenmesi ya da belirli kolluk faaliyetleri gibi sınırlı durumlar haricinde, ırk, siyasi görüşler, sendika üyeliği, dini veya felsefi inançlar, cinsel yaşam veya cinsel yönelim gibi hassas özellikleri çıkarmak için yapay zeka sistemlerini biyometrik sınıflandırma amacıyla kullanmak.</li>
+          <li>Bireyleri veya grupları sosyal davranışlarına ya da kişisel özelliklerine göre değerlendiren veya sınıflandıran, zarar, ayrımcılık veya haksız muameleye yol açan yapay zeka tabanlı sosyal puanlama sistemleri uygulamak.</li>
+          <li>Yasal güvencelerin yürürlükte olduğu dar tanımlı durumlar dışında, bir bireyin yalnızca profilleme, kişilik özellikleri veya diğer davranışsal olmayan faktörlere dayanarak suç işleme riskini değerlendirmek.</li>
+          <li>Yasal olarak uyumlu ve dar bir şekilde tanımlanmış bir amacın parçası olmadıkça, internet, sosyal medya veya CCTV görüntülerinden yüz görüntülerinin hedeflenmemiş kazınması yoluyla yüz tanıma veritabanları derlememek.</li>
+          <li>İşyerleri, eğitim kurumları veya bu tür analizlerin ayrımcılığa, haksız muameleye ya da gizlilik ihlallerine yol açabileceği başka herhangi bir bağlam gibi hassas ortamlarda duyguları çıkarmak için yapay zeka kullanmak.</li>
+          <li>Güçlü yasal gerekçelerin ve denetim mekanizmalarının bulunduğu belirli durumlar dışında, kolluk amacıyla kamuya açık yerlerde gerçek zamanlı uzaktan biyometrik tanımlama faaliyetlerinde bulunmak.</li>
+        </ul>
+
+        <h2>Yapay zeka</h2>
+        <p>
+          Yapay zekanın kullanıcılarımız ve toplum üzerinde sahip olabileceği önemli etkiyi
+          kabul ediyor ve Yapay Zeka Ürünlerimizin kapsamlı etik standartlarla uyumlu bir
+          şekilde tasarlanmasını ve işletilmesini sağlamaya kendimizi adamış bulunuyoruz.
+          Adalet, şeffaflık ve hesap verebilirlik ilkelerini koruyarak yapay zekayı
+          kullanıcı deneyimlerini geliştirmek için kullanmayı amaçlıyoruz.
+        </p>
+        <p>
+          Bu Politika, Hizmetlerimizdeki tüm yapay zeka destekli özellikler, hizmetler ve
+          sistemler için geçerlidir. Kullanıcıların haklarını korumak ve tüm yapay zeka
+          işlemlerinde şeffaflığı sürdürmek için yapay zeka teknolojilerinin geliştirilmesini,
+          dağıtılmasını ve kullanılmasını düzenler. Bu Politika, Yapay Zeka Ürünlerimize
+          katkıda bulunan veya bunlarla etkileşime giren çalışanlar, üçüncü taraf tedarikçiler
+          ve ortaklar dahil tüm paydaşlar için geçerlidir.
+        </p>
+        <h3>Uygulama</h3>
+        <p>
+          Yapay Zeka Ürünlerimizin herhangi bir şekilde kötüye kullanılması veya bu Politikada
+          belirtilen standartlara uyulmaması, platformumuzun bütünlüğünü ve kullanıcılarımızın
+          korunmasını sağlamak için uygun önlemlerin alınmasıyla sonuçlanacaktır. Yapay zekanın
+          kötüye kullanımına ilişkin spesifik sonuçlar, ihlalin niteliğine ve ciddiyetine,
+          kullanıcının Hizmetlerimizdeki geçmişine bağlı olarak değişebilir.
+        </p>
+        <p>İhlaller şunları içerebilir ancak bunlarla sınırlı değildir:</p>
+        <ul>
+          <li>Kullanıcı gizliliğini ihlal eden, verileri manipüle eden, etik kurallara aykırı veya Yapay Zeka Hizmet Sağlayıcılarının kullanım koşullarına aykırı şekillerde Yapay Zeka Ürünlerini kullanmak.</li>
+          <li>Yapay zekayı, kullanıcılara veya gruplara haksız muameleye yol açacak şekilde önyargı oluşturan veya buna neden olan bir biçimde uygulamak.</li>
+          <li>Yapay Zeka Ürünleri tarafından verilerin uygunsuz şekilde işlenmesi, saklanması veya kullanılması, bunun sonucunda kullanıcı güveninin ve yasal uyumun ihlal edilmesi.</li>
+          <li>Sistemlerimizin, verilerimizin veya kullanıcılarımızın gizliliğini ve güvenliğini tehlikeye atacak şekilde yapay zekayı kullanmak.</li>
+        </ul>
+        <p>İhlale bağlı olarak, Safolio B.V. aşağıdaki eylemlerden bir veya birkaçını gerçekleştirebilir:</p>
+        <ul>
+          <li>
+            <strong>Uyarılar:</strong> Sorumlu taraf resmi bir uyarı alabilir ve ihlal eden
+            uygulamalara son vermesi istenebilir.
+          </li>
+          <li>
+            <strong>Geçici Askıya Alma:</strong> Tekrarlanan veya daha ciddi ihlaller söz
+            konusu olduğunda, sorumlu kişinin Yapay Zeka Ürünlerine veya platformumuzun
+            belirli özelliklerine erişimi, sorun soruşturulurken geçici olarak askıya
+            alınabilir.
+          </li>
+          <li>
+            <strong>Erişimin Sonlandırılması:</strong> Özellikle kullanıcılara zarar veren
+            veya gizliliği ya da diğer düzenlemeleri ihlal eden ciddi ihlaller, Yapay Zeka
+            Ürünlerimize ve Hizmetlerimize erişimin kalıcı olarak sonlandırılmasına yol
+            açabilir.
+          </li>
+          <li>
+            <strong>Yasal İşlem:</strong> Yapay zekanın kötüye kullanılmasının önemli
+            zararlara, veri ihlallerine veya yasal ihlallere yol açtığı durumlarda, sorumlu
+            tarafa karşı yasal işlem başlatabiliriz. Bu, olayın kolluk kuvvetlerine veya
+            düzenleyici makamlara bildirilmesini içerebilir.
+          </li>
+          <li>
+            <strong>Kamuya Açıklama:</strong> Kamu güvenini etkileyen veya ciddi etik
+            ihlalleri içeren olaylar için, şeffaflığı ve hesap verebilirliği sürdürmek
+            amacıyla ihlali ve buna karşılık alınan önlemleri kamuya açıklama hakkını saklı
+            tutarız.
+          </li>
+        </ul>
+        <h3>Sorumlu Yapay Zekaya Bağlılık</h3>
+        <p>
+          Yukarıda belirtilen sonuçlara ek olarak, yapay zekanın kötüye kullanılması sonucu
+          ortaya çıkan zararları gidermeye derinden bağlıyız. Bu taahhüt, kullanıcılarımıza
+          olan bağlılığımızın ve bir şirket olarak sorumluluğumuzun bir göstergesidir.
+          Önyargılı sonuçları düzeltecek ve gelecekteki ihlalleri önlemek için ek güvenlik
+          önlemleri uygulayacağız.
+        </p>
+        <p>
+          Safolio B.V. olarak, Politikamızın sürekli iyileştirilmesi ve geliştirilmesine
+          kararlıyız. Teknoloji geliştikçe ve düzenleyici ortamlar değiştikçe, politikalarımızın
+          güncel kalmasının, alakalı, etkili olmasının ve yapay zeka etiğinde en iyi
+          uygulamalarla uyumlu olmasının önemini kabul ediyoruz. Politikamızı, teknolojik
+          gelişmeleri ve yapay zekayla ilgili yerel, ulusal ve uluslararası düzenlemelerdeki
+          yasal değişiklikleri yansıtacak şekilde düzenli olarak gözden geçirecek ve
+          güncelleyeceğiz. Politikamız, uygulamalarımızın yasal açıdan sağlam ve sosyal
+          açıdan sorumlu kalmasını sağlamak için yeni yasalara ve yönergelere uyacak şekilde
+          gerektiğinde güncellenecektir.
+        </p>
+
+        <h2>Katkılar</h2>
+        <p>Bu Politikada, &apos;Katkı&apos; terimi şu anlama gelir:</p>
+        <ul>
+          <li>Hizmetler üzerinde veya Hizmetler aracılığıyla herhangi bir şekilde yayınladığınız, paylaştığınız, yüklediğiniz, gönderdiğiniz veya başka bir şekilde sağladığınız tüm veriler, bilgiler, yazılımlar, metinler, kodlar, müzikler, komut dosyaları, sesler, grafikler, fotoğraflar, videolar, etiketler, mesajlar, etkileşimli özellikler veya diğer materyaller; veya</li>
+          <li>Safolio B.V.&apos;ye sağladığınız ya da Hizmetlerle birlikte kullandığınız diğer içerikler, materyaller veya veriler.</li>
+        </ul>
+        <p>
+          Hizmetlerin bazı alanları, kullanıcıların Katkıları yüklemesine, iletmesine veya
+          göndermesine olanak tanıyabilir. Hizmetlerde yapılan Katkıları gözden geçirme ya da
+          denetleme yükümlülüğümüz olmamakla birlikte, bunu yapabiliriz ve kullanıcılarımızdan
+          herhangi birinin bu Politikayı ihlal etmesinden kaynaklanan herhangi bir kayıp veya
+          zarar için sorumluluğumuzu açıkça hariç tutarız. Bu Politikayı ihlal ettiğine
+          inandığınız herhangi bir Katkıyı lütfen bildirin; ancak bir Katkının gerçekten bu
+          Politikayı ihlal edip etmediğini yalnızca biz kendi takdirimize bağlı olarak
+          belirleriz.
+        </p>
+        <p>Şunları garanti edersiniz:</p>
+        <ul>
+          <li>Katkılarınızın yaratıcısı ve sahibi olduğunuzu ya da Katkılarınızı Hizmetler ve bu Politika tarafından öngörülen herhangi bir şekilde kullanmak ve bizi, Hizmetleri ve Hizmetlerin diğer kullanıcılarını kullanmaya yetkilendirmek için gerekli lisanslara, haklara, onaylara, izinlere ve yetkilere sahip olduğunuzu;</li>
+          <li>Tüm Katkılarınızın yürürlükteki yasalara uygun olduğunu ve özgün ve gerçek olduğunu (görüşlerinizi veya gerçekleri temsil ediyorlarsa);</li>
+          <li>Katkılarınızın oluşturulması, dağıtılması, iletilmesi, kamuya açık olarak görüntülenmesi veya sunulması ve bunlara erişilmesi, indirilmesi veya kopyalanması, herhangi bir üçüncü tarafın telif hakkı, patent, ticari marka, ticari sır veya manevi hakları dahil ancak bunlarla sınırlı olmamak üzere mülkiyet haklarını ihlal etmediğini ve etmeyeceğini; ve</li>
+          <li>Katkılarınızın Hizmetler ve bu Politika tarafından öngörülen herhangi bir şekilde dahil edilmesini ve kullanılmasını sağlamak için Katkılarınızdaki kimliği belirlenebilir her bir bireyin adının veya benzerliğinin kullanılması için doğrulanabilir onayına, iznine ve/veya yetkisine sahip olduğunuzu.</li>
+        </ul>
+        <p>Ayrıca, aşağıdaki herhangi bir Katkıyı (veya Katkının herhangi bir bölümünü) yayınlamayacağınızı, iletmeyeceğinizi veya yüklemeyeceğinizi kabul edersiniz:</p>
+        <ul>
+          <li>Yürürlükteki yasaları, yönetmelikleri, mahkeme kararını, sözleşmeden doğan yükümlülüğü, bu Politikayı, Yasal Koşullarımızı, yasal bir görevi ihlal eden ya da dolandırıcılığı veya yasadışı faaliyetleri teşvik eden veya kolaylaştıran;</li>
+          <li>Herhangi bir kişi veya gruba karşı karalayıcı, müstehcen, saldırgan, nefret dolu, hakaret edici, korkutucu, zorbalık yapıcı, kötüye kullanıcı veya tehditkar olan;</li>
+          <li>Yanlış, hatalı veya yanıltıcı olan;</li>
+          <li>Çocuklara yönelik cinsel istismar materyali içeren ya da çocuk pornografisine ilişkin geçerli herhangi bir yasayı veya başka bir şekilde reşit olmayanları korumayı amaçlayan yasaları ihlal eden;</li>
+          <li>18 yaşın altındaki herhangi birinden kişisel bilgi talep eden veya 18 yaşın altındaki kişileri cinsel ya da şiddet içeren bir şekilde istismar eden herhangi bir materyal içeren;</li>
+          <li>Şiddeti teşvik eden, herhangi bir hükümetin şiddet yoluyla devrilmesini savunan veya başka birine fiziksel zarar verilmesini kışkırtan, teşvik eden ya da tehdit eden;</li>
+          <li>Müstehcen, ahlaksız, şehvetli, kirli, şiddet içeren, taciz edici, iftira niteliğinde, karalayıcı, açıkça cinsel içerikli materyaller içeren veya başka bir şekilde sakıncalı olan (bizim tarafımızdan belirlendiği şekilde);</li>
+          <li>Irk, cinsiyet, din, milliyet, engellilik, cinsel yönelim veya yaşa dayalı olarak ayrımcı olan;</li>
+          <li>Herhangi bir kişiye karşı zorbalık eden, gözünü korkutan, küçük düşüren veya hakaret eden;</li>
+          <li>Terörizm eylemlerini teşvik eden, kolaylaştıran veya başkalarının bu tür eylemleri teşvik etmesine ve kolaylaştırmasına yardımcı olan;</li>
+          <li>Üçüncü bir tarafın fikri mülkiyet haklarını veya tanınma ya da gizlilik haklarını ihlal eden veya başkalarının ihlal etmesine yardımcı olan;</li>
+          <li>Aldatıcı olan, kimliğinizi veya herhangi bir kişiyle olan ilişkinizi yanlış tanıtan ve/veya bizimle olan ilişkiniz konusunda herhangi birini yanıltan ya da Katkının sizden başka biri tarafından yapıldığını ima eden;</li>
+          <li>İstenmeyen veya yetkisiz reklamlar, tanıtım materyalleri, piramit şemaları, zincir mektuplar, spam, toplu postalar ya da parasal tazminat olsun veya ayni olsun &apos;ücretli&apos; diğer talep biçimlerini içeren; veya</li>
+          <li>Kimliğinizi veya Katkının kimden geldiğini yanlış tanıtan.</li>
+        </ul>
+
+        <h2>Bu Politikanın ihlalinin bildirilmesi</h2>
+        <p>
+          Hizmetlerde yapılan Katkıları gözden geçirme veya denetleme yükümlülüğümüz olmamakla
+          birlikte bunu yapabiliriz ve kullanıcılarımızdan herhangi birinin bu Politikayı
+          ihlal etmesinden kaynaklanan herhangi bir kayıp veya zarar için sorumluluğumuzu
+          açıkça hariç tutarız.
+        </p>
+        <p>Herhangi bir Hizmetin, İçeriğin veya Katkının:</p>
+        <ul>
+          <li>
+            bu Politikayı ihlal ettiğini düşünüyorsanız, lütfen bize{" "}
+            <a href="mailto:info@safolio.com">info@safolio.com</a> adresinden e-posta gönderin
+            veya hangi Hizmetin, İçeriğin ya da Katkının bu Politikayı ihlal ettiğini ve nedenini
+            bize bildirmek için bu belgenin altındaki iletişim bilgilerine başvurun
+          </li>
+          <li>
+            herhangi bir üçüncü taraf fikri mülkiyet haklarını ihlal ettiğini düşünüyorsanız,
+            lütfen bize <a href="mailto:info@safolio.com">info@safolio.com</a> adresinden
+            e-posta gönderin
+          </li>
+          <li>
+            kullanıcılar ayrıca Yapay Zeka Ürünlerimizle olan etkileşimleri hakkında
+            ayrıntılı geri bildirimi <a href="mailto:info@safolio.com">info@safolio.com</a>
+            {" "}adresine e-posta göndererek veya bu belgenin altındaki iletişim bilgilerine
+            başvurarak gönderebilirler. Bağlam, endişenin niteliği ve ilgili ekran görüntüleri
+            veya belgeler gibi yapay zeka etkileşimi hakkında belirli ayrıntıları eklemelisiniz
+          </li>
+        </ul>
+        <p>Bir Hizmetin, İçeriğin veya Katkının bu Politikayı ihlal edip etmediğini makul ölçüde belirleyeceğiz.</p>
+
+        <h2>Bu Politikanın ihlalinin sonuçları</h2>
+        <p>
+          Politikamızı ihlal etmenin sonuçları, ihlalin ciddiyetine ve kullanıcının
+          Hizmetlerdeki geçmişine bağlı olarak değişecektir, örneğin:
+        </p>
+        <p>
+          Bazı durumlarda size bir uyarı verebilir ve/veya ihlal eden Katkıyı kaldırabiliriz,
+          ancak ihlaliniz ciddiyse ya da Yasal Koşullarımızı ve bu Politikayı ihlal etmeye
+          devam ederseniz, Hizmetlerimize erişiminizi ve kullanımınızı askıya alma veya
+          sonlandırma ve uygun olduğunda hesabınızı devre dışı bırakma hakkına sahibiz.
+          Ayrıca, bir bireye gerçek bir risk veya kamu güvenliğine bir tehdit olduğuna
+          inandığımızda, kolluk kuvvetlerine bildirimde bulunabilir veya size karşı yasal işlem
+          başlatabiliriz.
+        </p>
+        <p>Bu Politikanın ihlali durumunda alabileceğimiz tüm eylemlere ilişkin sorumluluğumuzu hariç tutarız.</p>
+
+        <h2>Sorumluluk Reddi</h2>
+        <p>
+          Safolio B.V., kullanıcıların etkinliklerini izlemekle yükümlü değildir ve herhangi
+          bir kullanıcının Hizmetleri kötüye kullanmasından doğan herhangi bir sorumluluğu
+          reddederiz. Safolio B.V., Hizmetler üzerinde veya Hizmetler aracılığıyla oluşturulan,
+          sürdürülen, saklanan, iletilen veya erişilebilir olan herhangi bir kullanıcı veya
+          diğer İçerik ya da Katkı için herhangi bir sorumluluğa sahip değildir ve bu tür
+          materyalleri izlemekle veya üzerlerinde herhangi bir editoryal kontrol uygulamakla
+          yükümlü değildir. Safolio B.V., bu tür bir İçerik veya Katkının bu Politikayı ihlal
+          ettiğinden haberdar olursa, bu İçerik veya Katkıyı kaldırmaya ve hesabınızı engellemeye
+          ek olarak, bu ihlali polise veya uygun düzenleyici makama bildirebilir. Bu Politikada
+          aksi belirtilmedikçe, Safolio B.V., Hizmetlerin kullanımı için Safolio B.V. ile bir
+          anlaşma yapmamış herhangi bir kişiye karşı herhangi bir yükümlülüğü reddeder.
+        </p>
+
+        <h2>Bu Politika hakkında bizimle nasıl iletişim kurabilirsiniz?</h2>
+        <p>
+          Başka sorularınız veya yorumlarınız varsa ya da sorunlu herhangi bir İçeriği veya
+          Katkıyı bildirmek istiyorsanız, bizimle şu şekilde iletişime geçebilirsiniz:
+        </p>
+        <p>
+          E-posta: <a href="mailto:info@safolio.com">info@safolio.com</a>
+        </p>
       </LegalLayout>
     );
   }
