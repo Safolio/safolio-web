@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LegalLayout } from "@/components/legal-layout";
-import { LegalTRPlaceholder } from "@/components/legal-tr-placeholder";
 
 export async function generateMetadata({
   params,
@@ -21,7 +20,1337 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   if (locale === "tr") {
     return (
       <LegalLayout title={t("legal1")}>
-        <LegalTRPlaceholder docName={t("legal1")} />
+        <p className="text-sm text-ink3">Son güncelleme: 01 Şubat 2026</p>
+
+        <p>
+          Safolio B.V. (Safolio ticari unvanı ile faaliyet göstermektedir) (&apos;biz&apos;,
+          &apos;bize&apos; veya &apos;bizim&apos;) için hazırlanan bu Gizlilik Bildirimi,
+          Hizmetlerimizi (&apos;Hizmetler&apos;) kullandığınızda kişisel bilgilerinize nasıl ve
+          neden eriştiğimizi, bunları nasıl topladığımızı, sakladığımızı, kullandığımızı
+          ve/veya paylaştığımızı (&apos;işlediğimizi&apos;) açıklar; bu kapsam aşağıdaki
+          durumları içerir:
+        </p>
+        <ul>
+          <li>
+            Web sitemizi{" "}
+            <a href="https://safolio.com">https://safolio.com</a> adresinde veya bu Gizlilik
+            Bildirimine bağlantı veren herhangi bir web sitemizi ziyaret ettiğinizde
+          </li>
+          <li>
+            Mobil uygulamamızı (Safolio), Facebook uygulamamızı (Safolio) veya bu Gizlilik
+            Bildirimine bağlantı veren herhangi bir başka uygulamamızı indirip kullandığınızda
+          </li>
+          <li>
+            Safolio&apos;yu kullandığınızda. Safolio, kullanıcıların kişisel yatırım
+            portföylerini takip etmesine ve analiz etmesine olanak tanıyan bir hizmet olarak
+            yazılım (SaaS) platformudur.
+          </li>
+          <li>
+            Pazarlama veya etkinlikler dahil olmak üzere bizimle ilgili diğer şekillerde
+            iletişim kurduğunuzda
+          </li>
+        </ul>
+        <p>
+          Sorularınız veya endişeleriniz mi var? Bu Gizlilik Bildirimini okumak, gizlilik
+          haklarınızı ve seçeneklerinizi anlamanıza yardımcı olacaktır. Kişisel bilgilerinizin
+          nasıl işleneceğine ilişkin kararlardan biz sorumluyuz. Politikalarımız ve
+          uygulamalarımız konusunda hemfikir değilseniz, lütfen Hizmetlerimizi kullanmayın.
+          Hâlâ sorularınız veya endişeleriniz varsa, lütfen{" "}
+          <a href="mailto:privacy@safolio.com">privacy@safolio.com</a> adresinden bizimle
+          iletişime geçin.
+        </p>
+
+        <h2>Temel Noktaların Özeti</h2>
+        <p>
+          <em>
+            Bu özet, Gizlilik Bildirimimizdeki temel noktaları sunar; ancak bu konuların
+            herhangi biri hakkında daha fazla ayrıntıya, her temel noktanın ardından gelen
+            bağlantıya tıklayarak veya aşağıdaki içindekiler tablomuzu kullanarak aradığınız
+            bölüme ulaşarak erişebilirsiniz.
+          </em>
+        </p>
+        <p>
+          <strong>Hangi kişisel bilgileri işliyoruz?</strong> Hizmetlerimizi ziyaret ettiğinizde,
+          kullandığınızda veya bunlar arasında gezindiğinizde; bizimle ve Hizmetlerle nasıl
+          etkileşim kurduğunuza, yaptığınız tercihlere ve kullandığınız ürün ve özelliklere
+          bağlı olarak kişisel bilgilerinizi işleyebiliriz.
+        </p>
+        <p>
+          <strong>Hassas kişisel bilgileri işliyor muyuz?</strong> Bazı bilgiler, belirli
+          yargı bölgelerinde &apos;özel&apos; veya &apos;hassas&apos; olarak kabul edilebilir;
+          örneğin ırksal veya etnik kökeniniz, cinsel yöneliminiz ve dini inançlarınız. Hassas
+          kişisel bilgileri, gerektiğinde rızanızla veya yürürlükteki yasalar tarafından izin
+          verildiği şekilde işleyebiliriz.
+        </p>
+        <p>
+          <strong>Üçüncü taraflardan herhangi bir bilgi topluyor muyuz?</strong> Üçüncü
+          taraflardan herhangi bir bilgi toplamıyoruz.
+        </p>
+        <p>
+          <strong>Bilgilerinizi nasıl işliyoruz?</strong> Bilgilerinizi; Hizmetlerimizi
+          sağlamak, geliştirmek ve yönetmek, sizinle iletişim kurmak, güvenlik ve dolandırıcılık
+          önleme amacıyla ve yasalara uymak için işleriz. Ayrıca rızanızla bilgilerinizi başka
+          amaçlarla da işleyebiliriz. Bilgilerinizi yalnızca bunu yapmak için geçerli bir
+          yasal nedenimiz olduğunda işleriz.
+        </p>
+        <p>
+          <strong>Kişisel bilgileri hangi durumlarda ve hangi türde taraflarla
+          paylaşıyoruz?</strong>{" "}
+          Bilgileri belirli durumlarda ve belirli üçüncü taraf kategorileriyle paylaşabiliriz.
+        </p>
+        <p>
+          <strong>Bilgilerinizi nasıl güvende tutuyoruz?</strong> Kişisel bilgilerinizi
+          korumak için yeterli kurumsal ve teknik süreç ve prosedürlere sahibiz. Bununla
+          birlikte, internet üzerinden hiçbir elektronik iletim veya bilgi depolama
+          teknolojisinin %100 güvenli olduğu garanti edilemez; bu nedenle bilgisayar
+          korsanlarının, siber suçluların veya diğer yetkisiz üçüncü tarafların güvenliğimizi
+          aşıp bilgilerinizi uygunsuz bir şekilde toplamayacaklarını, bunlara erişmeyeceklerini,
+          çalmayacaklarını veya değiştirmeyeceklerini taahhüt edemez ya da garanti edemeyiz.
+        </p>
+        <p>
+          <strong>Haklarınız nelerdir?</strong> Coğrafi olarak nerede bulunduğunuza bağlı
+          olarak, yürürlükteki gizlilik yasası size kişisel bilgilerinizle ilgili bazı haklar
+          verebilir.
+        </p>
+        <p>
+          <strong>Haklarınızı nasıl kullanırsınız?</strong> Haklarınızı kullanmanın en kolay
+          yolu, bir veri sahibi erişim talebi göndermek veya bizimle iletişime geçmektir. Her
+          talebi yürürlükteki veri koruma yasalarına uygun olarak değerlendirip işleme
+          alacağız.
+        </p>
+
+        <h2>İçindekiler</h2>
+        <ol>
+          <li>Hangi bilgileri topluyoruz?</li>
+          <li>Bilgilerinizi nasıl işliyoruz?</li>
+          <li>Kişisel bilgilerinizi işlemek için hangi yasal dayanaklara güveniyoruz?</li>
+          <li>Kişisel bilgilerinizi ne zaman ve kiminle paylaşıyoruz?</li>
+          <li>Üçüncü taraf web sitelerine ilişkin tutumumuz nedir?</li>
+          <li>Çerezleri ve diğer izleme teknolojilerini kullanıyor muyuz?</li>
+          <li>Yapay zekaya dayalı ürünler sunuyor muyuz?</li>
+          <li>Sosyal girişlerinizi nasıl ele alıyoruz?</li>
+          <li>Bilgilerinizi ne kadar süre saklıyoruz?</li>
+          <li>Bilgilerinizi nasıl güvende tutuyoruz?</li>
+          <li>Reşit olmayanlardan bilgi topluyor muyuz?</li>
+          <li>Gizlilik haklarınız nelerdir?</li>
+          <li>Do-not-track özellikleri için kontroller</li>
+          <li>Amerika Birleşik Devletleri sakinlerinin belirli gizlilik hakları var mı?</li>
+          <li>Diğer bölgelerin belirli gizlilik hakları var mı?</li>
+          <li>Finansal ve piyasa verilerinin kullanımı</li>
+          <li>Bağlı finansal hesaplar</li>
+          <li>Bu bildirimi güncelliyor muyuz?</li>
+          <li>Bu bildirimle ilgili olarak bizimle nasıl iletişime geçebilirsiniz?</li>
+          <li>Sizden topladığımız verileri nasıl gözden geçirebilir, güncelleyebilir veya silebilirsiniz?</li>
+        </ol>
+
+        <h2>1. Hangi bilgileri topluyoruz?</h2>
+        <h3>Bize beyan ettiğiniz kişisel bilgiler</h3>
+        <p>
+          <em>Özetle: Bize sağladığınız kişisel bilgileri topluyoruz.</em>
+        </p>
+        <p>
+          Hizmetlere kaydolurken, ürünlerimiz ve Hizmetlerimiz hakkında bilgi edinmek
+          istediğinizi belirttiğinizde, Hizmetlerdeki etkinliklere katıldığınızda veya başka
+          bir şekilde bizimle iletişime geçtiğinizde bize gönüllü olarak sağladığınız kişisel
+          bilgileri toplarız.
+        </p>
+        <p>
+          <strong>Sizin Tarafınızdan Sağlanan Kişisel Bilgiler.</strong> Topladığımız kişisel
+          bilgiler, bizimle ve Hizmetlerle olan etkileşiminizin bağlamına, yaptığınız
+          tercihlere ve kullandığınız ürün ve özelliklere bağlıdır. Topladığımız kişisel
+          bilgiler aşağıdakileri içerebilir:
+        </p>
+        <ul>
+          <li>adlar</li>
+          <li>e-posta adresleri</li>
+          <li>kullanıcı adları</li>
+          <li>şifreler</li>
+          <li>iletişim tercihleri</li>
+          <li>fatura adresleri</li>
+          <li>banka/kredi kartı numaraları</li>
+          <li>iletişim veya kimlik doğrulama verileri</li>
+        </ul>
+        <p>
+          <strong>Hassas Bilgiler.</strong> Gerekli olduğunda, rızanızla veya yürürlükteki
+          yasalar tarafından izin verildiği şekilde, aşağıdaki hassas bilgi kategorilerini
+          işleriz:
+        </p>
+        <ul>
+          <li>finansal veriler</li>
+          <li>biyometrik veriler</li>
+        </ul>
+        <p>
+          <strong>Ödeme Verileri.</strong> Satın alma işlemi yapmayı seçtiğinizde ödemenizi
+          işleme almak için gerekli verileri toplayabiliriz; örneğin ödeme aracınızın numarası
+          ve ödeme aracınızla ilişkili güvenlik kodu. Tüm ödeme verileri PayPal, Stripe,
+          WePay ve Paddle tarafından işlenir ve saklanır. Gizlilik bildirimi bağlantılarını
+          buradan bulabilirsiniz:{" "}
+          <a href="https://www.paypal.com/us/webapps/mpp/ua/privacy-full#personalData">PayPal</a>,{" "}
+          <a href="http://www.stripe.com/privacy">Stripe</a>,{" "}
+          <a href="https://go.wepay.com/privacy-policy/">WePay</a> ve{" "}
+          <a href="https://www.paddle.com/legal/privacy">Paddle</a>.
+        </p>
+        <p>
+          <strong>Çevrimiçi Ödemeler.</strong> Safolio&apos;nun hizmetleri için yapılan
+          ödemeler, üçüncü taraf ödeme hizmeti sağlayıcıları tarafından işlenir. Safolio,
+          ödeme kartı bilgilerini veya diğer hassas ödeme bilgilerini işlemez veya saklamaz.
+          Bir kullanıcı ödeme yaptığında, işlemi tamamlamak için gereken kişisel veriler
+          (ödeme bilgileri ve fatura bilgileri gibi) doğrudan seçilen ödeme hizmeti sağlayıcısı
+          tarafından kendi gizlilik politikasına ve yürürlükteki yasalara uygun olarak işlenir.
+          Ödeme hizmeti sağlayıcılarının kişisel verileri nasıl işlediğine ilişkin bilgilere,
+          ödeme sırasında sağlayıcının web sitesinde sunulan ilgili sağlayıcının gizlilik
+          politikasından ulaşılabilir. Safolio, ödeme hizmeti sağlayıcılarını zaman zaman
+          değiştirebilir veya ekleyebilir. Geçerli ödeme sağlayıcısı ve gizlilik politikası,
+          ödeme sürecinde kullanıcılara her zaman bildirilecektir.
+        </p>
+        <p>
+          <strong>Sosyal Medya Giriş Verileri.</strong> Mevcut Facebook, X veya diğer sosyal
+          medya hesap bilgilerinizi kullanarak bize kaydolma seçeneği sunabiliriz. Bu şekilde
+          kaydolmayı seçerseniz, aşağıda &apos;Sosyal Girişlerinizi Nasıl Ele Alıyoruz?&apos;
+          başlıklı bölümde açıklandığı şekilde sosyal medya sağlayıcısından sizinle ilgili
+          bazı profil bilgilerini toplarız.
+        </p>
+        <p>
+          <strong>Uygulama Verileri.</strong> Uygulamalarımızı kullanıyorsanız, bize erişim
+          veya izin vermeyi seçmeniz halinde aşağıdaki bilgileri de toplayabiliriz:
+        </p>
+        <ul>
+          <li>
+            <em>Coğrafi Konum Bilgileri.</em> Konuma dayalı belirli hizmetleri sağlamak için
+            mobil cihazınızdan, sürekli olarak veya mobil uygulamamızı kullandığınız sırada
+            konuma dayalı bilgileri izlemek üzere erişim veya izin talep edebiliriz.
+            Erişimimizi veya izinleri değiştirmek isterseniz, bunu cihazınızın ayarlarından
+            yapabilirsiniz.
+          </li>
+          <li>
+            <em>Mobil Cihaz Erişimi.</em> Mobil cihazınızın takvimi, hatırlatıcıları ve
+            diğer özellikleri dahil olmak üzere mobil cihazınızın belirli özelliklerine
+            erişim veya izin talep edebiliriz. Erişimimizi veya izinleri değiştirmek
+            isterseniz, bunu cihazınızın ayarlarından yapabilirsiniz.
+          </li>
+          <li>
+            <em>Mobil Cihaz Verileri.</em> Cihaz bilgilerini (mobil cihaz kimliği, modeli ve
+            üreticisi gibi), işletim sistemi, sürüm bilgileri ve sistem yapılandırma
+            bilgileri, cihaz ve uygulama kimlik numaraları, tarayıcı türü ve sürümü, donanım
+            modeli, internet servis sağlayıcısı ve/veya mobil operatör ve İnternet
+            Protokolü (IP) adresini (veya proxy sunucusu) otomatik olarak toplarız.
+            Uygulamalarımızı kullanıyorsanız, ayrıca mobil cihazınızla ilişkili telefon ağı,
+            mobil cihazınızın işletim sistemi veya platformu, kullandığınız mobil cihazın
+            türü, mobil cihazınızın benzersiz cihaz kimliği ve eriştiğiniz uygulama
+            özelliklerimiz hakkında bilgi de toplayabiliriz.
+          </li>
+          <li>
+            <em>Anlık Bildirimler.</em> Hesabınız veya uygulamaların belirli özellikleriyle
+            ilgili olarak size anlık bildirim göndermeyi talep edebiliriz. Bu tür iletişimleri
+            almaktan vazgeçmek isterseniz, bunları cihazınızın ayarlarından kapatabilirsiniz.
+          </li>
+        </ul>
+        <p>
+          Bu bilgiler öncelikle uygulamalarımızın güvenliğini ve işleyişini sürdürmek, sorun
+          gidermek ve dahili analiz ve raporlama amaçlarımız için gereklidir.
+        </p>
+        <p>
+          Bize sağladığınız tüm kişisel bilgilerin doğru, eksiksiz ve güncel olması ve bu
+          kişisel bilgilerdeki herhangi bir değişikliği bize bildirmeniz gerekir.
+        </p>
+
+        <h3>Otomatik olarak toplanan bilgiler</h3>
+        <p>
+          <em>
+            Özetle: Bazı bilgiler — İnternet Protokolü (IP) adresiniz ve/veya tarayıcı ve
+            cihaz özellikleri gibi — Hizmetlerimizi ziyaret ettiğinizde otomatik olarak
+            toplanır.
+          </em>
+        </p>
+        <p>
+          Hizmetleri ziyaret ettiğinizde, kullandığınızda veya bunlar arasında gezindiğinizde
+          belirli bilgileri otomatik olarak toplarız. Bu bilgiler, özel kimliğinizi (adınız
+          veya iletişim bilgileriniz gibi) ortaya çıkarmaz; ancak IP adresiniz, tarayıcı ve
+          cihaz özellikleriniz, işletim sistemi, dil tercihleri, yönlendiren URL&apos;ler,
+          cihaz adı, ülke, konum, Hizmetlerimizi nasıl ve ne zaman kullandığınıza ilişkin
+          bilgiler ve diğer teknik bilgiler gibi cihaz ve kullanım bilgilerini içerebilir. Bu
+          bilgiler öncelikle Hizmetlerimizin güvenliğini ve işleyişini sürdürmek ve dahili
+          analiz ve raporlama amaçlarımız için gereklidir.
+        </p>
+        <p>
+          Pek çok işletme gibi biz de bilgileri çerezler ve benzer teknolojiler aracılığıyla
+          topluyoruz. Bu konuda daha fazla bilgiyi{" "}
+          <Link href="/cookie-policy">Çerez Politikamızda</Link> bulabilirsiniz.
+        </p>
+        <p>Topladığımız bilgiler şunları içerir:</p>
+        <ul>
+          <li>
+            <em>Günlük ve Kullanım Verileri.</em> Günlük ve kullanım verileri; Hizmetlerimize
+            eriştiğinizde veya kullandığınızda sunucularımızın otomatik olarak topladığı ve
+            günlük dosyalarına kaydettiğimiz hizmetle ilgili, tanılayıcı, kullanım ve performans
+            bilgileridir. Bizimle nasıl etkileşim kurduğunuza bağlı olarak, bu günlük verileri
+            IP adresinizi, cihaz bilgilerinizi, tarayıcı türünüzü ve ayarlarınızı ve
+            Hizmetlerdeki etkinliğinize ilişkin bilgileri (kullanımınızla ilişkili tarih/saat
+            damgaları, görüntülenen sayfalar ve dosyalar, aramalar ve hangi özellikleri
+            kullandığınız gibi gerçekleştirdiğiniz diğer eylemler) ve cihaz olay bilgilerini
+            (sistem etkinliği, hata raporları (bazen &apos;crash dump&apos; olarak adlandırılır)
+            ve donanım ayarları gibi) içerebilir.
+          </li>
+          <li>
+            <em>Cihaz Verileri.</em> Hizmetlere erişmek için kullandığınız bilgisayar, telefon,
+            tablet veya diğer cihazlarınız hakkındaki bilgiler gibi cihaz verilerini toplarız.
+            Kullanılan cihaza bağlı olarak, bu cihaz verileri IP adresiniz (veya proxy
+            sunucusu), cihaz ve uygulama kimlik numaraları, konum, tarayıcı türü, donanım
+            modeli, internet servis sağlayıcısı ve/veya mobil operatör, işletim sistemi ve
+            sistem yapılandırma bilgileri gibi bilgileri içerebilir.
+          </li>
+          <li>
+            <em>Konum Verileri.</em> Cihazınızın konumu hakkındaki bilgiler gibi konum
+            verilerini toplarız; bu konum hassas veya hassas olmayabilir. Topladığımız bilgi
+            miktarı, Hizmetlere erişmek için kullandığınız cihazın türüne ve ayarlarına
+            bağlıdır. Örneğin, mevcut konumunuzu (IP adresinize göre) bize söyleyen coğrafi
+            konum verilerini toplamak için GPS ve diğer teknolojileri kullanabiliriz. Bu
+            bilgilere erişimi reddederek veya cihazınızdaki Konum ayarınızı devre dışı bırakarak
+            bu bilgileri toplamamıza izin vermekten vazgeçebilirsiniz. Ancak vazgeçmeyi
+            seçerseniz, Hizmetlerin bazı yönlerini kullanamayabilirsiniz.
+          </li>
+        </ul>
+        <h3>Google API</h3>
+        <p>
+          Google API&apos;lerinden alınan bilgileri kullanımımız, Sınırlı Kullanım
+          gereksinimleri dahil olmak üzere{" "}
+          <a href="https://developers.google.com/terms/api-services-user-data-policy">
+            Google API Hizmetleri Kullanıcı Verileri Politikasına
+          </a>
+          {" "}uygun olacaktır.
+        </p>
+        <p>
+          <strong>Facebook uygulamalarımızı kullandığınızda toplanan bilgiler.</strong> Varsayılan
+          olarak, adınız, e-postanız, cinsiyetiniz, doğum gününüz, mevcut şehriniz ve profil
+          resmi URL&apos;si dahil olmak üzere Facebook temel hesap bilgilerinize ve kamuya
+          açık hale getirmeyi seçtiğiniz diğer bilgilere erişiriz. Ayrıca, arkadaşlar,
+          check-in&apos;ler ve beğeniler gibi hesabınızla ilgili diğer izinlere erişim talep
+          edebiliriz ve her bir izin için bize erişim verme veya vermeme seçeneğine sahip
+          olursunuz. Facebook izinleri hakkında daha fazla bilgi için Facebook İzinler
+          Referansı sayfasına bakınız.
+        </p>
+
+        <h2>2. Bilgilerinizi nasıl işliyoruz?</h2>
+        <p>
+          <em>
+            Özetle: Bilgilerinizi; Hizmetlerimizi sağlamak, geliştirmek ve yönetmek, sizinle
+            iletişim kurmak, güvenlik ve dolandırıcılık önleme amacıyla ve yasalara uymak
+            için işleriz. Kişisel bilgileri aşağıda listelenen amaçlar için işleriz.
+            Bilgilerinizi yalnızca açık ön rızanızla başka amaçlarla da işleyebiliriz.
+          </em>
+        </p>
+        <p>
+          Kişisel bilgilerinizi, Hizmetlerimizle nasıl etkileşim kurduğunuza bağlı olarak
+          çeşitli nedenlerle işleriz; bu nedenler arasında şunlar yer alır:
+        </p>
+        <ul>
+          <li>
+            <strong>Hesap oluşturma ve kimlik doğrulamayı kolaylaştırmak ve kullanıcı
+            hesaplarını başka şekilde yönetmek için.</strong>{" "}
+            Hesabınızı oluşturup hesabınıza giriş yapabilmeniz ve hesabınızın çalışır
+            durumda kalmasını sağlamak için bilgilerinizi işleyebiliriz.
+          </li>
+          <li>
+            <strong>Kullanıcıya hizmet sunmak ve sunulmasını kolaylaştırmak için.</strong>{" "}
+            Talep ettiğiniz hizmeti size sağlamak için bilgilerinizi işleyebiliriz.
+          </li>
+          <li>
+            <strong>Siparişlerinizi yerine getirmek ve yönetmek için.</strong> Hizmetler
+            aracılığıyla yapılan siparişlerinizi, ödemelerinizi, iadelerinizi ve değişimlerinizi
+            yerine getirmek ve yönetmek için bilgilerinizi işleyebiliriz.
+          </li>
+          <li>
+            <strong>Kullanıcıdan kullanıcıya iletişimi etkinleştirmek için.</strong> Başka
+            bir kullanıcıyla iletişim kurmaya olanak tanıyan herhangi bir hizmetimizi
+            kullanmayı seçerseniz bilgilerinizi işleyebiliriz.
+          </li>
+          <li>
+            <strong>Geri bildirim talep etmek için.</strong> Geri bildirim talep etmek ve
+            Hizmetlerimizi kullanımınızla ilgili sizinle iletişim kurmak için gerekli
+            olduğunda bilgilerinizi işleyebiliriz.
+          </li>
+          <li>
+            <strong>Pazarlama ve tanıtım iletişimleri göndermek için.</strong> Pazarlama
+            tercihlerinize uygun olması koşuluyla, pazarlama amaçlarımız için bize gönderdiğiniz
+            kişisel bilgileri işleyebiliriz. Pazarlama e-postalarımızdan istediğiniz zaman
+            çıkabilirsiniz. Daha fazla bilgi için aşağıdaki &apos;Gizlilik Haklarınız
+            Nelerdir?&apos; bölümüne bakınız.
+          </li>
+          <li>
+            <strong>Size hedeflenmiş reklamlar sunmak için.</strong> İlgi alanlarınıza,
+            konumunuza ve daha fazlasına göre özelleştirilmiş kişiselleştirilmiş içerik ve
+            reklamlar geliştirmek ve görüntülemek için bilgilerinizi işleyebiliriz. Daha fazla
+            bilgi için{" "}
+            <Link href="/cookie-policy">Çerez Politikamıza</Link> bakınız.
+          </li>
+          <li>
+            <strong>Kullanım eğilimlerini belirlemek için.</strong> Hizmetlerimizi nasıl
+            kullandığınıza ilişkin bilgileri, bunların nasıl kullanıldığını daha iyi anlamak
+            ve geliştirebilmek için işleyebiliriz.
+          </li>
+          <li>
+            <strong>Pazarlama ve tanıtım kampanyalarımızın etkinliğini belirlemek için.</strong>{" "}
+            Sizinle en alakalı pazarlama ve tanıtım kampanyalarını nasıl sunacağımızı daha iyi
+            anlamak için bilgilerinizi işleyebiliriz.
+          </li>
+          <li>
+            <strong>Bir kişinin hayati çıkarlarını korumak veya kurtarmak için.</strong> Bir
+            kişinin hayati çıkarlarını korumak veya kurtarmak için, örneğin zararı önlemek için
+            gerekli olduğunda bilgilerinizi işleyebiliriz.
+          </li>
+        </ul>
+
+        <h2>3. Bilgilerinizi işlemek için hangi yasal dayanaklara güveniyoruz?</h2>
+        <p>
+          <em>
+            Özetle: Kişisel bilgilerinizi yalnızca yürürlükteki yasalara göre bunun gerekli
+            olduğuna inandığımızda ve bunu yapmak için geçerli bir yasal nedenimiz (yani yasal
+            dayanağımız) olduğunda işleriz; örneğin rızanızla, yasalara uymak için, size
+            hizmet sunmak ve sözleşmeden doğan yükümlülüklerimize girmek veya yerine getirmek
+            için, haklarınızı korumak için veya meşru iş çıkarlarımızı yerine getirmek için.
+          </em>
+        </p>
+        <p>
+          <strong>AB veya Birleşik Krallık&apos;ta bulunuyorsanız, bu bölüm sizin için
+          geçerlidir.</strong>
+        </p>
+        <p>
+          Genel Veri Koruma Yönetmeliği (GDPR) ve Birleşik Krallık GDPR&apos;ı, kişisel
+          bilgilerinizi işlemek için dayandığımız geçerli yasal dayanakları açıklamamızı
+          gerektirir. Bu nedenle kişisel bilgilerinizi işlemek için aşağıdaki yasal dayanaklara
+          güvenebiliriz:
+        </p>
+        <ul>
+          <li>
+            <strong>Rıza.</strong> Kişisel bilgilerinizi belirli bir amaç için kullanmamıza
+            izin (yani rıza) vermişseniz bilgilerinizi işleyebiliriz. Rızanızı istediğiniz
+            zaman geri çekebilirsiniz.
+          </li>
+          <li>
+            <strong>Sözleşmenin İfası.</strong> Hizmetlerimizi sunmak veya sizinle bir
+            sözleşmeye girmeden önce talebiniz üzerine size karşı sözleşmeden doğan
+            yükümlülüklerimizi yerine getirmek için gerekli olduğuna inandığımızda kişisel
+            bilgilerinizi işleyebiliriz.
+          </li>
+          <li>
+            <strong>Meşru Menfaatler.</strong> Meşru iş çıkarlarımızı gerçekleştirmek için
+            makul ölçüde gerekli olduğuna ve bu çıkarların sizin çıkarlarınızdan ve temel
+            haklarınızdan ve özgürlüklerinizden daha ağır basmadığına inandığımızda
+            bilgilerinizi işleyebiliriz. Örneğin, aşağıdaki amaçlardan bazıları için kişisel
+            bilgilerinizi işleyebiliriz:
+            <ul>
+              <li>Kullanıcılara ürün ve hizmetlerimize ilişkin özel teklifler ve indirimler hakkında bilgi göndermek</li>
+              <li>Kullanıcılarımız için kişiselleştirilmiş ve alakalı reklam içeriği geliştirmek ve görüntülemek</li>
+              <li>Hizmetlerimizin nasıl kullanıldığını analiz ederek kullanıcıları çekmek ve elde tutmak için bunları geliştirmek</li>
+              <li>Pazarlama faaliyetlerimizi desteklemek</li>
+              <li>Kullanıcılarımızın ürünlerimizi ve hizmetlerimizi nasıl kullandığını anlayarak kullanıcı deneyimini iyileştirmek</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Yasal Yükümlülükler.</strong> Yasal yükümlülüklerimize uymak için
+            gerekli olduğuna inandığımızda bilgilerinizi işleyebiliriz; örneğin bir kolluk
+            kuvveti veya düzenleyici kurumla işbirliği yapmak, yasal haklarımızı kullanmak
+            veya savunmak ya da dahil olduğumuz davalarda kanıt olarak bilgilerinizi ifşa
+            etmek için.
+          </li>
+          <li>
+            <strong>Hayati Çıkarlar.</strong> Hayati çıkarlarınızı veya bir üçüncü tarafın
+            hayati çıkarlarını korumak için gerekli olduğuna inandığımızda bilgilerinizi
+            işleyebiliriz; örneğin herhangi bir kişinin güvenliğine yönelik olası tehditleri
+            içeren durumlarda.
+          </li>
+        </ul>
+        <p>
+          <strong>Kanada&apos;da bulunuyorsanız, bu bölüm sizin için geçerlidir.</strong>
+        </p>
+        <p>
+          Kişisel bilgilerinizi belirli bir amaç için kullanmamıza özel izin (yani açık rıza)
+          vermişseniz veya izninizin çıkarsanabildiği durumlarda (yani zımni rıza)
+          bilgilerinizi işleyebiliriz. Rızanızı istediğiniz zaman geri çekebilirsiniz.
+        </p>
+        <p>
+          Bazı istisnai durumlarda, yürürlükteki yasalar uyarınca rızanız olmadan bilgilerinizi
+          işlememize yasal olarak izin verilebilir; örneğin:
+        </p>
+        <ul>
+          <li>Toplama açıkça bir kişinin çıkarına ise ve rıza zamanında alınamıyorsa</li>
+          <li>Soruşturmalar ile dolandırıcılık tespiti ve önlenmesi için</li>
+          <li>Belirli koşulların karşılandığı iş işlemleri için</li>
+          <li>Bir tanık ifadesinde yer alıyorsa ve toplamanın bir sigorta talebini değerlendirmek, işlemek veya çözmek için gerekli olması</li>
+          <li>Yaralı, hasta veya vefat etmiş kişileri tespit etmek ve yakınlarıyla iletişim kurmak için</li>
+          <li>Bir kişinin mali istismara maruz kaldığına, kaldığına veya kalabileceğine inanmak için makul gerekçelerimizin olması durumunda</li>
+          <li>Rıza ile toplama ve kullanımın bilgilerin elde edilebilirliğini veya doğruluğunu tehlikeye atacağı makul olarak beklenen durumlarda ve toplamanın bir sözleşme ihlalinin veya Kanada veya bir vilayetin yasalarının ihlalinin soruşturulmasıyla ilgili amaçlar için makul olması durumunda</li>
+          <li>Bir mahkeme celbine, müzekkereye, mahkeme emrine veya kayıtların sunulmasına ilişkin mahkeme kurallarına uymak için ifşanın gerekli olması durumunda</li>
+          <li>Bir kişinin istihdamı, işi veya mesleği sırasında üretilmişse ve toplamanın, bilginin üretildiği amaçlarla tutarlı olması durumunda</li>
+          <li>Toplama yalnızca gazetecilik, sanatsal veya edebi amaçlar için ise</li>
+          <li>Bilgiler kamuya açıksa ve yönetmeliklerle belirtilmişse</li>
+          <li>Etik gözetim ve gizlilik taahhütleri kapsamında, onaylanmış araştırma veya istatistik projeleri için kimliği tanımlanamayan bilgileri ifşa edebiliriz</li>
+        </ul>
+
+        <h2>4. Kişisel bilgilerinizi ne zaman ve kiminle paylaşıyoruz?</h2>
+        <p>
+          <em>
+            Özetle: Bilgileri bu bölümde açıklanan belirli durumlarda ve/veya aşağıdaki
+            üçüncü taraf kategorileriyle paylaşabiliriz.
+          </em>
+        </p>
+        <p>
+          <strong>Satıcılar, Danışmanlar ve Diğer Üçüncü Taraf Hizmet Sağlayıcıları.</strong>
+          {" "}Verilerinizi, bizim için veya bizim adımıza hizmet sağlayan ve bu işi yapmak için
+          bu bilgilere erişmesi gereken üçüncü taraf satıcılar, hizmet sağlayıcılar, yükleniciler
+          veya temsilcilerle (&apos;üçüncü taraflar&apos;) paylaşabiliriz. Üçüncü taraflarımızla,
+          kişisel bilgilerinizi korumaya yardımcı olmak üzere tasarlanmış sözleşmelerimiz
+          bulunmaktadır. Bu, kendilerine talimat vermediğimiz sürece kişisel bilgilerinizle
+          hiçbir şey yapamayacakları anlamına gelir. Ayrıca kişisel bilgilerinizi bizim
+          dışımızda hiçbir kuruluşla paylaşmayacaklardır. Bizim adımıza tuttukları verileri
+          korumayı ve talimatımız olan süre boyunca saklamayı da taahhüt ederler.
+        </p>
+        <p>Kişisel bilgileri paylaşabileceğimiz üçüncü taraf kategorileri aşağıdaki gibidir:</p>
+        <ul>
+          <li>Reklam Ağları</li>
+          <li>Bağlı Kuruluş Pazarlama Programları</li>
+          <li>Yapay Zeka Platformları</li>
+          <li>Bulut Bilişim Hizmetleri</li>
+          <li>Veri Analizi Hizmetleri</li>
+          <li>Finans ve Muhasebe Araçları</li>
+          <li>Ödeme İşlemcileri</li>
+          <li>Performans İzleme Araçları</li>
+          <li>Ürün Mühendisliği ve Tasarım Araçları</li>
+          <li>Satış ve Pazarlama Araçları</li>
+          <li>Sosyal Ağlar</li>
+          <li>Kullanıcı Hesabı Kaydı ve Kimlik Doğrulama Hizmetleri</li>
+        </ul>
+        <p>Ayrıca aşağıdaki durumlarda da kişisel bilgilerinizi paylaşmamız gerekebilir:</p>
+        <ul>
+          <li>
+            <strong>İş Devirleri.</strong> İşimizin tamamının veya bir kısmının başka bir
+            şirkete birleşmesi, şirket varlıklarının satışı, finansman veya devralınması ile
+            bağlantılı olarak veya bunların müzakereleri sırasında bilgilerinizi paylaşabilir
+            veya aktarabiliriz.
+          </li>
+          <li>
+            <strong>Bağlı Kuruluşlar.</strong> Bilgilerinizi bağlı kuruluşlarımızla
+            paylaşabiliriz; bu durumda söz konusu bağlı kuruluşlardan bu Gizlilik Bildirimine
+            uymalarını isteriz. Bağlı kuruluşlar; ana şirketimizi ve kontrol ettiğimiz veya
+            bizimle ortak kontrol altında olan iştiraklerimizi, ortak girişim ortaklarımızı
+            veya diğer şirketleri içerir.
+          </li>
+          <li>
+            <strong>İş Ortakları.</strong> Belirli ürünler, hizmetler veya promosyonlar sunmak
+            için bilgilerinizi iş ortaklarımızla paylaşabiliriz.
+          </li>
+          <li>
+            <strong>Diğer Kullanıcılar.</strong> Kişisel bilgileri paylaştığınızda (örneğin
+            Hizmetlere yorumlar, katkılar veya diğer içerikleri göndererek) veya Hizmetlerin
+            kamuya açık alanlarıyla başka bir şekilde etkileşime girdiğinizde, bu tür kişisel
+            bilgiler tüm kullanıcılar tarafından görüntülenebilir ve Hizmetler dışında süresiz
+            olarak kamuya açık hale getirilebilir. Hizmetlerimizin diğer kullanıcılarıyla
+            etkileşime girer ve Hizmetlerimize bir sosyal ağ (Facebook gibi) aracılığıyla
+            kaydolursanız, sosyal ağdaki kişileriniz adınızı, profil fotoğrafınızı ve
+            etkinliğinizin açıklamalarını görür. Benzer şekilde, diğer kullanıcılar da
+            etkinliğinizin açıklamalarını görüntüleyebilir, Hizmetlerimizin içinde sizinle
+            iletişim kurabilir ve profilinizi görüntüleyebilir.
+          </li>
+          <li>
+            <strong>Teklif Duvarı.</strong> Uygulamalarımız, üçüncü taraf tarafından barındırılan
+            bir &apos;teklif duvarı&apos; görüntüleyebilir. Böyle bir teklif duvarı, üçüncü
+            taraf reklamverenlerin, bir reklam teklifinin kabulü ve tamamlanması karşılığında
+            kullanıcılara sanal para, hediye veya diğer ürünler sunmasına olanak tanır. Bu tür
+            bir teklif duvarı uygulamalarımızda görünebilir ve coğrafi alanınız veya demografik
+            bilginiz gibi belirli verilere dayalı olarak size gösterilebilir. Bir teklif
+            duvarına tıkladığınızda, diğer kişilere ait harici bir web sitesine yönlendirilirsiniz
+            ve uygulamalarımızdan ayrılırsınız. Dolandırıcılığı önlemek ve hesabınızı ilgili
+            ödülle uygun şekilde kredilendirmek için kullanıcı kimliğiniz gibi benzersiz bir
+            tanımlayıcı teklif duvarı sağlayıcısıyla paylaşılacaktır.
+          </li>
+        </ul>
+
+        <h2>5. Üçüncü taraf web sitelerine ilişkin tutumumuz nedir?</h2>
+        <p>
+          <em>
+            Özetle: Bağlantı verebileceğimiz veya Hizmetlerimizde reklam veren ancak
+            Hizmetlerimizle bağlantılı olmayan üçüncü taraflarla paylaştığınız bilgilerin
+            güvenliğinden sorumlu değiliz.
+          </em>
+        </p>
+        <p>
+          Teklif duvarımız dahil Hizmetler, bizimle bağlantılı olmayan üçüncü taraf web
+          sitelerine, çevrimiçi hizmetlere veya mobil uygulamalara bağlantı verebilir ve/veya
+          diğer web sitelerine, hizmetlere veya uygulamalara bağlantı verebilen üçüncü
+          taraflardan gelen reklamlar içerebilir. Buna göre, bu tür üçüncü taraflara ilişkin
+          herhangi bir garanti vermiyoruz ve bu tür üçüncü taraf web sitelerinin, hizmetlerinin
+          veya uygulamalarının kullanımından kaynaklanan herhangi bir kayıp veya hasardan
+          sorumlu olmayacağız. Bir üçüncü taraf web sitesine, hizmete veya uygulamaya
+          bağlantı verilmesi, bizim tarafımızdan onaylandığı anlamına gelmez. Herhangi bir
+          üçüncü taraf web sitesine sağladığınız verilerin güvenliğini ve gizliliğini garanti
+          edemeyiz. Üçüncü taraflar tarafından toplanan veriler bu Gizlilik Bildirimi
+          kapsamında değildir. Hizmetlere veya Hizmetlerden bağlantı verilebilen diğer web
+          siteleri, hizmetler veya uygulamalar dahil olmak üzere herhangi bir üçüncü tarafın
+          içeriğinden veya gizlilik ve güvenlik uygulamalarından ve politikalarından sorumlu
+          değiliz. Bu tür üçüncü tarafların politikalarını gözden geçirmeli ve sorularınıza
+          yanıt almak için doğrudan onlarla iletişime geçmelisiniz.
+        </p>
+
+        <h2>6. Çerezleri ve diğer izleme teknolojilerini kullanıyor muyuz?</h2>
+        <p>
+          <em>
+            Özetle: Bilgilerinizi toplamak ve saklamak için çerezleri ve diğer izleme
+            teknolojilerini kullanabiliriz.
+          </em>
+        </p>
+        <p>
+          Hizmetlerimizle etkileşim kurduğunuzda bilgi toplamak için çerezler ve benzer izleme
+          teknolojilerini (web işaretçileri ve pikseller gibi) kullanabiliriz. Bazı çevrimiçi
+          izleme teknolojileri, Hizmetlerimizin ve hesabınızın güvenliğini sağlamamıza,
+          çökmeleri önlememize, hataları düzeltmemize, tercihlerinizi kaydetmemize ve temel
+          site işlevlerine yardımcı olmamıza yardımcı olur.
+        </p>
+        <p>
+          Ayrıca, üçüncü tarafların ve hizmet sağlayıcıların; reklamları yönetmeye ve
+          görüntülemeye, reklamları ilgi alanlarınıza göre uyarlamaya veya terk edilmiş
+          alışveriş sepeti hatırlatıcıları göndermeye yardımcı olmak (iletişim tercihlerinize
+          bağlı olarak) dahil olmak üzere analiz ve reklamcılık amacıyla Hizmetlerimizde
+          çevrimiçi izleme teknolojilerini kullanmasına izin veririz. Üçüncü taraflar ve hizmet
+          sağlayıcılar, ilgi alanlarınıza göre uyarlanmış ürün ve hizmetler hakkında reklam
+          sunmak için teknolojilerini kullanır; bu reklamlar Hizmetlerimizde veya diğer web
+          sitelerinde görünebilir.
+        </p>
+        <p>
+          Bu çevrimiçi izleme teknolojilerinin yürürlükteki ABD eyalet yasaları uyarınca bir
+          &apos;satış&apos;/&apos;paylaşım&apos; (yürürlükteki yasalar uyarınca tanımlandığı
+          şekilde hedeflenmiş reklamcılık dahil) olarak kabul edildiği ölçüde, aşağıdaki
+          &apos;Amerika Birleşik Devletleri Sakinlerinin Belirli Gizlilik Hakları Var mı?&apos;
+          bölümünde açıklandığı gibi bir talep göndererek bu çevrimiçi izleme teknolojilerinden
+          vazgeçebilirsiniz.
+        </p>
+        <p>
+          Bu tür teknolojileri nasıl kullandığımız ve belirli çerezleri nasıl reddedebileceğinize
+          ilişkin özel bilgiler{" "}
+          <Link href="/cookie-policy">Çerez Politikamızda</Link> belirtilmiştir.
+        </p>
+        <h3>Google Analytics</h3>
+        <p>
+          Hizmetlerin kullanımını izlemek ve analiz etmek için bilgilerinizi Google Analytics
+          ile paylaşabiliriz. Kullanabileceğimiz Google Analytics Reklam Özellikleri şunları
+          içerir: Google Analytics ile Yeniden Pazarlama, Google Görüntülü Reklam Ağı
+          Görüntüleme Raporlaması ve Google Analytics Demografik Bilgiler ve İlgi Alanları
+          Raporlaması. Tüm Hizmetlerde Google Analytics tarafından izlenmekten vazgeçmek
+          için{" "}
+          <a href="https://tools.google.com/dlpage/gaoptout">https://tools.google.com/dlpage/gaoptout</a>
+          {" "}adresini ziyaret edebilirsiniz. Google Analytics Reklam Özelliklerinden Reklam
+          Ayarları ve mobil uygulamalar için Reklam Ayarları aracılığıyla vazgeçebilirsiniz.
+          Diğer vazgeçme yöntemleri şunları içerir:{" "}
+          <a href="http://optout.networkadvertising.org/">http://optout.networkadvertising.org/</a>{" "}
+          ve{" "}
+          <a href="http://www.networkadvertising.org/mobile-choice">
+            http://www.networkadvertising.org/mobile-choice
+          </a>
+          . Google&apos;ın gizlilik uygulamaları hakkında daha fazla bilgi için lütfen Google
+          Gizlilik ve Şartlar sayfasını ziyaret ediniz.
+        </p>
+
+        <h2>7. Yapay zekaya dayalı ürünler sunuyor muyuz?</h2>
+        <p>
+          <em>
+            Özetle: Yapay zeka, makine öğrenmesi veya benzeri teknolojiler tarafından
+            desteklenen ürünler, özellikler veya araçlar sunuyoruz.
+          </em>
+        </p>
+        <p>
+          Hizmetlerimizin bir parçası olarak, yapay zeka, makine öğrenmesi veya benzeri
+          teknolojiler tarafından desteklenen ürünler, özellikler veya araçlar (topluca,
+          &apos;Yapay Zeka Ürünleri&apos;) sunuyoruz. Bu araçlar, deneyiminizi geliştirmek ve
+          size yenilikçi çözümler sunmak için tasarlanmıştır. Bu Gizlilik Bildirimindeki
+          şartlar, Hizmetlerimiz içindeki Yapay Zeka Ürünlerini kullanımınızı düzenler.
+        </p>
+        <h3>Yapay Zeka Teknolojilerinin Kullanımı</h3>
+        <p>
+          Yapay Zeka Ürünlerini, OpenAI ve Google Cloud AI dahil olmak üzere üçüncü taraf
+          hizmet sağlayıcılar (&apos;Yapay Zeka Hizmet Sağlayıcıları&apos;) aracılığıyla
+          sunuyoruz. Bu Gizlilik Bildiriminde belirtildiği gibi, girdi, çıktı ve kişisel
+          bilgileriniz, &apos;Kişisel Bilgilerinizi İşlemek İçin Hangi Yasal Dayanaklara
+          Güveniyoruz?&apos; bölümünde belirtilen amaçlar için Yapay Zeka Ürünlerimizi
+          kullanmanızı sağlamak amacıyla bu Yapay Zeka Hizmet Sağlayıcıları ile paylaşılacak
+          ve onlar tarafından işlenecektir. Yapay Zeka Ürünlerini, herhangi bir Yapay Zeka
+          Hizmet Sağlayıcısının şart veya politikalarını ihlal eden hiçbir şekilde
+          kullanmamalısınız.
+        </p>
+        <h3>Yapay Zeka Ürünlerimiz</h3>
+        <p>Yapay Zeka Ürünlerimiz aşağıdaki işlevler için tasarlanmıştır:</p>
+        <ul>
+          <li>Yapay zeka uygulamaları</li>
+          <li>Yapay zeka botları</li>
+          <li>Yapay zeka belge oluşturma</li>
+          <li>Yapay zeka içgörüleri</li>
+          <li>Yapay zeka araştırması</li>
+          <li>Blockchain</li>
+          <li>Doğal dil işleme</li>
+          <li>Metin analizi</li>
+        </ul>
+        <h3>Verilerinizi Yapay Zeka Kullanarak Nasıl İşliyoruz</h3>
+        <p>
+          Yapay Zeka Ürünlerimiz kullanılarak işlenen tüm kişisel bilgiler, Gizlilik
+          Bildirimimize ve üçüncü taraflarla olan anlaşmamıza uygun olarak ele alınır. Bu,
+          süreç boyunca yüksek güvenlik sağlar ve kişisel bilgilerinizi korur, böylece
+          verilerinizin güvenliği konusunda size huzur sağlar.
+        </p>
+
+        <h2>8. Sosyal girişlerinizi nasıl ele alıyoruz?</h2>
+        <p>
+          <em>
+            Özetle: Hizmetlerimize bir sosyal medya hesabı kullanarak kaydolmayı veya giriş
+            yapmayı seçerseniz, sizinle ilgili belirli bilgilere erişebiliriz.
+          </em>
+        </p>
+        <p>
+          Hizmetlerimiz, üçüncü taraf sosyal medya hesap bilgilerinizi (Facebook veya X
+          girişleriniz gibi) kullanarak kaydolmanıza ve giriş yapmanıza olanak tanır. Bunu
+          yapmayı seçtiğinizde, sosyal medya sağlayıcınızdan sizinle ilgili belirli profil
+          bilgilerini alacağız. Aldığımız profil bilgileri, ilgili sosyal medya sağlayıcısına
+          göre değişebilir; ancak çoğunlukla adınızı, e-posta adresinizi, arkadaş listenizi ve
+          profil resminizi ve bu tür bir sosyal medya platformunda kamuya açık hale getirmeyi
+          seçtiğiniz diğer bilgileri içerir. Facebook kullanarak giriş yaparsanız, arkadaşlarınız,
+          check-in&apos;leriniz ve beğenileriniz gibi hesabınızla ilgili diğer izinlere
+          erişim de talep edebiliriz ve her bir izin için bize erişim verme veya vermeme
+          seçeneğine sahip olursunuz.
+        </p>
+        <p>
+          Aldığımız bilgileri yalnızca bu Gizlilik Bildiriminde açıklanan amaçlar için veya
+          ilgili Hizmetlerde size açıkça belirtilen amaçlar için kullanacağız. Lütfen kişisel
+          bilgilerinizin üçüncü taraf sosyal medya sağlayıcınız tarafından diğer kullanımlarını
+          kontrol etmediğimizi ve bunlardan sorumlu olmadığımızı unutmayın. Kişisel bilgilerinizi
+          nasıl topladıklarını, kullandıklarını ve paylaştıklarını ve sitelerinde ve
+          uygulamalarında gizlilik tercihlerinizi nasıl ayarlayabileceğinizi anlamak için
+          gizlilik bildirimlerini gözden geçirmenizi öneririz.
+        </p>
+
+        <h2>9. Bilgilerinizi ne kadar süre saklıyoruz?</h2>
+        <p>
+          <em>
+            Özetle: Bilgilerinizi, yasalar tarafından aksi gerekmedikçe bu Gizlilik
+            Bildiriminde belirtilen amaçları yerine getirmek için gerekli olduğu sürece
+            saklarız.
+          </em>
+        </p>
+        <p>
+          Kişisel bilgilerinizi yalnızca bu Gizlilik Bildiriminde belirtilen amaçlar için
+          gerekli olduğu sürece saklayacağız; yasalar tarafından daha uzun bir saklama süresi
+          gerekli veya izin verilmedikçe (vergi, muhasebe veya diğer yasal gereklilikler
+          gibi). Bu bildirimde belirtilen hiçbir amaç, kişisel bilgilerinizi kullanıcının
+          hesabının sona ermesinden sonra altı (6) aydan daha uzun süre saklamamızı
+          gerektirmeyecektir.
+        </p>
+        <p>
+          Kişisel bilgilerinizi işlemek için süregelen bir meşru ticari ihtiyacımız
+          olmadığında, bu bilgileri ya silecek ya da anonimleştireceğiz; bu mümkün değilse
+          (örneğin kişisel bilgileriniz yedek arşivlerde saklandığı için), o zaman kişisel
+          bilgilerinizi güvenli bir şekilde saklayacak ve silme mümkün olana kadar daha fazla
+          işlemden izole edeceğiz.
+        </p>
+
+        <h2>10. Bilgilerinizi nasıl güvende tutuyoruz?</h2>
+        <p>
+          <em>
+            Özetle: Kişisel bilgilerinizi bir kurumsal ve teknik güvenlik önlemleri sistemi
+            aracılığıyla korumayı amaçlıyoruz.
+          </em>
+        </p>
+        <p>
+          İşlediğimiz herhangi bir kişisel bilginin güvenliğini korumak için tasarlanmış uygun
+          ve makul teknik ve kurumsal güvenlik önlemlerini uyguladık. Bununla birlikte,
+          güvenlik önlemlerimize ve bilgilerinizi güvende tutma çabalarımıza rağmen, internet
+          üzerinden hiçbir elektronik iletim veya bilgi depolama teknolojisinin %100 güvenli
+          olduğu garanti edilemez; bu nedenle bilgisayar korsanlarının, siber suçluların veya
+          diğer yetkisiz üçüncü tarafların güvenliğimizi aşıp bilgilerinizi uygunsuz bir
+          şekilde toplamayacaklarını, bunlara erişmeyeceklerini, çalmayacaklarını veya
+          değiştirmeyeceklerini taahhüt edemez ya da garanti edemeyiz. Kişisel bilgilerinizi
+          korumak için elimizden geleni yapmamıza rağmen, kişisel bilgilerin Hizmetlerimize
+          ve Hizmetlerimizden iletilmesi kendi sorumluluğunuzdadır. Hizmetlere yalnızca güvenli
+          bir ortamda erişmelisiniz.
+        </p>
+
+        <h2>11. Reşit olmayanlardan bilgi topluyor muyuz?</h2>
+        <p>
+          <em>
+            Özetle: 18 yaşın altındaki veya yargı bölgenizdeki yasalarla belirlenmiş eşdeğer
+            yaşın altındaki çocuklardan bilerek veri toplamayız veya pazarlama yapmayız.
+          </em>
+        </p>
+        <p>
+          18 yaşın altındaki veya yargı bölgenizdeki yasalarla belirlenmiş eşdeğer yaşın
+          altındaki çocuklardan bilerek veri toplamayız, talep etmez veya pazarlama yapmayız
+          ve bu tür kişisel bilgileri bilerek satmayız. Hizmetleri kullanarak, en az 18 veya
+          yargı bölgenizdeki yasalarla belirlenmiş eşdeğer yaşta olduğunuzu veya böyle bir
+          reşit olmayanın ebeveyni veya vasisi olduğunuzu ve bu tür reşit olmayan bağımlının
+          Hizmetleri kullanmasına rıza gösterdiğinizi beyan etmiş olursunuz. 18 yaşın altındaki
+          veya yargı bölgenizdeki yasalarla belirlenmiş eşdeğer yaşın altındaki kullanıcılardan
+          kişisel bilgilerin toplandığını öğrenirsek, hesabı devre dışı bırakacağız ve bu tür
+          verileri kayıtlarımızdan derhal silmek için makul önlemler alacağız. 18 yaşın
+          altındaki veya yargı bölgenizdeki yasalarla belirlenmiş eşdeğer yaşın altındaki
+          çocuklardan toplamış olabileceğimiz herhangi bir veriden haberdar olursanız, lütfen{" "}
+          <a href="mailto:privacy@safolio.com">privacy@safolio.com</a> adresinden bizimle
+          iletişime geçin.
+        </p>
+
+        <h2>12. Gizlilik haklarınız nelerdir?</h2>
+        <p>
+          <em>
+            Özetle: ABD&apos;deki ikamet ettiğiniz eyalete veya Avrupa Ekonomik Alanı (AEA),
+            Birleşik Krallık (BK), İsviçre ve Kanada gibi bazı bölgelere bağlı olarak, kişisel
+            bilgilerinize daha fazla erişim ve kontrol sağlayan haklarınız vardır. İkamet
+            ettiğiniz ülkeye, vilayete veya eyalete bağlı olarak hesabınızı istediğiniz zaman
+            inceleyebilir, değiştirebilir veya sonlandırabilirsiniz.
+          </em>
+        </p>
+        <p>
+          Bazı bölgelerde (AEA, BK, İsviçre ve Kanada gibi), yürürlükteki veri koruma
+          yasaları kapsamında belirli haklarınız vardır. Bunlar (i) kişisel bilgilerinize
+          erişim talep etme ve bir kopyasını alma hakkı, (ii) düzeltme veya silme talep etme
+          hakkı; (iii) kişisel bilgilerinizin işlenmesini kısıtlama hakkı; (iv) varsa veri
+          taşınabilirliği hakkı; ve (v) otomatik karar vermeye tabi tutulmama hakkını içerebilir.
+          Yasal veya benzer şekilde önemli etkiler yaratan bir karar yalnızca otomatik yollarla
+          alındığında, sizi bilgilendireceğiz, ana faktörleri açıklayacağız ve insan
+          incelemesi talep etmenin basit bir yolunu sunacağız. Bazı durumlarda, kişisel
+          bilgilerinizin işlenmesine itiraz etme hakkına da sahip olabilirsiniz. Aşağıdaki
+          &apos;Bu Bildirimle İlgili Olarak Bizimle Nasıl İletişime Geçebilirsiniz?&apos;
+          bölümünde sağlanan iletişim bilgilerini kullanarak bizimle iletişime geçerek böyle
+          bir talepte bulunabilirsiniz.
+        </p>
+        <p>
+          Her talebi yürürlükteki veri koruma yasalarına uygun olarak değerlendirip işleme
+          alacağız.
+        </p>
+        <p>
+          AEA veya BK&apos;da bulunuyorsanız ve kişisel bilgilerinizi yasalara aykırı bir
+          şekilde işlediğimize inanıyorsanız, Üye Devlet veri koruma otoritenize veya BK veri
+          koruma otoritenize de şikayette bulunma hakkına sahipsiniz.
+        </p>
+        <p>
+          İsviçre&apos;de bulunuyorsanız, Federal Veri Koruma ve Bilgi Komiseri ile iletişime
+          geçebilirsiniz.
+        </p>
+        <p>
+          <strong>Rızanızı geri çekme:</strong> Kişisel bilgilerinizi işlemek için rızanıza
+          güveniyorsak (bu, yürürlükteki yasaya bağlı olarak açık ve/veya zımni rıza olabilir),
+          rızanızı istediğiniz zaman geri çekme hakkına sahipsiniz. Aşağıdaki &apos;Bu
+          Bildirimle İlgili Olarak Bizimle Nasıl İletişime Geçebilirsiniz?&apos; bölümünde
+          sağlanan iletişim bilgilerini kullanarak veya tercihlerinizi güncelleyerek rızanızı
+          istediğiniz zaman geri çekebilirsiniz.
+        </p>
+        <p>
+          Ancak lütfen bunun, geri çekilmeden önce gerçekleştirilen işlemenin yasallığını
+          etkilemeyeceğini ve yürürlükteki yasaların izin verdiği durumlarda, rıza dışındaki
+          yasal işleme dayanaklarına dayanarak gerçekleştirilen kişisel bilgilerinizin
+          işlenmesini de etkilemeyeceğini unutmayın.
+        </p>
+        <p>
+          <strong>Pazarlama ve tanıtım iletişimlerinden vazgeçme:</strong> Pazarlama ve
+          tanıtım iletişimlerimizden, gönderdiğimiz e-postalardaki abonelikten çıkma
+          bağlantısına tıklayarak veya aşağıdaki &apos;Bu Bildirimle İlgili Olarak Bizimle
+          Nasıl İletişime Geçebilirsiniz?&apos; bölümünde sağlanan ayrıntıları kullanarak
+          bizimle iletişime geçerek istediğiniz zaman abonelikten çıkabilirsiniz. Bu durumda
+          pazarlama listelerinden çıkarılacaksınız. Ancak hesabınızın yönetimi ve kullanımı
+          için gerekli olan hizmetle ilgili mesajlar göndermek, hizmet taleplerine yanıt
+          vermek veya diğer pazarlama dışı amaçlar için sizinle iletişim kurmaya devam
+          edebiliriz.
+        </p>
+        <h3>Hesap Bilgileri</h3>
+        <p>
+          Hesabınızdaki bilgileri istediğiniz zaman gözden geçirmek veya değiştirmek ya da
+          hesabınızı sonlandırmak isterseniz şunları yapabilirsiniz:
+        </p>
+        <ul>
+          <li>Hesap ayarlarınıza giriş yapın ve kullanıcı hesabınızı güncelleyin.</li>
+          <li>
+            Hesabınızı sonlandırma talebiniz üzerine, hesabınızı ve bilgilerinizi aktif
+            veritabanlarımızdan devre dışı bırakacağız veya sileceğiz. Ancak, dolandırıcılığı
+            önlemek, sorunları gidermek, herhangi bir soruşturmaya yardımcı olmak, yasal
+            koşullarımızı uygulamak ve/veya yürürlükteki yasal gereklilikleri yerine getirmek
+            için dosyalarımızda bazı bilgileri saklayabiliriz.
+          </li>
+        </ul>
+        <p>
+          <strong>Çerezler ve benzer teknolojiler:</strong> Çoğu Web tarayıcısı varsayılan
+          olarak çerezleri kabul edecek şekilde ayarlanmıştır. İsterseniz, genellikle çerezleri
+          kaldırmak ve çerezleri reddetmek için tarayıcınızı ayarlamayı seçebilirsiniz.
+          Çerezleri kaldırmayı veya reddetmeyi seçerseniz, bu durum Hizmetlerimizin belirli
+          özelliklerini veya hizmetlerini etkileyebilir. Ayrıca, Hizmetlerimizdeki reklamverenler
+          tarafından ilgi alanına dayalı reklamcılıktan da vazgeçebilirsiniz. Daha fazla bilgi
+          için lütfen <Link href="/cookie-policy">Çerez Politikamıza</Link> bakınız.
+        </p>
+        <p>
+          Gizlilik haklarınızla ilgili sorularınız veya yorumlarınız varsa,{" "}
+          <a href="mailto:privacy@safolio.com">privacy@safolio.com</a> adresinden bize
+          e-posta gönderebilirsiniz.
+        </p>
+
+        <h2>13. Do-not-track özellikleri için kontroller</h2>
+        <p>
+          Çoğu web tarayıcısı ve bazı mobil işletim sistemleri ile mobil uygulamalar,
+          çevrimiçi tarama etkinliklerinizle ilgili verilerin izlenmemesi ve toplanmaması
+          yönündeki gizlilik tercihinizi bildirmek için etkinleştirebileceğiniz bir
+          Do-Not-Track (&apos;DNT&apos;) özelliği veya ayarı içerir. Bu aşamada, DNT
+          sinyallerini tanıma ve uygulamaya yönelik herhangi bir tek tip teknoloji standardı
+          tamamlanmamıştır. Bu nedenle, şu anda DNT tarayıcı sinyallerine veya çevrimiçi olarak
+          izlenmeme tercihinizi otomatik olarak ileten başka bir mekanizmaya yanıt
+          vermemekteyiz. Gelecekte takip etmemiz gereken çevrimiçi izleme için bir standart
+          kabul edilirse, bu Gizlilik Bildiriminin revize edilmiş bir sürümünde bu uygulama
+          hakkında sizi bilgilendireceğiz.
+        </p>
+        <p>
+          Kaliforniya yasaları, web tarayıcısı DNT sinyallerine nasıl yanıt verdiğimizi size
+          bildirmemizi gerektirir. DNT sinyallerini tanıma veya bunlara saygı gösterme
+          konusunda şu anda bir endüstri veya yasal standart olmadığından, şu anda bunlara
+          yanıt vermiyoruz.
+        </p>
+        <p>
+          <strong>Küresel Gizlilik Kontrolü:</strong> Küresel Gizlilik Kontrolü (GPC)
+          sinyallerini tanıyor ve bunlara saygı gösteriyoruz. GPC&apos;yi destekleyen bir
+          tarayıcı veya uzantı kullanıyorsanız, bunu Kaliforniya Tüketici Gizlilik Yasası
+          (CCPA) dahil olmak üzere yürürlükteki eyalet gizlilik yasaları kapsamında hedeflenmiş
+          reklamcılık amacıyla kişisel bilgilerinizin satışı veya paylaşımından vazgeçmek için
+          geçerli bir talep olarak ele alacağız. Tarayıcınızdan bir GPC sinyali tespit
+          ettiğimizde, herhangi bir ek işlem yapmanızı gerektirmeden vazgeçme tercihinizi
+          otomatik olarak uygulayacağız. GPC ve nasıl etkinleştirileceği hakkında daha fazla
+          bilgi için{" "}
+          <a href="https://globalprivacycontrol.org">globalprivacycontrol.org</a> adresini
+          ziyaret edebilirsiniz.
+        </p>
+
+        <h2>14. Amerika Birleşik Devletleri sakinlerinin belirli gizlilik hakları var mı?</h2>
+        <p>
+          <em>
+            Özetle: Kaliforniya, Colorado, Connecticut, Delaware, Florida, Indiana, Iowa,
+            Kentucky, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey,
+            Oregon, Rhode Island, Tennessee, Texas, Utah veya Virginia&apos;da ikamet
+            ediyorsanız, hakkınızda tuttuğumuz kişisel bilgilere ve bunları nasıl işlediğimize
+            ilişkin erişim talep etme ve ayrıntı alma, yanlışlıkları düzeltme, bir kopyasını
+            alma veya kişisel bilgilerinizi silme hakkına sahip olabilirsiniz. Ayrıca, kişisel
+            bilgilerinizi işlememize ilişkin rızanızı geri çekme hakkına da sahip olabilirsiniz.
+            Bu haklar bazı durumlarda yürürlükteki yasalarla sınırlandırılabilir. Daha fazla
+            bilgi aşağıda verilmiştir.
+          </em>
+        </p>
+        <h3>Topladığımız Kişisel Bilgi Kategorileri</h3>
+        <p>
+          Aşağıdaki tablo, son on iki (12) ayda topladığımız kişisel bilgi kategorilerini
+          göstermektedir. Tablo, her kategorinin örnek niteliğindeki örneklerini içerir ve
+          sizden topladığımız kişisel bilgileri yansıtmaz. İşlediğimiz tüm kişisel bilgilerin
+          kapsamlı bir envanteri için lütfen &apos;Hangi Bilgileri Topluyoruz?&apos; bölümüne
+          bakınız.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Kategori</th>
+              <th>Örnekler</th>
+              <th>Toplanıyor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A. Tanımlayıcılar</td>
+              <td>
+                Gerçek ad, takma ad, posta adresi, telefon veya mobil iletişim numarası,
+                benzersiz kişisel tanımlayıcı, çevrimiçi tanımlayıcı, İnternet Protokolü
+                adresi, e-posta adresi ve hesap adı gibi iletişim bilgileri
+              </td>
+              <td>EVET</td>
+            </tr>
+            <tr>
+              <td>B. Kaliforniya Müşteri Kayıtları yasasında tanımlandığı şekliyle kişisel bilgiler</td>
+              <td>
+                Ad, iletişim bilgileri, eğitim, istihdam, istihdam geçmişi ve finansal
+                bilgiler
+              </td>
+              <td>EVET</td>
+            </tr>
+            <tr>
+              <td>C. Eyalet veya federal yasalar kapsamındaki korunan sınıflandırma özellikleri</td>
+              <td>
+                Cinsiyet, yaş, doğum tarihi, ırk ve etnik köken, ulusal köken, medeni durum
+                ve diğer demografik veriler
+              </td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>D. Ticari bilgiler</td>
+              <td>İşlem bilgileri, satın alma geçmişi, finansal ayrıntılar ve ödeme bilgileri</td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>E. Biyometrik bilgiler</td>
+              <td>Parmak izleri ve ses kayıtları</td>
+              <td>EVET</td>
+            </tr>
+            <tr>
+              <td>F. İnternet veya diğer benzer ağ etkinliği</td>
+              <td>
+                Tarama geçmişi, arama geçmişi, çevrimiçi davranış, ilgi alanı verileri ve
+                bizim ve diğer web siteleri, uygulamalar, sistemler ve reklamlarla etkileşimler
+              </td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>G. Coğrafi konum verileri</td>
+              <td>Cihaz konumu</td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>H. Sesli, elektronik, duyusal veya benzer bilgiler</td>
+              <td>
+                Ticari faaliyetlerimizle bağlantılı olarak oluşturulan görüntüler ve sesli,
+                video veya çağrı kayıtları
+              </td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>I. Mesleki veya istihdamla ilgili bilgiler</td>
+              <td>
+                İşletme düzeyinde Hizmetlerimizi size sunmak için iş iletişim bilgileri veya
+                bizimle bir iş için başvurmanız halinde iş unvanı, çalışma geçmişi ve
+                mesleki nitelikler
+              </td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>J. Eğitim Bilgileri</td>
+              <td>Öğrenci kayıtları ve dizin bilgileri</td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>K. Toplanan kişisel bilgilerden çıkarılan çıkarımlar</td>
+              <td>
+                Örneğin bir kişinin tercihleri ve özellikleri hakkında bir profil veya özet
+                oluşturmak için yukarıda listelenen herhangi bir kişisel bilgiden çıkarılan
+                çıkarımlar
+              </td>
+              <td>HAYIR</td>
+            </tr>
+            <tr>
+              <td>L. Hassas kişisel bilgiler</td>
+              <td>
+                Hesap giriş bilgileri, biyometrik veriler ve hesap erişim ayrıntıları dahil
+                finansal bilgiler
+              </td>
+              <td>EVET</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Hassas kişisel bilgileri yalnızca yürürlükteki gizlilik yasaları veya yasalar
+          tarafından izin verilen amaçlar için veya rızanızla topluyoruz. Hassas kişisel
+          bilgiler, ek olarak belirtilen amaçlar için bir hizmet sağlayıcıya veya yükleniciye
+          kullanılabilir veya açıklanabilir. Hassas kişisel bilgilerinizin kullanımını veya
+          açıklanmasını sınırlama hakkına sahip olabilirsiniz. Hassas kişisel bilgileri,
+          hakkınızdaki özellikleri çıkarmak amacıyla toplamıyor veya işlemiyoruz.
+        </p>
+        <p>
+          Bunun yanı sıra, sizinle şahsen, çevrimiçi veya telefonla ya da posta yoluyla
+          aşağıdaki bağlamlarda etkileşime girdiğiniz örnekler aracılığıyla bu kategoriler
+          dışında diğer kişisel bilgileri de toplayabiliriz:
+        </p>
+        <ul>
+          <li>Müşteri destek kanallarımız aracılığıyla yardım alma;</li>
+          <li>Müşteri anketlerine veya yarışmalara katılım; ve</li>
+          <li>Hizmetlerimizin sunulmasını kolaylaştırma ve sorgularınıza yanıt verme.</li>
+        </ul>
+        <p>Topladığımız kişisel bilgileri, Hizmetleri sağlamak için veya aşağıdaki amaçlar için ihtiyaç duyulduğu kadar kullanacak ve saklayacağız:</p>
+        <ul>
+          <li>A Kategorisi — Kullanıcının bizde bir hesabı olduğu sürece</li>
+          <li>B Kategorisi — Kullanıcının bizde bir hesabı olduğu sürece</li>
+          <li>E Kategorisi — Kullanıcının bizde bir hesabı olduğu sürece</li>
+          <li>L Kategorisi — Kullanıcının bizde bir hesabı olduğu sürece</li>
+        </ul>
+        <h3>Kişisel Bilgilerin Kaynakları</h3>
+        <p>
+          Topladığımız kişisel bilgilerin kaynakları hakkında daha fazla bilgi için &apos;Hangi
+          Bilgileri Topluyoruz?&apos; bölümüne bakınız.
+        </p>
+        <h3>Kişisel Bilgileri Nasıl Kullanıyor ve Paylaşıyoruz</h3>
+        <p>
+          Kişisel bilgilerinizi nasıl kullandığımız hakkında daha fazla bilgi için
+          &apos;Bilgilerinizi Nasıl İşliyoruz?&apos; bölümüne bakınız.
+        </p>
+        <p>Kişisel bilgilerinizi şu yollarla topluyor ve paylaşıyoruz:</p>
+        <ul>
+          <li>Hedefleme çerezleri/Pazarlama çerezleri</li>
+          <li>Sosyal medya çerezleri</li>
+          <li>İşaretçiler/Pikseller/Etiketler</li>
+        </ul>
+        <p>
+          <strong>Bilgileriniz başka biriyle paylaşılacak mı?</strong>
+        </p>
+        <p>
+          Kişisel bilgilerinizi, her hizmet sağlayıcı ile aramızdaki yazılı bir sözleşmeye
+          tabi olarak hizmet sağlayıcılarımızla açıklayabiliriz. Kişisel bilgileri kime
+          açıkladığımız hakkında daha fazla bilgi için &apos;Kişisel Bilgilerinizi Ne Zaman
+          ve Kiminle Paylaşıyoruz?&apos; bölümüne bakınız.
+        </p>
+        <p>
+          Kişisel bilgilerinizi, teknolojik geliştirme ve gösterim için iç araştırma yürütmek
+          gibi kendi ticari amaçlarımız için kullanabiliriz. Bu, kişisel bilgilerinizin
+          &apos;satılması&apos; olarak kabul edilmez.
+        </p>
+        <p>
+          Önceki on iki (12) ay içinde herhangi bir kişisel bilgiyi ticari veya iş amacıyla
+          üçüncü taraflara satmadık veya paylaşmadık. Önceki on iki (12) ay içinde aşağıdaki
+          kişisel bilgi kategorilerini ticari veya iş amacıyla üçüncü taraflara açıkladık:
+        </p>
+        <ul>
+          <li>A Kategorisi. Tanımlayıcılar</li>
+          <li>B Kategorisi. Kaliforniya Müşteri Kayıtları yasasında tanımlandığı şekliyle kişisel bilgiler</li>
+          <li>L Kategorisi. Hassas kişisel bilgiler</li>
+        </ul>
+        <p>
+          Ticari veya iş amacıyla kişisel bilgileri açıkladığımız üçüncü taraf kategorileri,
+          &apos;Kişisel Bilgilerinizi Ne Zaman ve Kiminle Paylaşıyoruz?&apos; başlığı altında
+          bulunabilir.
+        </p>
+        <h3>Haklarınız</h3>
+        <p>
+          Belirli ABD eyalet veri koruma yasaları kapsamında haklarınız vardır. Ancak bu
+          haklar mutlak değildir ve bazı durumlarda, yasaların izin verdiği şekilde talebinizi
+          reddedebiliriz. Bu haklar şunları içerir:
+        </p>
+        <ul>
+          <li>Kişisel verilerinizi işleyip işlemediğimizi bilme hakkı</li>
+          <li>Kişisel verilerinize erişim hakkı</li>
+          <li>Kişisel verilerinizdeki yanlışlıkları düzeltme hakkı</li>
+          <li>Kişisel verilerinizin silinmesini talep etme hakkı</li>
+          <li>Daha önce bizimle paylaştığınız kişisel verilerin bir kopyasını alma hakkı</li>
+          <li>Haklarınızı kullanmaktan dolayı ayrımcılığa uğramama hakkı</li>
+          <li>
+            Kişisel verileriniz hedeflenmiş reklamcılık (veya Kaliforniya gizlilik yasası
+            kapsamında tanımlandığı şekilde paylaşım), kişisel verilerin satışı veya yasal
+            veya benzer şekilde önemli etkiler yaratan kararların ilerletilmesi için
+            profilleme (&apos;profilleme&apos;) için kullanılıyorsa, kişisel verilerinizin
+            işlenmesinden vazgeçme hakkı
+          </li>
+        </ul>
+        <p>İkamet ettiğiniz eyalete bağlı olarak, aşağıdaki haklara da sahip olabilirsiniz:</p>
+        <ul>
+          <li>
+            İşlenen kişisel veri kategorilerine erişim hakkı (Minnesota&apos;daki gizlilik
+            yasası dahil olmak üzere yürürlükteki yasaların izin verdiği şekilde)
+          </li>
+          <li>
+            Kişisel verileri açıkladığımız üçüncü taraf kategorilerinin bir listesini alma
+            hakkı (Kaliforniya, Delaware ve Maryland&apos;daki gizlilik yasası dahil olmak
+            üzere yürürlükteki yasaların izin verdiği şekilde)
+          </li>
+          <li>
+            Kişisel verileri açıkladığımız belirli üçüncü tarafların bir listesini alma hakkı
+            (Minnesota ve Oregon&apos;daki gizlilik yasası dahil olmak üzere yürürlükteki
+            yasaların izin verdiği şekilde)
+          </li>
+          <li>
+            Kişisel verileri sattığımız üçüncü tarafların bir listesini alma hakkı
+            (Connecticut&apos;daki gizlilik yasası dahil olmak üzere yürürlükteki yasaların
+            izin verdiği şekilde)
+          </li>
+          <li>
+            Kişisel verilerin nasıl profillendirildiğini inceleme, anlama, sorgulama ve
+            ikamet ettiğiniz yere bağlı olarak düzeltme hakkı (Connecticut ve Minnesota&apos;daki
+            gizlilik yasası dahil olmak üzere yürürlükteki yasaların izin verdiği şekilde)
+          </li>
+          <li>
+            Hassas kişisel verilerin kullanımını ve açıklanmasını sınırlama hakkı
+            (Kaliforniya&apos;daki gizlilik yasası dahil olmak üzere yürürlükteki yasaların
+            izin verdiği şekilde)
+          </li>
+          <li>
+            Bir ses veya yüz tanıma özelliğinin çalıştırılması yoluyla toplanan hassas
+            verilerin ve kişisel verilerin toplanmasından vazgeçme hakkı (Florida&apos;daki
+            gizlilik yasası dahil olmak üzere yürürlükteki yasaların izin verdiği şekilde)
+          </li>
+        </ul>
+        <h3>Haklarınızı Nasıl Kullanırsınız</h3>
+        <p>
+          Bu hakları kullanmak için, bir veri sahibi erişim talebi göndererek,{" "}
+          <a href="mailto:privacy@safolio.com">privacy@safolio.com</a> adresinden bize
+          e-posta göndererek veya bu belgenin altındaki iletişim bilgilerine başvurarak
+          bizimle iletişime geçebilirsiniz.
+        </p>
+        <p>
+          Tarayıcınızda Küresel Gizlilik Kontrolü (GPC) vazgeçme sinyalini etkinleştirirseniz
+          vazgeçme tercihlerinize uyacağız.
+        </p>
+        <p>
+          Belirli ABD eyalet veri koruma yasaları kapsamında, sizin adınıza talepte bulunmak
+          için yetkili bir temsilci atayabilirsiniz. Yürürlükteki yasalara uygun olarak sizin
+          adınıza hareket etmek üzere geçerli şekilde yetkilendirildiklerine dair kanıt
+          sunmayan yetkili bir temsilciden gelen talebi reddedebiliriz.
+        </p>
+        <h3>Talep Doğrulama</h3>
+        <p>
+          Talebinizi aldığımızda, sistemimizde bilgilerine sahip olduğumuz kişiyle aynı kişi
+          olduğunuzu belirlemek için kimliğinizi doğrulamamız gerekecektir. Talebinizde
+          sağlanan kişisel bilgileri yalnızca kimliğinizi veya talepte bulunma yetkinizi
+          doğrulamak için kullanacağız. Ancak kimliğinizi tarafımızca zaten tutulan
+          bilgilerden doğrulayamazsak, kimliğinizi doğrulamak ve güvenlik veya dolandırıcılığı
+          önleme amacıyla ek bilgi sağlamanızı isteyebiliriz.
+        </p>
+        <p>
+          Talebi yetkili bir temsilci aracılığıyla gönderirseniz, talebinizi işleme almadan
+          önce kimliğinizi doğrulamak için ek bilgi toplamamız gerekebilir ve temsilcinin
+          sizin adınıza böyle bir talepte bulunmak için sizden yazılı ve imzalı izin alması
+          gerekir.
+        </p>
+        <h3>İtirazlar</h3>
+        <p>
+          Belirli ABD eyalet veri koruma yasaları kapsamında, talebinize ilişkin işlem
+          yapmayı reddedersek,{" "}
+          <a href="mailto:privacy@safolio.com">privacy@safolio.com</a> adresinden bize e-posta
+          göndererek kararımıza itiraz edebilirsiniz. İtiraza yanıt olarak alınan veya
+          alınmayan herhangi bir işlem hakkında, kararların gerekçelerine ilişkin yazılı bir
+          açıklama dahil olmak üzere sizi yazılı olarak bilgilendireceğiz. İtirazınız
+          reddedilirse, eyalet başsavcınıza şikayette bulunabilirsiniz.
+        </p>
+        <h3>Kaliforniya &apos;Shine The Light&apos; Yasası</h3>
+        <p>
+          &apos;Shine The Light&apos; yasası olarak da bilinen Kaliforniya Medeni Kanunu
+          Bölüm 1798.83, Kaliforniya sakini olan kullanıcılarımızın, yılda bir kez ve ücretsiz
+          olarak, doğrudan pazarlama amacıyla üçüncü taraflara açıkladığımız kişisel bilgi
+          kategorileri (varsa) ve hemen önceki takvim yılında kişisel bilgileri paylaştığımız
+          tüm üçüncü tarafların adları ve adresleri hakkında bizden bilgi talep etmesine ve
+          almasına izin verir. Kaliforniya sakini iseniz ve böyle bir talepte bulunmak
+          istiyorsanız, lütfen &apos;Bu Bildirimle İlgili Olarak Bizimle Nasıl İletişime
+          Geçebilirsiniz?&apos; bölümünde sağlanan iletişim bilgilerini kullanarak talebinizi
+          yazılı olarak bize gönderin.
+        </p>
+
+        <h2>15. Diğer bölgelerin belirli gizlilik hakları var mı?</h2>
+        <p>
+          <em>Özetle: İkamet ettiğiniz ülkeye bağlı olarak ek haklarınız olabilir.</em>
+        </p>
+        <h3>Avustralya ve Yeni Zelanda</h3>
+        <p>
+          Kişisel bilgilerinizi, Avustralya&apos;nın 1988 Gizlilik Yasası ve Yeni Zelanda&apos;nın
+          2020 Gizlilik Yasası (Gizlilik Yasası) tarafından belirlenen yükümlülükler ve
+          koşullar altında topluyor ve işliyoruz.
+        </p>
+        <p>
+          Bu Gizlilik Bildirimi, her iki Gizlilik Yasasında tanımlanan bildirim gereksinimlerini
+          karşılamaktadır; özellikle sizden hangi kişisel bilgileri topladığımız, hangi
+          kaynaklardan, hangi amaçlar için ve kişisel bilgilerinizin diğer alıcıları.
+        </p>
+        <p>
+          Geçerli amaçlarını yerine getirmek için gerekli kişisel bilgileri sağlamak
+          istemiyorsanız, bu durum hizmetlerimizi sağlama yeteneğimizi etkileyebilir;
+          özellikle:
+        </p>
+        <ul>
+          <li>istediğiniz ürün veya hizmetleri size sunma</li>
+          <li>taleplerinize yanıt verme veya yardım etme</li>
+          <li>hesabınızı bizimle yönetme</li>
+          <li>kimliğinizi doğrulama ve hesabınızı koruma</li>
+        </ul>
+        <p>
+          Herhangi bir zamanda, kişisel bilgilerinize erişim talep etme veya bunları
+          düzeltme hakkına sahipsiniz. Böyle bir talepte bulunmak için &apos;Sizden
+          Topladığımız Verileri Nasıl Gözden Geçirebilir, Güncelleyebilir veya
+          Silebilirsiniz?&apos; bölümünde sağlanan iletişim bilgilerini kullanarak bizimle
+          iletişime geçebilirsiniz.
+        </p>
+        <p>
+          Kişisel bilgilerinizi yasalara aykırı bir şekilde işlediğimize inanıyorsanız,
+          Avustralya Gizlilik İlkelerinin ihlali için Avustralya Bilgi Komiserliği Ofisine ve
+          Yeni Zelanda&apos;nın Gizlilik İlkelerinin ihlali için Yeni Zelanda Gizlilik
+          Komiserliği Ofisine şikayet sunma hakkına sahipsiniz.
+        </p>
+        <h3>Güney Afrika Cumhuriyeti</h3>
+        <p>
+          Herhangi bir zamanda, kişisel bilgilerinize erişim talep etme veya bunları
+          düzeltme hakkına sahipsiniz. Böyle bir talepte bulunmak için &apos;Sizden
+          Topladığımız Verileri Nasıl Gözden Geçirebilir, Güncelleyebilir veya
+          Silebilirsiniz?&apos; bölümünde sağlanan iletişim bilgilerini kullanarak bizimle
+          iletişime geçebilirsiniz.
+        </p>
+        <p>
+          Kişisel bilgilerinizi işlememizle ilgili herhangi bir şikayeti ele alma şeklimizden
+          memnun değilseniz, ayrıntıları aşağıdaki gibi olan düzenleyici ofisle iletişime
+          geçebilirsiniz:
+        </p>
+        <p>
+          Bilgi Düzenleyicisi (Güney Afrika)
+          <br />
+          Genel sorgular:{" "}
+          <a href="mailto:enquiries@inforegulator.org.za">enquiries@inforegulator.org.za</a>
+          <br />
+          Şikayetler (POPIA/PAIA form 5 doldurun):{" "}
+          <a href="mailto:PAIAComplaints@inforegulator.org.za">
+            PAIAComplaints@inforegulator.org.za
+          </a>{" "}
+          &amp;{" "}
+          <a href="mailto:POPIAComplaints@inforegulator.org.za">
+            POPIAComplaints@inforegulator.org.za
+          </a>
+        </p>
+
+        <h2>16. Finansal ve piyasa verilerinin kullanımı</h2>
+        <p>
+          Safolio, yalnızca portföy takibi ve analitik işlevsellik sağlamak amacıyla kullanıcı
+          tarafından sağlanan portföy verilerini ve üçüncü taraf piyasa verilerini işler.
+          Piyasa verileri gecikmeli, tahmini veya yanlış olabilir. Veri doğruluğu, sorumluluk
+          reddi beyanları ve kullanıcı sorumluluğu hakkında daha fazla bilgi Hizmet
+          Şartlarında verilmiştir.
+        </p>
+
+        <h2>17. Bağlı finansal hesaplar</h2>
+        <p>
+          Bir kullanıcı bir banka hesabı, aracı kurum hesabı veya başka bir finansal hesabı
+          bağlamayı seçerse, Safolio portföy takibi ve analitik amacıyla üçüncü taraf finansal
+          kuruluşlar veya veri toplama hizmetleri tarafından sağlanan hesap bilgilerini
+          işler. Bu, hesap tanımlayıcıları, bakiyeler, işlem geçmişi ve varlık tutmaları
+          içerebilir. Safolio, bağlı hesaplara salt okunur modda erişir ve ödemeleri veya
+          işlemleri başlatamaz. Veriler yalnızca kullanıcının açık rızasıyla işlenir ve
+          periyodik olarak veya kullanıcı talebi üzerine yenilenebilir. Veri doğruluğu,
+          sınırlamalar ve kullanıcı sorumluluğu hakkında daha fazla bilgi Hizmet Şartlarında
+          açıklanmıştır.
+        </p>
+
+        <h2>18. Bu bildirimi güncelliyor muyuz?</h2>
+        <p>
+          <em>Özetle: Evet, ilgili yasalara uymak için bu bildirimi gerektiği şekilde güncelleyeceğiz.</em>
+        </p>
+        <p>
+          Bu Gizlilik Bildirimini zaman zaman güncelleyebiliriz. Güncellenen sürüm, bu
+          Gizlilik Bildiriminin üst kısmında güncellenmiş bir &apos;Revize Edilmiş&apos;
+          tarihi ile belirtilecektir. Bu Gizlilik Bildiriminde önemli değişiklikler yaparsak,
+          bu tür değişikliklere ilişkin bir bildirimi belirgin bir şekilde yayınlayarak veya
+          size doğrudan bir bildirim göndererek bilgilendirebiliriz. Bilgilerinizi nasıl
+          koruduğumuz hakkında bilgi sahibi olmak için bu Gizlilik Bildirimini sık sık gözden
+          geçirmenizi öneririz.
+        </p>
+
+        <h2>19. Bu bildirimle ilgili olarak bizimle nasıl iletişime geçebilirsiniz?</h2>
+        <p>
+          Bu bildirimle ilgili sorularınız veya yorumlarınız varsa,{" "}
+          <a href="mailto:privacy@safolio.com">privacy@safolio.com</a> adresinden bize e-posta
+          gönderebilir veya posta yoluyla bizimle iletişime geçebilirsiniz:
+        </p>
+        <p>
+          Safolio B.V.
+          <br />
+          2-A Abtstraat
+          <br />
+          Utrecht, Utrecht 3512 AB
+          <br />
+          Netherlands
+        </p>
+
+        <h2>20. Sizden topladığımız verileri nasıl gözden geçirebilir, güncelleyebilir veya silebilirsiniz?</h2>
+        <p>
+          ABD&apos;deki ülkenizin veya ikamet ettiğiniz eyaletin yürürlükteki yasalarına
+          bağlı olarak, sizden topladığımız kişisel bilgilere erişim talep etme, bunları
+          nasıl işlediğimize ilişkin ayrıntılar, yanlışlıkları düzeltme veya kişisel
+          bilgilerinizi silme hakkına sahip olabilirsiniz. Ayrıca, kişisel bilgilerinizi
+          işlememize ilişkin rızanızı geri çekme hakkına da sahip olabilirsiniz. Bu haklar
+          bazı durumlarda yürürlükteki yasalarla sınırlandırılabilir. Kişisel bilgilerinizi
+          gözden geçirmek, güncellemek veya silmek için lütfen bir veri sahibi erişim talebi
+          doldurup gönderin.
+        </p>
       </LegalLayout>
     );
   }
