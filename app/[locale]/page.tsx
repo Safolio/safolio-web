@@ -1,10 +1,16 @@
-import { useTranslations } from "next-intl";
+import { Header } from "@/components/sections/header";
+import { SkipToMain } from "@/components/skip-to-main";
 
 export default function HomePage() {
-  const t = useTranslations("Nav");
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold">{t("home")}</h1>
-    </main>
+    <>
+      <SkipToMain />
+      <Header />
+      <main id="main" className="min-h-screen pt-16">
+        <div className="mx-auto max-w-[1300px] px-4 py-24">
+          <p className="text-muted-foreground">Sections coming…</p>
+        </div>
+      </main>
+    </>
   );
 }
