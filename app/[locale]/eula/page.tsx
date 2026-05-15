@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { LegalLayout } from "@/components/legal-layout";
-import { LegalTRPlaceholder } from "@/components/legal-tr-placeholder";
 
 export async function generateMetadata({
   params,
@@ -20,7 +19,429 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   if (locale === "tr") {
     return (
       <LegalLayout title={t("legal5")}>
-        <LegalTRPlaceholder docName={t("legal5")} />
+        <p className="text-sm text-ink3">Son güncelleme: 01 Şubat 2026</p>
+
+        <p>
+          Safolio, Safolio B.V. tarafından Size (Son Kullanıcı) bu Lisans Sözleşmesi&apos;nin
+          şartları altında kullanılmak üzere lisanslanmıştır. Safolio B.V., 2-A Abtstraat,
+          Utrecht, Utrecht 3512 AB, Hollanda adresinde bulunmakta ve kayıtlıdır
+          (&apos;Lisansör&apos;). KDV numaramız NL868276042B01&apos;dir.
+        </p>
+        <p>
+          Lisanslı Uygulamayı Apple&apos;ın yazılım dağıtım platformundan (&apos;App
+          Store&apos;) ve Google&apos;ın yazılım dağıtım platformundan (&apos;Play Store&apos;)
+          ve bunlara ilişkin her türlü güncellemeyi (bu Lisans Sözleşmesi&apos;nin izin verdiği
+          şekilde) indirerek, bu Lisans Sözleşmesi&apos;nin tüm şart ve koşullarına bağlı
+          kalmayı kabul ettiğinizi ve bu Lisans Sözleşmesi&apos;ni kabul ettiğinizi
+          belirtirsiniz. App Store ve Play Store, bu Lisans Sözleşmesi&apos;nde
+          &apos;Hizmetler&apos; olarak anılmaktadır.
+        </p>
+        <p>
+          Bu Lisans Sözleşmesi&apos;nin tarafları, Hizmetlerin bu Lisans Sözleşmesi&apos;nin
+          bir Tarafı olmadığını ve Lisanslı Uygulama ile ilgili olarak garanti, sorumluluk,
+          bakım ve destek gibi hiçbir hüküm veya yükümlülükle bağlı olmadığını kabul eder.
+          Lisanslı Uygulama ve içeriğinden yalnızca Safolio B.V. sorumludur, Hizmetler değildir.
+        </p>
+        <p>
+          Bu Lisans Sözleşmesi, Lisanslı Uygulamanın kullanımına ilişkin en güncel Apple Media
+          Services Şartlar ve Koşulları ile Google Play Hizmet Şartları (&apos;Kullanım
+          Kuralları&apos;) ile çelişen kullanım kuralları öngöremez. Safolio B.V., Kullanım
+          Kurallarını inceleme fırsatı bulduğunu ve bu Lisans Sözleşmesi&apos;nin bunlarla
+          çelişmediğini kabul eder.
+        </p>
+        <p>
+          Hizmetler aracılığıyla satın alınan veya indirilen Safolio, yalnızca bu Lisans
+          Sözleşmesi&apos;nin şartları altında kullanılmak üzere Size lisanslanmıştır. Lisansör,
+          Size açıkça verilmeyen tüm hakları saklı tutar. Safolio, Apple&apos;ın işletim
+          sistemleri (&apos;iOS&apos; ve &apos;Mac OS&apos;) veya Google&apos;ın işletim sistemi
+          (&apos;Android&apos;) ile çalışan cihazlarda kullanılmak içindir.
+        </p>
+
+        <h2>İçindekiler</h2>
+        <ol>
+          <li>Uygulama</li>
+          <li>Lisansın kapsamı</li>
+          <li>Teknik gereksinimler</li>
+          <li>Bakım ve destek</li>
+          <li>Verilerin kullanımı</li>
+          <li>Kullanıcı tarafından oluşturulan katkılar</li>
+          <li>Katkı lisansı</li>
+          <li>Sorumluluk</li>
+          <li>Garanti</li>
+          <li>Ürün talepleri</li>
+          <li>Yasal uyumluluk</li>
+          <li>İletişim bilgileri</li>
+          <li>Fesih</li>
+          <li>Üçüncü taraf sözleşme şartları ve lehdar</li>
+          <li>Fikri mülkiyet hakları</li>
+          <li>Geçerli hukuk</li>
+          <li>Çeşitli hükümler</li>
+        </ol>
+
+        <h2>1. Uygulama</h2>
+        <p>
+          Safolio (&apos;Lisanslı Uygulama&apos;), kullanıcılara kişisel yatırım portföylerini
+          merkezi bir dijital ortamda takip etme, birleştirme ve analiz etme araçları sunmak
+          için oluşturulmuş ve iOS ile Android mobil cihazlar (&apos;Cihazlar&apos;) için
+          özelleştirilmiş bir yazılım parçasıdır. Kullanıcı tarafından sağlanan veriler ve
+          üçüncü taraf veri kaynaklarına dayalı olarak varlık tutumlarını, portföy
+          değerlemelerini, geçmiş performansı ve varlık dağılımı bilgilerini görüntüleme dahil
+          kişisel portföy izleme ve analizinde kullanılır.
+        </p>
+        <p>
+          Ayrıca, birden fazla hesap ve kurumdan yatırım verilerini yalnızca okuma modunda
+          toplamak, bilgilendirme amaçlı geçmiş ve güncel piyasa verilerini görüntülemek,
+          performans karşılaştırmaları, portföy özetleri ve varsayımsal veya
+          &ldquo;ya olsaydı&rdquo; senaryoları gibi analitik araçlar sağlamak ve kişisel
+          referans ve kayıt tutma amacıyla finansal bilgileri düzenlemek ve görselleştirmek için
+          kullanılır.
+        </p>
+        <p>
+          Lisanslı Uygulama, sektöre özgü düzenlemelere (Sağlık Sigortası Taşınabilirlik ve
+          Hesap Verebilirlik Yasası (HIPAA), Federal Bilgi Güvenliği Yönetim Yasası (FISMA) vb.)
+          uyacak şekilde tasarlanmamıştır; bu nedenle etkileşimleriniz bu tür yasalara tabi
+          olacaksa, bu Lisanslı Uygulamayı kullanamazsınız. Lisanslı Uygulamayı Gramm-Leach-Bliley
+          Yasası&apos;nı (GLBA) ihlal edecek şekilde kullanamazsınız.
+        </p>
+
+        <h2>2. Lisansın kapsamı</h2>
+        <p>
+          2.1 Size (Son Kullanıcı), Sizin sahip olduğunuz veya kontrol ettiğiniz herhangi bir
+          Cihaza Lisanslı Uygulamayı kurmak ve kullanmak için Kullanım Kurallarının izin verdiği
+          ölçüde devredilemez, münhasır olmayan ve alt lisans verilemeyen bir lisans verilmiştir;
+          ancak bu Lisanslı Uygulamaya, Aile Paylaşımı veya Toplu Satın Alma yoluyla Sizinle
+          (Son Kullanıcı, Satın Alıcı) ilişkili diğer hesaplar tarafından erişilebilir ve
+          kullanılabilir.
+        </p>
+        <p>
+          2.2 Bu lisans, Lisansör tarafından sağlanan ve ilk Lisanslı Uygulamanın yerini alan,
+          onaran ve/veya tamamlayan Lisanslı Uygulamanın her türlü güncellemesini de
+          yönetecektir; ancak böyle bir güncelleme için ayrı bir lisans sağlanması durumunda, bu
+          yeni lisansın şartları geçerli olacaktır.
+        </p>
+        <p>
+          2.3 Lisanslı Uygulamayı üçüncü taraflarla paylaşamaz veya üçüncü tarafların
+          kullanımına sunamazsınız (Kullanım Kurallarının izin verdiği ölçüde ve Safolio
+          B.V.&apos;nin önceden yazılı izni dışında); Lisanslı Uygulamayı satamaz, kiralayamaz,
+          ödünç veremez, kiraya veremez veya başka bir şekilde yeniden dağıtamazsınız.
+        </p>
+        <p>
+          2.4 Lisanslı Uygulamayı veya herhangi bir bölümünü tersine mühendislik yapamaz,
+          çeviremez, parçalara ayıramaz, entegre edemez, kodunu çözemez, kaldıramaz,
+          değiştiremez, birleştiremez, türev çalışmalar veya güncellemeler oluşturamaz,
+          uyarlayamaz veya kaynak kodunu türetmeye çalışamazsınız (Safolio B.V.&apos;nin
+          önceden yazılı izni hariç).
+        </p>
+        <p>
+          2.5 Lisanslı Uygulamayı veya bölümlerini kopyalayamaz (bu lisans ve Kullanım Kuralları
+          tarafından açıkça yetkilendirildiği durumlar hariç) veya değiştiremezsiniz. Yalnızca
+          bu lisans, Kullanım Kuralları ve cihaza veya kullanılan yazılıma uygulanan diğer
+          şartlar ve koşullar kapsamında yedekleme amacıyla sahip olduğunuz veya kontrol
+          ettiğiniz cihazlarda kopyalar oluşturabilir ve saklayabilirsiniz. Herhangi bir fikri
+          mülkiyet bildirimini kaldıramazsınız. Yetkisiz üçüncü tarafların bu kopyalara hiçbir
+          zaman erişim sağlayamayacağını kabul edersiniz. Cihazlarınızı üçüncü bir tarafa
+          satarsanız, satmadan önce Lisanslı Uygulamayı Cihazlardan kaldırmanız gerekir.
+        </p>
+        <p>
+          2.6 Yukarıda belirtilen yükümlülüklerin ihlali ve böyle bir ihlal girişimi,
+          kovuşturma ve tazminata konu olabilir.
+        </p>
+        <p>2.7 Lisansör, lisans şart ve koşullarını değiştirme hakkını saklı tutar.</p>
+        <p>
+          2.8 Bu lisanstaki hiçbir şey üçüncü taraf şartlarını kısıtlayacak şekilde
+          yorumlanmamalıdır. Lisanslı Uygulamayı kullanırken, geçerli üçüncü taraf şart ve
+          koşullarına uyduğunuzdan emin olmalısınız.
+        </p>
+
+        <h2>3. Teknik gereksinimler</h2>
+        <p>
+          3.1 Lisansör, Lisanslı Uygulamayı, değiştirilmiş/yeni donanım yazılımı sürümleri ve
+          yeni donanım ile uyumlu hale getirmek için güncel tutmaya çalışır. Size böyle bir
+          güncelleme talep etme hakkı verilmemiştir.
+        </p>
+        <p>
+          3.2 Lisanslı Uygulamayı kullanmayı düşündüğünüz uygulama son kullanıcı cihazının
+          yukarıda belirtilen teknik özellikleri karşıladığını doğrulamak ve belirlemek Sizin
+          sorumluluğunuzdadır.
+        </p>
+        <p>
+          3.3 Lisansör, uygun gördüğü zamanlarda teknik özellikleri değiştirme hakkını saklı
+          tutar.
+        </p>
+
+        <h2>4. Bakım ve destek</h2>
+        <p>
+          4.1 Bu Lisanslı Uygulama için bakım ve destek hizmetleri sağlamaktan yalnızca
+          Lisansör sorumludur. Lisansöre, bu Lisanslı Uygulama için App Store veya Play
+          Store&apos;daki Genel Bakış sayfasında listelenen e-posta adresinden ulaşabilirsiniz.
+        </p>
+        <p>
+          4.2 Safolio B.V. ve Son Kullanıcı, Hizmetlerin Lisanslı Uygulama ile ilgili herhangi
+          bir bakım ve destek hizmeti sağlamak konusunda hiçbir yükümlülüğü olmadığını kabul
+          eder.
+        </p>
+
+        <h2>5. Verilerin kullanımı</h2>
+        <p>
+          Lisansörün, indirilen Lisanslı Uygulama içeriğinize ve kişisel bilgilerinize
+          erişebileceğini ve bunları düzenleyebileceğini ve Lisansörün bu tür materyal ve
+          bilgileri kullanmasının, Lisansör ile yaptığınız yasal anlaşmalara ve web sitesi ve
+          uygulamadaki bağlantıya tıklanarak erişilebilen Lisansörün gizlilik politikasına tabi
+          olduğunu kabul edersiniz.
+        </p>
+        <p>
+          Lisansörün, cihazınız, sisteminiz ve uygulama yazılımınız ile çevre birimleriniz
+          hakkında teknik veriler ve ilgili bilgileri periyodik olarak toplayabileceğini ve
+          kullanabileceğini, ürün desteği sunabileceğini, yazılım güncellemelerini
+          kolaylaştırabileceğini ve size (varsa) Lisanslı Uygulama ile ilgili diğer hizmetleri
+          sağlamak amacıyla bu bilgileri kullanabileceğini kabul edersiniz. Lisansör, sizi
+          kişisel olarak tanımlamayan bir biçimde olduğu sürece, bu bilgileri ürünlerini
+          geliştirmek veya size hizmet veya teknoloji sağlamak için de kullanabilir.
+        </p>
+
+        <h2>6. Kullanıcı tarafından oluşturulan katkılar</h2>
+        <p>
+          Lisanslı Uygulama, sizi sohbet etmeye, bloglara, mesaj panolarına, çevrimiçi forumlara
+          ve diğer işlevlere katkıda bulunmaya veya katılmaya davet edebilir ve size, bize veya
+          Lisanslı Uygulamada içerik ve materyaller oluşturma, gönderme, yayınlama, görüntüleme,
+          iletme, gerçekleştirme, yayımlama, dağıtma veya yayınlama fırsatı sağlayabilir; bunlar
+          arasında metin, yazılar, video, ses, fotoğraflar, grafikler, yorumlar, öneriler veya
+          kişisel bilgiler veya diğer materyaller (toplu olarak &apos;Katkılar&apos;) yer alır,
+          ancak bunlarla sınırlı değildir. Katkılar, Lisanslı Uygulamanın diğer kullanıcıları
+          ve üçüncü taraf web siteleri veya uygulamaları aracılığıyla görüntülenebilir. Bu
+          nedenle, ilettiğiniz herhangi bir Katkı, gizli olmayan ve mülkiyet hakkı içermeyen
+          olarak değerlendirilebilir. Herhangi bir Katkı oluşturduğunuzda veya kullanıma
+          sunduğunuzda, aşağıdakileri beyan ve garanti edersiniz:
+        </p>
+        <ol>
+          <li>Katkılarınızın oluşturulması, dağıtılması, iletilmesi, kamuya açık olarak görüntülenmesi veya gerçekleştirilmesi ve erişilmesi, indirilmesi veya kopyalanması, telif hakkı, patent, ticari marka, ticari sır veya manevi haklar dahil ancak bunlarla sınırlı olmamak üzere herhangi bir üçüncü tarafın mülkiyet haklarını ihlal etmez ve etmeyecektir.</li>
+          <li>Katkılarınızın yaratıcısı ve sahibisiniz ya da Katkılarınızı Lisanslı Uygulama tarafından öngörülen herhangi bir şekilde ve bu Lisans Sözleşmesi kapsamında kullanmak ve bizim, Lisanslı Uygulamanın ve Lisanslı Uygulamanın diğer kullanıcılarının kullanmasına izin vermek için gerekli lisanslara, haklara, onaylara, izinlere ve yetkilere sahipsiniz.</li>
+          <li>Katkılarınızda yer alan tanımlanabilir her bir bireyin Katkılarınızda kullanılmak üzere adının veya benzerliğinin Lisanslı Uygulama tarafından öngörülen herhangi bir şekilde ve bu Lisans Sözleşmesi kapsamında dahil edilmesini ve kullanılmasını sağlamak için her bir tanımlanabilir bireyden yazılı onay, izin ve/veya muvafakat almış bulunmaktasınız.</li>
+          <li>Katkılarınız yanlış, hatalı veya yanıltıcı değildir.</li>
+          <li>Katkılarınız, istenmeyen veya yetkisiz reklam, tanıtım materyalleri, piramit şemaları, zincir mektuplar, spam, toplu postalar veya diğer talep formları değildir.</li>
+          <li>Katkılarınız müstehcen, açık saçık, şehvet düşkünü, kirli, şiddet içerikli, taciz edici, iftira niteliğinde, karalayıcı veya başka bir şekilde sakıncalı (bizim tarafımızdan belirlendiği şekilde) değildir.</li>
+          <li>Katkılarınız hiç kimseyle alay etmez, küçük düşürmez, gözden düşürmez, korkutmaz veya istismar etmez.</li>
+          <li>Katkılarınız, başka bir kişiyi taciz etmek veya tehdit etmek (bu terimlerin yasal anlamında) ve belirli bir kişiye veya kişi sınıfına karşı şiddeti teşvik etmek için kullanılmaz.</li>
+          <li>Katkılarınız geçerli herhangi bir yasayı, yönetmeliği veya kuralı ihlal etmez.</li>
+          <li>Katkılarınız herhangi bir üçüncü tarafın gizlilik veya tanıtım haklarını ihlal etmez.</li>
+          <li>Katkılarınız çocuk pornografisi ile ilgili veya küçüklerin sağlığını veya esenliğini korumayı amaçlayan herhangi bir geçerli yasayı ihlal etmez.</li>
+          <li>Katkılarınız ırk, ulusal köken, cinsiyet, cinsel tercih veya fiziksel engelle ilgili saldırgan yorumlar içermez.</li>
+          <li>Katkılarınız, bu Lisans Sözleşmesi&apos;nin herhangi bir hükmünü veya geçerli herhangi bir yasa veya yönetmeliği başka bir şekilde ihlal etmez veya ihlal eden materyallere bağlantı vermez.</li>
+        </ol>
+        <p>
+          Lisanslı Uygulamanın yukarıdakileri ihlal eden herhangi bir şekilde kullanılması, bu
+          Lisans Sözleşmesi&apos;ni ihlal eder ve diğer şeylerin yanı sıra, Lisanslı Uygulamayı
+          kullanma haklarınızın feshedilmesine veya askıya alınmasına neden olabilir.
+        </p>
+
+        <h2>7. Katkı lisansı</h2>
+        <p>
+          Katkılarınızı Lisanslı Uygulamanın herhangi bir bölümüne göndererek veya Lisanslı
+          Uygulamadaki hesabınızı sosyal ağ hesaplarınızdan herhangi birine bağlayarak
+          Katkıları Lisanslı Uygulamaya erişilebilir hale getirerek, otomatik olarak bize
+          kısıtlamasız, sınırsız, geri alınamaz, kalıcı, münhasır olmayan, devredilebilir,
+          telifsiz, tamamen ödenmiş, dünya çapında bir hak ve lisans vermiş olursunuz ve böyle
+          bir hak verme hakkına sahip olduğunuzu beyan ve garanti edersiniz. Bu lisans;
+          Katkıları (görüntünüz ve sesiniz dahil ancak bunlarla sınırlı olmamak üzere) herhangi
+          bir amaçla, ticari reklam veya başka bir şekilde barındırma, kullanma, kopyalama,
+          çoğaltma, ifşa etme, satma, yeniden satma, yayımlama, yayınlama, yeniden adlandırma,
+          arşivleme, saklama, önbelleğe alma, kamuya açık olarak görüntüleme, yeniden
+          biçimlendirme, çevirme, iletme, alıntılama (tamamen veya kısmen) ve dağıtma ve bu tür
+          Katkıların türev çalışmalarını hazırlama veya başka çalışmalara dahil etme ve
+          yukarıdakilerin alt lisanslarını verme ve yetkilendirme hakkını içerir. Kullanım ve
+          dağıtım herhangi bir medya formatında ve herhangi bir medya kanalı aracılığıyla
+          gerçekleşebilir.
+        </p>
+        <p>
+          Bu lisans, şu anda bilinen veya bundan sonra geliştirilecek herhangi bir form, medya
+          veya teknolojiye uygulanacak ve adınızın, şirket adınızın ve franchise adınızın
+          (uygulanabilir olduğu durumlarda) ve sağladığınız ticari markaların, hizmet
+          markalarının, ticari isimlerin, logoların ve kişisel ve ticari görüntülerin
+          kullanımını içerir. Katkılarınızdaki tüm manevi haklardan feragat eder ve manevi
+          hakların Katkılarınızda başka bir şekilde ileri sürülmediğini garanti edersiniz.
+        </p>
+        <p>
+          Katkılarınız üzerinde herhangi bir mülkiyet iddiasında bulunmayız. Tüm Katkılarınızın
+          ve Katkılarınızla ilişkili herhangi bir fikri mülkiyet hakkının veya diğer mülkiyet
+          haklarının tam mülkiyetini elinizde tutarsınız. Lisanslı Uygulamadaki herhangi bir
+          alanda tarafınızca sağlanan Katkılarınızdaki ifadelerden veya beyanlardan sorumlu
+          değiliz. Lisanslı Uygulamaya yaptığınız Katkılardan yalnızca siz sorumlusunuz ve
+          Katkılarınızla ilgili olarak bizi her türlü sorumluluktan muaf tutmayı ve bize karşı
+          herhangi bir yasal işlemden kaçınmayı açıkça kabul edersiniz.
+        </p>
+        <p>
+          Tek ve mutlak takdir yetkimizle (1) herhangi bir Katkıyı düzenleme, redakte etme veya
+          başka bir şekilde değiştirme; (2) herhangi bir Katkıyı Lisanslı Uygulamada daha uygun
+          yerlere yerleştirmek için yeniden kategorize etme; ve (3) herhangi bir zamanda ve
+          herhangi bir nedenle, bildirimde bulunmaksızın herhangi bir Katkıyı önceden inceleme
+          veya silme hakkına sahibiz. Katkılarınızı izleme yükümlülüğümüz yoktur.
+        </p>
+
+        <h2>8. Sorumluluk</h2>
+        <p>
+          8.1 Lisansörün yükümlülüklerin ihlali ve haksız fiil durumundaki sorumluluğu, kasıt
+          ve ağır ihmal ile sınırlı olacaktır. Yalnızca esaslı sözleşme yükümlülüklerinin
+          (kardinal yükümlülüklerin) ihlali durumunda, Lisansör hafif ihmal halinde de sorumlu
+          tutulacaktır. Her durumda, sorumluluk öngörülebilir, sözleşmeye özgü tipik zararlarla
+          sınırlı olacaktır. Yukarıda belirtilen sınırlama, yaşama, vücut bütünlüğüne veya
+          sağlığa verilen zararlar için geçerli değildir.
+        </p>
+        <p>
+          8.2 Lisansör, bu Lisans Sözleşmesi&apos;nin 2. Bölümüne göre görevlerin ihlali
+          nedeniyle oluşan herhangi bir zarardan dolayı hiçbir hesap verme veya sorumluluk
+          kabul etmez. Veri kaybını önlemek için, geçerli üçüncü taraf kullanım şart ve
+          koşullarının izin verdiği ölçüde Lisanslı Uygulamanın yedekleme işlevlerini
+          kullanmanız gerekir. Lisanslı Uygulamada değişiklik veya manipülasyon yapılması
+          durumunda, Lisanslı Uygulamaya erişiminizin olmayacağının farkındasınız.
+        </p>
+        <p>
+          8.3 Lisansör hiçbir durumda hesap verme ve sorumluluk kabul etmez. Ek sınırlamalar
+          için lütfen Hizmet Şartlarına bakın.
+        </p>
+
+        <h2>9. Garanti</h2>
+        <p>
+          9.1 Lisansör, Lisanslı Uygulamanın indirme sırasında casus yazılım, truva atı, virüs
+          veya başka herhangi bir kötü amaçlı yazılım içermediğini garanti eder. Lisansör,
+          Lisanslı Uygulamanın kullanıcı belgelerinde açıklandığı şekilde çalıştığını garanti
+          eder.
+        </p>
+        <p>
+          9.2 Cihazda çalıştırılamayan, yetkisiz olarak değiştirilen, uygunsuz veya kusurlu bir
+          şekilde işlenen, uygunsuz donanım veya yazılımla birleştirilen veya kurulan, uygunsuz
+          aksesuarlarla kullanılan (kendiniz veya üçüncü taraflarca olup olmadığı önemli
+          olmaksızın) Lisanslı Uygulama için veya Lisanslı Uygulamanın çalıştırılabilirliğini
+          etkileyen Safolio B.V.&apos;nin etki alanı dışındaki başka herhangi bir neden varsa,
+          herhangi bir garanti verilmez.
+        </p>
+        <p>
+          9.3 Lisanslı Uygulamayı kurduktan hemen sonra incelemeniz ve keşfedilen sorunları
+          gecikme olmaksızın İletişim Bilgileri&apos;nde belirtilen e-posta ile Safolio
+          B.V.&apos;ye bildirmeniz gerekmektedir. Kusur raporu, keşiften sonraki doksan (90)
+          gün içinde e-posta ile gönderilmişse dikkate alınacak ve daha fazla incelenecektir.
+        </p>
+        <p>
+          9.4 Lisanslı Uygulamanın kusurlu olduğunu onaylarsak, Safolio B.V. durumu kusuru
+          çözerek veya yedek teslimat yoluyla düzeltme seçeneğini saklı tutar.
+        </p>
+        <p>
+          9.5 Lisanslı Uygulamanın geçerli herhangi bir garantiye uymaması durumunda, Hizmetler
+          Mağaza İşletmecisine bildirimde bulunabilirsiniz ve Lisanslı Uygulama satın alma
+          fiyatınız Size iade edilecektir. Geçerli yasaların izin verdiği azami ölçüde,
+          Hizmetler Mağaza İşletmecisi, Lisanslı Uygulama ile ilgili olarak başka herhangi bir
+          garanti yükümlülüğüne sahip olmayacaktır ve herhangi bir garantiye uymama ihmaline
+          atfedilebilecek diğer kayıplar, talepler, zararlar, sorumluluklar, masraflar ve
+          maliyetler için sorumluluğu olmayacaktır.
+        </p>
+        <p>
+          9.6 Kullanıcı bir girişimci ise, kusurlara dayanan herhangi bir talep, Lisanslı
+          Uygulama kullanıcıya sunulduktan sonra on iki (12) ay tutarındaki yasal zaman aşımı
+          süresinin sonunda sona erer. Tüketici olan kullanıcılar için yasalarca verilen
+          yasal zaman aşımı süreleri geçerlidir.
+        </p>
+
+        <h2>10. Ürün talepleri</h2>
+        <p>
+          Safolio B.V. ve Son Kullanıcı, Hizmetlerin değil, Safolio B.V.&apos;nin Lisanslı
+          Uygulama veya Son Kullanıcının söz konusu Lisanslı Uygulamaya sahip olması ve/veya
+          kullanmasıyla ilgili olarak Son Kullanıcının veya herhangi bir üçüncü tarafın
+          taleplerini ele almaktan sorumlu olduğunu kabul eder; bunlar aşağıdakileri içerir
+          ancak bunlarla sınırlı değildir:
+        </p>
+        <p>(i) ürün sorumluluğu talepleri;</p>
+        <p>
+          (ii) Lisanslı Uygulamanın geçerli herhangi bir yasal veya düzenleyici gerekliliğe
+          uymadığı iddiası; ve
+        </p>
+        <p>
+          (iii) tüketici koruması, gizlilik veya benzer mevzuat kapsamında ortaya çıkan
+          talepler; Lisanslı Uygulamanızın HealthKit ve HomeKit kullanımıyla bağlantılı
+          olanlar dahil.
+        </p>
+
+        <h2>11. Yasal uyumluluk</h2>
+        <p>
+          ABD Hükümeti ambargosuna tabi olan veya ABD Hükümeti tarafından &apos;teröre destek
+          veren&apos; bir ülke olarak belirlenmiş bir ülkede bulunmadığınızı ve yasaklı veya
+          kısıtlı taraflara ilişkin herhangi bir ABD Hükümeti listesinde yer almadığınızı
+          beyan ve garanti edersiniz.
+        </p>
+
+        <h2>12. İletişim bilgileri</h2>
+        <p>
+          Lisanslı Uygulama ile ilgili genel sorular, şikayetler, sorular veya talepler için
+          lütfen iletişime geçin:
+        </p>
+        <p>
+          Safolio B.V.
+          <br />
+          2-A Abtstraat
+          <br />
+          Utrecht, Utrecht 3512 AB
+          <br />
+          Hollanda
+          <br />
+          <a href="mailto:info@safolio.com">info@safolio.com</a>
+        </p>
+
+        <h2>13. Fesih</h2>
+        <p>
+          Lisans, Safolio B.V. veya Sizin tarafınızdan feshedilene kadar geçerlidir. Bu
+          lisansın herhangi bir şartına uymamanız durumunda, bu lisans kapsamındaki
+          haklarınız Safolio B.V.&apos;den bildirim yapılmaksızın otomatik olarak sona erer.
+          Lisansın feshi üzerine, Lisanslı Uygulamanın tüm kullanımını durdurmanız ve
+          Lisanslı Uygulamanın tam veya kısmi tüm kopyalarını imha etmeniz gerekir.
+        </p>
+
+        <h2>14. Üçüncü taraf sözleşme şartları ve lehdar</h2>
+        <p>
+          Safolio B.V., Lisanslı Uygulamayı kullanırken geçerli üçüncü taraf sözleşme
+          şartlarına uyacağını beyan ve garanti eder.
+        </p>
+        <p>
+          &apos;Geliştiricinin Son Kullanıcı Lisans Sözleşmesi için Asgari Şartlara İlişkin
+          Talimatlar&apos;ın 9. Bölümüne uygun olarak, Apple ve Google ile bunların iştirakleri
+          bu Son Kullanıcı Lisans Sözleşmesi&apos;nin üçüncü taraf lehdarları olacaktır ve bu
+          Lisans Sözleşmesi&apos;nin şart ve koşullarını kabul etmenizden sonra, Apple ve
+          Google bu Son Kullanıcı Lisans Sözleşmesi&apos;ni, üçüncü taraf lehdarı olarak Size
+          karşı uygulama hakkına sahip olacaktır (ve bu hakkı kabul etmiş sayılacaktır).
+        </p>
+
+        <h2>15. Fikri mülkiyet hakları</h2>
+        <p>
+          Safolio B.V. ve Son Kullanıcı, Lisanslı Uygulamanın veya Son Kullanıcının söz konusu
+          Lisanslı Uygulamaya sahip olması ve kullanmasının üçüncü tarafın fikri mülkiyet
+          haklarını ihlal ettiğine ilişkin herhangi bir üçüncü taraf talebi durumunda,
+          Hizmetlerin değil, yalnızca Safolio B.V.&apos;nin söz konusu fikri mülkiyet ihlali
+          taleplerinin araştırılması, savunulması, çözüme kavuşturulması ve sonuçlandırılmasından
+          tek başına sorumlu olacağını kabul eder.
+        </p>
+
+        <h2>16. Geçerli hukuk</h2>
+        <p>
+          Bu Lisans Sözleşmesi, kanunlar ihtilafı kurallarını hariç tutarak Hollanda yasalarına
+          tabidir.
+        </p>
+
+        <h2>17. Çeşitli hükümler</h2>
+        <p>
+          17.1 Bu sözleşmenin herhangi bir şartı geçersiz olur veya geçersiz hale gelirse,
+          kalan hükümlerin geçerliliği etkilenmez. Geçersiz şartlar, birincil amaca ulaşacak
+          şekilde formüle edilmiş geçerli olanlarla değiştirilecektir.
+        </p>
+        <p>
+          17.2 Yan anlaşmalar, değişiklikler ve tadilatlar yalnızca yazılı olarak yapıldığı
+          takdirde geçerlidir. Önceki madde yalnızca yazılı olarak feragat edilebilir.
+        </p>
+        <p>
+          17.3 <strong>Yalnızca Bilgilendirme Amaçlı Kullanım.</strong> Uygulama yalnızca
+          portföy izleme, takip ve bilgilendirme amaçlı olarak sağlanmaktadır. Uygulama yatırım,
+          finansal, hukuki veya vergi tavsiyesi sağlamaz ve herhangi bir finansal aracın satın
+          alınmasını, satılmasını veya elde tutulmasını önermez, onaylamaz veya talep etmez.
+          Uygulamada görüntülenen herhangi bir bilgi, finansal kararlar verme temeli olarak
+          güvenilmesi amaçlanmamıştır. Kullanıcılar, yatırım kararlarından ve tüm bilgileri
+          bağımsız olarak doğrulamaktan yalnızca kendileri sorumludur.
+        </p>
       </LegalLayout>
     );
   }
