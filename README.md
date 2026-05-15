@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Safolio Web
 
-## Getting Started
+Coming Soon landing page for Safolio, an independent investment portfolio platform.
 
-First, run the development server:
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+pnpm assets:download   # one-time, pulls brand assets from safolio.com
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000> — root redirects to `/tr` by default.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `pnpm dev` — start dev server (Turbopack)
+- `pnpm build` — production build
+- `pnpm start` — serve production build
+- `pnpm lint` — Next.js ESLint check
+- `pnpm format` — Prettier write
+- `pnpm format:check` — Prettier dry-run
+- `pnpm assets:download` — fetch brand assets from safolio.com into `public/`
 
-## Learn More
+## Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 15** App Router, TypeScript (strict), Tailwind v4
+- **shadcn/ui** (base-ui primitives)
+- **next-intl** for TR/EN routing and translations
+- **next-themes** with light/dark/system
+- **react-hook-form + zod** for the signup form (UI only — submit shows a fake success toast)
+- **sonner** for toasts, **lucide-react** for icons
+- **@vercel/analytics + @vercel/speed-insights** for production telemetry
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/[locale]/` — locale-scoped routes (homepage + 5 legal pages + 404)
+- `app/layout.tsx` — pass-through root layout
+- `app/sitemap.ts`, `app/robots.ts` — generated SEO endpoints
+- `app/[locale]/opengraph-image.tsx` — dynamic OG image
+- `components/sections/` — page section components (Header, Hero, About, DesignedForYou, WhyWeCreated, CTA, Footer)
+- `components/ui/` — shadcn primitives
+- `components/{theme-provider,theme-toggle,locale-switcher,signup-form,skip-to-main,cookie-banner,legal-layout,json-ld}.tsx`
+- `i18n/` — `routing.ts`, `navigation.ts`, `request.ts`
+- `messages/` — TR/EN translation catalogues
+- `lib/` — `utils.ts` (cn helper), `schemas.ts` (zod)
+- `scripts/download-assets.mjs` — brand asset fetcher
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Production target: `safolio.com` on Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push to GitHub.
+2. Import in Vercel — framework auto-detected.
+3. No env vars required.
+4. Add `safolio.com` and `www.safolio.com` as production domains in Vercel.
+5. Update DNS at registrar to point to Vercel.
+
+`@vercel/analytics` and `@vercel/speed-insights` activate automatically on Vercel.
+
+## Status
+
+MVP complete. Pending follow-ups before launch:
+
+- Real social media URLs (Footer currently uses `#` placeholders)
+- Final legal copy for the 5 legal pages (placeholder text in place)
+- Confirm `hello@safolio.com` is the right contact email
+- Optional: hook the signup form to a real backend (Resend / Supabase / Mailchimp)
+- Optional: official App Store / Google Play badge SVGs (CTA currently uses text fallback)
