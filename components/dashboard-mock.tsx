@@ -316,7 +316,7 @@ function CommunityView() {
             Community feed
           </div>
           <div className="mt-1.5 text-[20px] font-medium tracking-[-0.015em] text-ink">
-            Today's threads
+            Today&apos;s threads
           </div>
         </div>
         <div className="hidden items-center gap-1.5 rounded-full border border-line px-3 py-1.5 text-[11px] text-ink2 sm:inline-flex">

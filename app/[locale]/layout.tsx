@@ -6,8 +6,6 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CookieBanner } from "@/components/cookie-banner";
 import { Toaster } from "sonner";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -70,8 +68,6 @@ export default async function LocaleLayout({
             {children}
             <CookieBanner />
             <Toaster richColors position="top-center" />
-            <Analytics />
-            <SpeedInsights />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
