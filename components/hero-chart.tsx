@@ -169,7 +169,7 @@ export function HeroChart() {
 
   return (
     <div className="relative rounded-chart border border-line bg-surface p-[22px] pb-4 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_24px_60px_-32px_rgba(15,19,17,0.18)] dark:shadow-[0_1px_0_rgba(255,255,255,0.04)_inset,0_24px_60px_-32px_rgba(0,0,0,0.6)]">
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <div className="font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-ink3">
             {t("total")}

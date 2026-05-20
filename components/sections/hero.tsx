@@ -29,7 +29,7 @@ export function Hero() {
   return (
     <section id="waitlist" className="mx-auto max-w-[1240px] px-8 pt-16 pb-24">
       <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_1.1fr]">
-        <div>
+        <div className="min-w-0">
           <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 pl-2.5 text-[12.5px] tracking-[-0.005em] text-ink2">
             <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent shadow-[0_0_0_3px_color-mix(in_oklab,var(--accent)_22%,transparent)]" />
             {t("preLabel")}
@@ -56,7 +56,7 @@ export function Hero() {
                 placeholder={t("emailPlaceholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border-0 bg-transparent px-3.5 text-[14.5px] text-ink outline-none placeholder:text-ink3"
+                className="min-w-0 border-0 bg-transparent px-3.5 text-[14.5px] text-ink outline-none placeholder:text-ink3"
               />
               <button
                 type="submit"
@@ -112,7 +112,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <HeroChart />
         </div>
       </div>
