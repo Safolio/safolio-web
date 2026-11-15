@@ -23,10 +23,13 @@ export function CookieBanner() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl rounded-card border border-line bg-surface p-4 text-ink2 shadow-lg md:flex md:items-center md:gap-4">
+    <div className="rounded-card border-line bg-surface text-ink2 fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl border p-4 shadow-lg md:flex md:items-center md:gap-4">
       <p className="text-sm">
         {t("message")}{" "}
-        <Link href="/cookie-policy" className="text-ink underline underline-offset-2 hover:text-accent">
+        <Link
+          href="/cookie-policy"
+          className="text-ink hover:text-accent underline underline-offset-2"
+        >
           {t("policyLink")}
         </Link>
       </p>
@@ -34,14 +37,14 @@ export function CookieBanner() {
         <button
           type="button"
           onClick={() => decide("rejected")}
-          className="inline-flex items-center justify-center rounded-full border border-line px-[14px] py-[7px] text-[13px] font-medium text-ink transition-colors hover:border-line-strong"
+          className="border-line text-ink hover:border-line-strong inline-flex items-center justify-center rounded-full border px-[14px] py-[7px] text-[13px] font-medium transition-colors"
         >
           {t("reject")}
         </button>
         <button
           type="button"
           onClick={() => decide("accepted")}
-          className="inline-flex items-center justify-center rounded-full bg-ink px-[14px] py-[7px] text-[13px] font-medium text-bg transition-colors hover:bg-accent hover:text-accent-ink"
+          className="bg-ink text-bg hover:bg-accent hover:text-accent-ink inline-flex items-center justify-center rounded-full px-[14px] py-[7px] text-[13px] font-medium transition-colors"
         >
           {t("accept")}
         </button>

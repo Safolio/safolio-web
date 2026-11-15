@@ -2,13 +2,7 @@ import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { SkipToMain } from "@/components/skip-to-main";
 
-export function LegalLayout({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
+export function LegalLayout({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <>
       <SkipToMain />
@@ -18,7 +12,7 @@ export function LegalLayout({
           <h1 className="mb-8 text-[clamp(30px,3.6vw,48px)] font-medium tracking-[-0.02em]">
             {title}
           </h1>
-          <div className="prose prose-neutral max-w-none text-ink2 dark:prose-invert">
+          <div className="prose prose-neutral text-ink2 dark:prose-invert max-w-none">
             {children}
           </div>
         </article>

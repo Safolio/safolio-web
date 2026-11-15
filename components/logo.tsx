@@ -32,12 +32,7 @@ export function Logo({
         }}
       />
       {!hideWordmark && (
-        <span
-          className={cn(
-            "text-[18px] font-semibold tracking-[-0.015em]",
-            wordmarkClassName,
-          )}
-        >
+        <span className={cn("text-[18px] font-semibold tracking-[-0.015em]", wordmarkClassName)}>
           Safolio
         </span>
       )}

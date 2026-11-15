@@ -10,7 +10,7 @@ export function ReadOnly() {
     { title: t("i4_t"), body: t("i4_b"), Icon: Info },
   ];
   return (
-    <section id="read-only" className="px-8 py-24">
+    <section id="read-only" className="px-5 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-[1240px]">
         <div className="mb-14 max-w-[700px]">
           <div className="text-ink3 mb-[18px] font-mono text-[11.5px] font-medium tracking-[0.12em] uppercase">

@@ -5,7 +5,7 @@ import { Logo } from "@/components/logo";
 export function Footer() {
   const t = useTranslations("Footer");
   return (
-    <footer className="border-line bg-surface2 border-t px-8 pt-16 pb-8">
+    <footer className="border-line bg-surface2 border-t px-5 pt-16 pb-8 md:px-8">
       <div className="mx-auto max-w-[1240px]">
         <div className="border-line grid grid-cols-1 gap-12 border-b pb-14 min-[540px]:grid-cols-2 min-[880px]:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
