@@ -1,0 +1,17 @@
+// Cloudflare Workers static-assets deployment for safolio.com.
+// Build first (`pnpm build` -> ./out), then `npx wrangler deploy`.
+{
+  "name": "safolio-web",
+  // yasin@yasin.dev's Cloudflare account
+  "account_id": "5ae2aac6000c93f2235a1ab60fad0db0",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    { "pattern": "safolio.com", "custom_domain": true },
+    { "pattern": "www.safolio.com", "custom_domain": true }
+  ]
+}

@@ -48,3 +48,4 @@ server.log
 /playwright-report/
 /playwright/.cache/
 dev*.log
+.wrangler
