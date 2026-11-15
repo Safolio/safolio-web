@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Safolio — Invest with insight",
-    "description": "Safolio is an independent platform that brings all your assets — stocks, crypto, ETFs, gold — together in one place, helping you make the right decisions through advanced risk analysis."
+    "title": "Safolio — Portfolio analysis and reporting",
+    "description": "Safolio is an independent portfolio analysis and reporting app. It brings your stocks, crypto, ETFs and gold into one read-only view with performance reports and risk analysis. Safolio never executes trades or holds funds."
   },
   "Nav": {
     "product": "Product",
@@ -13,11 +13,11 @@
     "openMenu": "Open menu"
   },
   "Hero": {
-    "preLabel": "Coming soon · Empower your financial future",
-    "h1_a": "Invest with",
-    "h1_b": "insight,",
-    "h1_c": "not noise.",
-    "sub": "Safolio is an independent platform that brings all your assets — stocks, crypto, ETFs, gold — together in one place, helping you manage them with ease and make the right decisions through advanced risk analysis.",
+    "preLabel": "Coming soon · Portfolio analysis & reporting",
+    "h1_a": "Understand your",
+    "h1_b": "portfolio,",
+    "h1_c": "not the noise.",
+    "sub": "Safolio is an independent portfolio analysis and reporting app. It brings all your holdings — stocks, crypto, ETFs, gold — into one clear view, with performance reports and advanced risk analysis to help you make informed decisions.",
     "emailPlaceholder": "you@email.com",
     "signupBtn": "Sign up early",
     "ctaNote": "Be among the first to try. No spam, ever.",
@@ -25,23 +25,23 @@
     "waitlistLabel": "Waitlist",
     "waitlistCaption": "to public beta",
     "trustA": "Independent — not tied to any bank or broker",
-    "trustB": "Built by investors, for investors",
-    "trustC": "Multi-asset by default"
+    "trustB": "Read-only — no trading, no custody",
+    "trustC": "Multi-asset reporting by default"
   },
   "Features": {
     "eyebrow": "Why Safolio",
-    "h": "Independent, empowering, simple and risk-smart.",
-    "sub": "Safolio is more than just a portfolio tracker. It's your companion on the path to financial freedom — see the bigger picture, understand your risks, refine your strategy, and act with ease.",
+    "h": "Independent, insightful, simple and risk-smart.",
+    "sub": "Safolio is a portfolio analysis and reporting tool. See the bigger picture, understand your risks and review your strategy. Any buying or selling stays with your own bank or broker.",
     "f1_t": "Truly independent",
     "f1_b": "Not tied to any bank or broker. Every calculation and analysis is built for your benefit and trust.",
-    "f2_t": "Multi-asset support",
-    "f2_b": "From stocks to crypto, funds to gold, manage and evaluate all your investments in one place.",
-    "f3_t": "Integrated trading journal",
-    "f3_b": "Learn from your past and plan your future. Track every move with the reason behind it, in the simplest way.",
+    "f2_t": "Multi-asset reporting",
+    "f2_b": "From stocks to crypto, funds to gold, track and analyse all your holdings in one place.",
+    "f3_t": "Investment journal",
+    "f3_b": "Learn from your past and plan your future. Record the transactions you made elsewhere, together with the reasoning behind them.",
     "f4_t": "Smart risk analysis",
-    "f4_b": "No surprises. Advanced tools work for you so you stay in control and enjoy managing your investments yourself.",
+    "f4_b": "No surprises. Clear risk metrics show your concentration, volatility and currency exposure at a glance.",
     "f5_t": "Community driven",
-    "f5_b": "Learn, share and grow together. A community of investors managing their own portfolios — no gurus, no signals."
+    "f5_b": "Learn, share and grow together. A community of investors reviewing their own portfolios — no gurus, no signals."
   },
   "Preview": {
     "eyebrow": "Product",
@@ -51,39 +51,52 @@
   "How": {
     "eyebrow": "How it works",
     "h": "Set up in minutes. Use it for years.",
-    "s1_t": "Connect or import",
-    "s1_b": "Add positions manually, via CSV, or by linking accounts. Your data, your control.",
+    "s1_t": "Add or import",
+    "s1_b": "Add positions manually, via CSV, or through a read-only account connection. Your data, your control.",
     "s2_t": "See the full picture",
     "s2_b": "Safolio normalises across asset classes and currencies, then surfaces risk you couldn't see before.",
-    "s3_t": "Decide with insight",
-    "s3_b": "Stress-test changes, journal your reasoning, and revisit your strategy with the data in front of you."
+    "s3_t": "Review with insight",
+    "s3_b": "Run what-if scenarios, journal your reasoning, and review your strategy with the data in front of you. You decide, and act at your own bank or broker."
   },
   "Personas": {
     "eyebrow": "Designed for you",
     "h": "Wherever you are on your investment journey.",
     "p1": "New investors taking their very first steps into the world of investing",
-    "p2": "Experienced investors and traders looking for smarter tools and deeper insights",
-    "p3": "Those managing both crypto and traditional assets together",
+    "p2": "Experienced investors looking for deeper analysis and clearer reporting",
+    "p3": "Those tracking both crypto and traditional assets together",
     "p4": "Investment communities that love to share knowledge",
-    "p5": "Savers who want to turn their money into investments with reliable insights",
+    "p5": "Savers who want a clear, reliable view of how their investments are doing",
     "p6": "Financial professionals seeking advanced analysis and clarity",
     "p7": "Thought leaders and influencers shaping the future of finance"
+  },
+  "ReadOnly": {
+    "eyebrow": "Read-only by design",
+    "h": "Safolio never touches your assets.",
+    "sub": "Safolio is an analysis and reporting tool, not a trading platform. It only reads your portfolio data to show you reports and insights.",
+    "i1_t": "No trading",
+    "i1_b": "Safolio does not buy, sell or place orders. Every transaction happens at your own bank, broker or exchange.",
+    "i2_t": "No custody",
+    "i2_b": "Safolio does not hold, receive or move money or crypto. Your assets stay where they are.",
+    "i3_t": "Read-only connections",
+    "i3_b": "Connected accounts are accessed read-only, only to fetch holdings and prices for analysis. Safolio cannot change anything in them.",
+    "i4_t": "No investment advice",
+    "i4_b": "Reports and risk scores are for information only. Decisions stay with you."
   },
   "Manifesto": {
     "eyebrow": "Why we created Safolio",
     "p1": "We believe investing is a right for everyone, no matter the size of their savings.",
-    "p2": "Too many investors get lost in scattered platforms and overwhelming information. As investors ourselves, searching for the best way to grow our money, we built Safolio — a trustworthy, independent platform that empowers you to make your own decisions, backed by unbiased analysis and advanced risk insights.",
-    "p3": "As you plan for your future, you're no longer alone. Safolio is with you 24/7, helping you take control and make the right moves on your investment journey."
+    "p2": "Too many investors get lost in scattered platforms and overwhelming information. As investors ourselves, we built Safolio — a trustworthy, independent analysis platform that helps you make your own decisions, backed by unbiased reporting and advanced risk insights.",
+    "p3": "As you plan for your future, you're no longer alone. Safolio is with you 24/7, giving you a clear view of your portfolio so you can make informed choices."
   },
   "CTA": {
-    "h_a": "Welcome to financial",
-    "h_b": "freedom.",
-    "sub": "Forget what you thought you knew about finance — a new era is beginning, and this time, you're in control.",
+    "h_a": "See your portfolio",
+    "h_b": "clearly.",
+    "sub": "One read-only view of everything you own, with the reports and risk analysis to understand it.",
     "btn": "Sign up early"
   },
   "Footer": {
-    "tag_a": "Unify your investments,",
-    "tag_b": "empower your decisions.",
+    "tag_a": "See all your investments,",
+    "tag_b": "understand your decisions.",
     "contact": "Contact",
     "company": "Safolio B.V.",
     "address": "2-A Abtstraat, 3512 AB Utrecht",
@@ -98,7 +111,8 @@
     "social2": "LinkedIn",
     "social3": "Instagram",
     "copyright": "© Safolio 2026. All rights reserved.",
-    "version": "v0.1 · pre-launch"
+    "version": "v0.1 · pre-launch",
+    "disclaimer": "Safolio is a portfolio analysis and reporting tool. It does not execute trades, hold client funds or provide investment advice."
   },
   "Chart": {
     "total": "Portfolio value",

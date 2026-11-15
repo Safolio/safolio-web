@@ -6,6 +6,7 @@ import { Features } from "@/components/sections/features";
 import { ProductPreview } from "@/components/sections/product-preview";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Personas } from "@/components/sections/personas";
+import { ReadOnly } from "@/components/sections/read-only";
 import { Manifesto } from "@/components/sections/manifesto";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
@@ -43,11 +44,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -61,6 +58,7 @@ export default async function HomePage({
         <ProductPreview />
         <HowItWorks />
         <Personas />
+        <ReadOnly />
         <Manifesto />
         <FinalCTA />
       </main>
