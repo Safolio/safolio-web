@@ -7,8 +7,8 @@ export function OrganizationJsonLd({ locale }: { locale: string }) {
     logo: "https://safolio.com/logo.svg",
     description:
       locale === "tr"
-        ? "Bağımsız yatırım portföy yönetim platformu"
-        : "Independent investment portfolio management platform",
+        ? "Bağımsız portföy analizi ve raporlama uygulaması"
+        : "Independent portfolio analysis and reporting app",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Vinkenburgstraat 2 A",
@@ -19,9 +19,6 @@ export function OrganizationJsonLd({ locale }: { locale: string }) {
     parentOrganization: { "@type": "Organization", name: "Safolio B.V." },
   };
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }

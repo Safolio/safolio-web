@@ -9,13 +9,20 @@ test.describe("Safolio landing — golden path", () => {
 
   test("/en renders English hero", async ({ page }) => {
     await page.goto("/en");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText(/Invest with/i);
-    await expect(page).toHaveTitle(/Safolio — Invest with insight/);
+    await expect(page.getByRole("heading", { level: 1 })).toContainText(/Understand your/i);
+    await expect(page).toHaveTitle(/Safolio — Portfolio analysis and reporting/);
   });
 
   test("/tr renders Turkish hero", async ({ page }) => {
     await page.goto("/tr");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText(/İçgörüyle/);
+    await expect(page.getByRole("heading", { level: 1 })).toContainText(/Portföyünü/);
+  });
+
+  test("read-only section states Safolio does not trade", async ({ page }) => {
+    await page.goto("/en");
+    await expect(page.getByRole("heading", { name: /never touches your assets/i })).toBeVisible();
+    await page.goto("/tr");
+    await expect(page.getByRole("heading", { name: /varlıklarına asla dokunmaz/i })).toBeVisible();
   });
 
   test("hero email form shows success after valid submit", async ({ page }) => {

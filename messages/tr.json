@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Safolio — İçgörüyle yatırım yap",
-    "description": "Safolio; akıllı yatırımcılar için tasarlanmış bağımsız bir platform. Hisseler, kripto, ETF, altın — tüm varlıklarını tek yerde toplar ve gelişmiş risk analiziyle doğru kararlar almana destek olur."
+    "title": "Safolio — Portföy analizi ve raporlama",
+    "description": "Safolio bağımsız bir portföy analizi ve raporlama uygulamasıdır. Hisse, kripto, ETF ve altın varlıklarını tek bir salt okunur görünümde toplar, performans raporları ve risk analizi sunar. Safolio alım satım işlemi yapmaz ve fon tutmaz."
   },
   "Nav": {
     "product": "Ürün",
@@ -13,11 +13,11 @@
     "openMenu": "Menüyü aç"
   },
   "Hero": {
-    "preLabel": "Çok yakında · Finansal geleceğine güç kat",
-    "h1_a": "İçgörüyle",
-    "h1_b": "yatırım yap,",
+    "preLabel": "Çok yakında · Portföy analizi ve raporlama",
+    "h1_a": "Portföyünü",
+    "h1_b": "içgörüyle anla,",
     "h1_c": "gürültüyle değil.",
-    "sub": "Safolio; akıllı yatırımcılar için tasarlanmış bağımsız bir platform. Hisseler, kripto, ETF, altın — tüm varlıklarını tek yerde toplar, kolayca yönetmeni sağlar ve gelişmiş risk analiziyle doğru kararlar almana destek olur.",
+    "sub": "Safolio bağımsız bir portföy analizi ve raporlama uygulamasıdır. Hisseler, kripto, ETF, altın — tüm varlıklarını tek ve net bir görünümde toplar; performans raporları ve gelişmiş risk analiziyle bilinçli kararlar almana destek olur.",
     "emailPlaceholder": "sen@eposta.com",
     "signupBtn": "Erken kayıt",
     "ctaNote": "İlk denemek isteyenlerden biri ol. Spam yok.",
@@ -25,23 +25,23 @@
     "waitlistLabel": "Bekleme listesi",
     "waitlistCaption": "açık beta'ya",
     "trustA": "Bağımsız — hiçbir banka ya da aracı kuruma bağlı değil",
-    "trustB": "Yatırımcılar tarafından, yatırımcılar için",
-    "trustC": "Varsayılan olarak çok varlıklı"
+    "trustB": "Salt okunur — alım satım yok, saklama yok",
+    "trustC": "Varsayılan olarak çok varlıklı raporlama"
   },
   "Features": {
     "eyebrow": "Neden Safolio",
-    "h": "Bağımsız, güçlendiren, basit ve risk açısından akıllı.",
-    "sub": "Safolio bir portföy takip aracından fazlası; finansal özgürlük yolundaki yol arkadaşın. Büyük resmi gör, risklerini anla, stratejini bileştir ve kolaylıkla harekete geç.",
+    "h": "Bağımsız, içgörülü, basit ve risk açısından akıllı.",
+    "sub": "Safolio bir portföy analizi ve raporlama aracıdır. Büyük resmi gör, risklerini anla, stratejini gözden geçir. Alım satım işlemlerin her zaman kendi bankanda ya da aracı kurumunda kalır.",
     "f1_t": "Gerçekten bağımsız",
     "f1_b": "Hiçbir banka ya da aracı kuruma bağlı değil. Her hesaplama ve analiz senin yararın ve güvenin için tasarlandı.",
-    "f2_t": "Çok varlıklı destek",
-    "f2_b": "Hisseden kriptoya, fonlardan altına — tüm yatırımlarını tek yerde yönet ve değerlendir.",
-    "f3_t": "Entegre işlem günlüğü",
-    "f3_b": "Geçmişinden öğren, geleceğini planla. Tüm hamlelerini en sade şekilde, gerekçesiyle birlikte kaydet.",
+    "f2_t": "Çok varlıklı raporlama",
+    "f2_b": "Hisseden kriptoya, fonlardan altına — tüm varlıklarını tek yerde takip et ve analiz et.",
+    "f3_t": "Yatırım günlüğü",
+    "f3_b": "Geçmişinden öğren, geleceğini planla. Başka platformlarda yaptığın işlemleri gerekçeleriyle birlikte kaydet.",
     "f4_t": "Akıllı risk analizi",
-    "f4_b": "Sürpriz yok. Gelişmiş araçlar senin için çalışır; kontrolü elinde tutar, yatırımını keyifle yönetirsin.",
+    "f4_b": "Sürpriz yok. Net risk göstergeleri yoğunlaşmanı, oynaklığını ve döviz riskini bir bakışta gösterir.",
     "f5_t": "Toplulukla gelişen",
-    "f5_b": "Öğren, paylaş ve birlikte büyü. Kendi portföyünü yöneten yatırımcıların sakin odası — guru yok, sinyal yok."
+    "f5_b": "Öğren, paylaş ve birlikte büyü. Kendi portföyünü inceleyen yatırımcıların sakin odası — guru yok, sinyal yok."
   },
   "Preview": {
     "eyebrow": "Ürün",
@@ -51,39 +51,52 @@
   "How": {
     "eyebrow": "Nasıl çalışır",
     "h": "Dakikalar içinde kur. Yıllarca kullan.",
-    "s1_t": "Bağla veya içe aktar",
-    "s1_b": "Pozisyonlarını elle, CSV ile veya hesaplarını bağlayarak ekle. Veri senin, kontrol senin.",
+    "s1_t": "Ekle veya içe aktar",
+    "s1_b": "Pozisyonlarını elle, CSV ile veya salt okunur hesap bağlantısıyla ekle. Veri senin, kontrol senin.",
     "s2_t": "Bütünü gör",
     "s2_b": "Safolio varlık sınıfları ve para birimleri arasında normalize eder, sonra önce göremediğin riski gün yüzüne çıkarır.",
-    "s3_t": "İçgörüyle karar ver",
-    "s3_b": "Değişiklikleri stres testinden geçir, gerekçeni günlüğe yaz ve stratejine veriye bakarak geri dön."
+    "s3_t": "İçgörüyle değerlendir",
+    "s3_b": "Senaryo analizleri yap, gerekçeni günlüğe yaz ve stratejini veriye bakarak gözden geçir. Kararı sen verirsin, işlemi kendi bankanda ya da aracı kurumunda yaparsın."
   },
   "Personas": {
     "eyebrow": "Senin için tasarlandı",
     "h": "Yatırım yolculuğunda nerede olursan ol.",
     "p1": "Yatırım dünyasına ilk adımını atan yeni yatırımcılar",
-    "p2": "Daha akıllı araçlar ve derin içgörü arayan deneyimli yatırımcılar ve trader'lar",
-    "p3": "Kripto ve geleneksel varlıkları birlikte yönetenler",
+    "p2": "Daha derin analiz ve net raporlama arayan deneyimli yatırımcılar",
+    "p3": "Kripto ve geleneksel varlıklarını birlikte takip edenler",
     "p4": "Bilgi paylaşmayı seven yatırımcı toplulukları",
-    "p5": "Parasını yatırıma dönüştürmek isteyen birikim sahipleri",
+    "p5": "Yatırımlarının nasıl gittiğini net ve güvenilir şekilde görmek isteyen birikim sahipleri",
     "p6": "Gelişmiş analiz ve netlik arayan finans profesyonelleri",
     "p7": "Finansın geleceğini şekillendiren düşünce önderleri ve etkileyiciler"
+  },
+  "ReadOnly": {
+    "eyebrow": "Tasarım gereği salt okunur",
+    "h": "Safolio varlıklarına asla dokunmaz.",
+    "sub": "Safolio bir alım satım platformu değil, analiz ve raporlama aracıdır. Sana rapor ve içgörü sunmak için portföy verilerini yalnızca okur.",
+    "i1_t": "Alım satım yok",
+    "i1_b": "Safolio alım satım yapmaz ve emir iletmez. Tüm işlemler kendi bankanda, aracı kurumunda veya borsanda gerçekleşir.",
+    "i2_t": "Saklama yok",
+    "i2_b": "Safolio para ya da kripto tutmaz, almaz veya transfer etmez. Varlıkların bulundukları yerde kalır.",
+    "i3_t": "Salt okunur bağlantı",
+    "i3_b": "Bağlı hesaplara yalnızca okuma yetkisiyle, analiz için varlık ve fiyat bilgisi almak amacıyla erişilir. Safolio bu hesaplarda hiçbir şeyi değiştiremez.",
+    "i4_t": "Yatırım tavsiyesi yok",
+    "i4_b": "Raporlar ve risk skorları yalnızca bilgilendirme amaçlıdır. Kararlar her zaman sende."
   },
   "Manifesto": {
     "eyebrow": "Safolio'yu neden yarattık",
     "p1": "Yatırımın; birikiminin büyüklüğünden bağımsız, herkesin hakkı olduğuna inanıyoruz.",
-    "p2": "Çok fazla yatırımcı dağınık platformlar ve bıktırıcı bilgi yığınları arasında kaybolur. Biz de kendi paramızı büyütmenin en iyi yolunu arayan yatırımcılar olarak Safolio'yu kurduk — güvenilir, bağımsız; tarafsız analiz ve gelişmiş risk içgörüsüyle desteklenen, kendi kararlarını vermeni güçlendiren bir platform.",
-    "p3": "Geleceğini planlarken artık yalnız değilsin. Safolio 7/24 yanında; kontrolü senin elinde tutmana ve doğru hamleleri yapmana yardım ediyor."
+    "p2": "Çok fazla yatırımcı dağınık platformlar ve bıktırıcı bilgi yığınları arasında kaybolur. Biz de yatırımcılar olarak Safolio'yu kurduk — güvenilir, bağımsız; tarafsız raporlama ve gelişmiş risk içgörüsüyle kendi kararlarını vermene destek olan bir analiz platformu.",
+    "p3": "Geleceğini planlarken artık yalnız değilsin. Safolio 7/24 yanında; portföyünü net görmeni ve bilinçli seçimler yapmanı sağlıyor."
   },
   "CTA": {
-    "h_a": "Finansal özgürlüğe",
-    "h_b": "hoş geldin.",
-    "sub": "Finans hakkında bildiğini sandıklarını unut — yeni bir çağ başlıyor ve bu kez kontrol sende.",
+    "h_a": "Portföyünü",
+    "h_b": "net gör.",
+    "sub": "Sahip olduğun her şey tek bir salt okunur görünümde; anlaman için raporlar ve risk analiziyle birlikte.",
     "btn": "Erken kayıt"
   },
   "Footer": {
-    "tag_a": "Yatırımlarını birleştir,",
-    "tag_b": "kararlarını güçlendir.",
+    "tag_a": "Tüm yatırımlarını gör,",
+    "tag_b": "kararlarını anla.",
     "contact": "İletişim",
     "company": "Safolio B.V.",
     "address": "2-A Abtstraat, 3512 AB Utrecht",
@@ -98,7 +111,8 @@
     "social2": "LinkedIn",
     "social3": "Instagram",
     "copyright": "© Safolio 2026. Tüm hakları saklıdır.",
-    "version": "v0.1 · ön-lansman"
+    "version": "v0.1 · ön-lansman",
+    "disclaimer": "Safolio bir portföy analizi ve raporlama aracıdır. Alım satım işlemi yapmaz, müşteri fonu tutmaz ve yatırım tavsiyesi vermez."
   },
   "Chart": {
     "total": "Portföy değeri",
