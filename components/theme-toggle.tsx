@@ -17,7 +17,7 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={t("toggleTheme")}
-      className="inline-flex h-[30px] w-[30px] items-center justify-center rounded-full border border-line text-ink2 transition-colors hover:border-line-strong hover:text-ink"
+      className="border-line text-ink2 hover:border-line-strong hover:text-ink inline-flex h-[30px] w-[30px] items-center justify-center rounded-full border transition-colors"
     >
       {mounted && isDark ? (
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">

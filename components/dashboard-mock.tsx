@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Search, TrendingUp, AlertTriangle, BookOpen, MessageCircle, Heart } from "lucide-react";
 import { Allocation } from "@/components/hero-chart";
 import { cn } from "@/lib/utils";
@@ -152,6 +152,120 @@ const COMMUNITY = [
   },
 ];
 
+const RISK_FACTORS_TR = [
+  {
+    label: "Yoğunlaşma",
+    value: 38,
+    hint: "İlk 2 pozisyon = portföyün %53'ü",
+    level: "moderate" as const,
+  },
+  { label: "Oynaklık (30g)", value: 22, hint: "Hedef aralıkta", level: "low" as const },
+  { label: "Düşüş", value: 12, hint: "Zirveden dibe −%8,2", level: "low" as const },
+  {
+    label: "Döviz riski",
+    value: 64,
+    hint: "USD %41 · EUR %18 · TRY %41",
+    level: "elevated" as const,
+  },
+];
+
+const JOURNAL_TR = [
+  {
+    d: "Bugün",
+    sym: "BTC",
+    title: "BTC %16'ya indirildi",
+    body: "Yoğunlaşma riski hedefin üstüne çıkıyordu. Borsamda yaptığım 0,08 BTC satışını kaydettim. %10'luk geri çekilmede tekrar eklemeyi planlıyorum.",
+    tag: "Dengeleme",
+    pos: true,
+  },
+  {
+    d: "Dün",
+    sym: "ASELS",
+    title: "Düşüşte ekleme",
+    body: "Aracı kurumumdan alım yaptım. Savunma sektöründeki rüzgar sürüyor. Pozisyon %22, üst sınırımda.",
+    tag: "Alım",
+    pos: true,
+  },
+  {
+    d: "3 gün önce",
+    sym: "TUPRS",
+    title: "Kapatıldı — tez bozuldu",
+    body: "Aracı kurumumdan sattım. Rafineri marjları beklenenden kötü. −%15,6 ile çıktım. Ders: stopa saygı.",
+    tag: "Satım",
+    pos: false,
+  },
+  {
+    d: "1 hafta önce",
+    sym: "XAU",
+    title: "İlk altın pozisyonu",
+    body: "TRY riskine karşı koruma. Ağırlık %10. Üç ayda bir gözden geçireceğim.",
+    tag: "Alım",
+    pos: true,
+  },
+];
+
+const COMMUNITY_TR = [
+  {
+    who: "Mert K.",
+    role: "Uzun vadeli yatırımcı",
+    t: "2s",
+    body: "ASELS ile sektör ETF'i arasındaki farkı izleyen var mı? Bana kopuk görünüyor.",
+    likes: 14,
+    replies: 6,
+  },
+  {
+    who: "Selin A.",
+    role: "Uzun vade",
+    t: "5s",
+    body: "Safolio projeksiyonlarıyla 5 yıllık hedefimin kontrol noktasına ulaştım. Günlük tutma alışkanlığı her şeyi değiştirdi.",
+    likes: 41,
+    replies: 12,
+  },
+  {
+    who: "Ozan T.",
+    role: "Kripto odaklı",
+    t: "1g",
+    body: "Tartışmalı görüş: risk skorun 30'un altındaysa, vade ufkuna göre fazla çeşitlendirmiş olabilirsin.",
+    likes: 27,
+    replies: 18,
+  },
+];
+
+const COPY = {
+  en: {
+    riskTitle: "Risk breakdown",
+    riskSummary: "/ 100 · Moderate",
+    riskElevated: "2 factors elevated",
+    levels: { low: "low", moderate: "moderate", elevated: "elevated" },
+    journalTitle: "Investment journal",
+    journalCount: "4 recent notes",
+    journalMonth: "18 this month",
+    communityTitle: "Community feed",
+    communityHeading: "Today's threads",
+    communityActive: "1,284 active",
+    risk: RISK_FACTORS,
+    journal: JOURNAL,
+    community: COMMUNITY,
+  },
+  tr: {
+    riskTitle: "Risk dağılımı",
+    riskSummary: "/ 100 · Orta",
+    riskElevated: "2 faktör yüksek",
+    levels: { low: "düşük", moderate: "orta", elevated: "yüksek" },
+    journalTitle: "Yatırım günlüğü",
+    journalCount: "Son 4 not",
+    journalMonth: "Bu ay 18",
+    communityTitle: "Topluluk akışı",
+    communityHeading: "Bugünün konuları",
+    communityActive: "1.284 aktif",
+    risk: RISK_FACTORS_TR,
+    journal: JOURNAL_TR,
+    community: COMMUNITY_TR,
+  },
+};
+
+type Copy = (typeof COPY)["en"];
+
 const RISK_LEVEL_STYLES = {
   low: "text-pos",
   moderate: "text-ink2",
@@ -162,18 +276,19 @@ export function DashboardMock() {
   const t = useTranslations("Dashboard");
   const chart = useTranslations("Chart");
   const [active, setActive] = React.useState<TabKey>("overview");
+  const copy = useLocale() === "tr" ? COPY.tr : COPY.en;
 
   return (
     <div className="rounded-dash border-line bg-surface overflow-hidden border shadow-[0_30px_80px_-40px_rgba(15,19,17,0.20)] dark:shadow-[0_30px_80px_-40px_rgba(0,0,0,0.7)]">
-      <div className="border-line bg-surface2 flex items-center justify-between border-b px-[18px] py-3">
-        <div className="flex gap-1">
+      <div className="border-line bg-surface2 flex items-center justify-between gap-3 border-b px-[18px] py-3">
+        <div className="-my-1 flex min-w-0 [scrollbar-width:none] gap-1 overflow-x-auto py-1 [&::-webkit-scrollbar]:hidden">
           {TABS.map((key) => (
             <button
               key={key}
               type="button"
               onClick={() => setActive(key)}
               className={cn(
-                "rounded-lg px-3 py-1.5 text-[12.5px] font-medium transition-colors",
+                "shrink-0 rounded-lg px-3 py-1.5 text-[12.5px] font-medium whitespace-nowrap transition-colors",
                 key === active ? "bg-surface text-ink" : "text-ink3 hover:text-ink2",
               )}
             >
@@ -238,9 +353,9 @@ export function DashboardMock() {
           {(active === "overview" || active === "positions") && (
             <PositionsTable t={t} compact={active === "overview"} />
           )}
-          {active === "risk" && <RiskView />}
-          {active === "journal" && <JournalView />}
-          {active === "community" && <CommunityView />}
+          {active === "risk" && <RiskView copy={copy} />}
+          {active === "journal" && <JournalView copy={copy} />}
+          {active === "community" && <CommunityView copy={copy} />}
         </div>
       </div>
     </div>
@@ -282,10 +397,10 @@ function PositionsTable({
               )}
             >
               <div className="flex items-center gap-2.5">
-                <div className="border-line bg-surface2 h-7 w-7 rounded-lg border" />
+                <div className="border-line bg-surface2 h-7 w-7 shrink-0 rounded-lg border" />
                 <div>
                   <div className="text-ink text-[13px] font-medium tracking-[0.01em]">{r.sym}</div>
-                  <div className="text-ink3 text-[11.5px]">{r.name}</div>
+                  <div className="text-ink3 text-[11.5px] whitespace-nowrap">{r.name}</div>
                 </div>
               </div>
             </td>
@@ -316,26 +431,27 @@ function PositionsTable({
   );
 }
 
-function RiskView() {
+function RiskView({ copy }: { copy: Copy }) {
   return (
     <div className="p-[22px]">
       <div className="mb-5 flex items-center justify-between">
         <div>
           <div className="text-ink3 font-mono text-[11px] font-medium tracking-[0.08em] uppercase">
-            Risk breakdown
+            {copy.riskTitle}
           </div>
           <div className="mt-1.5 flex items-baseline gap-2">
             <span className="text-ink text-[28px] font-medium tracking-[-0.02em]">58</span>
-            <span className="text-ink3 font-mono text-[12px]">/ 100 · Moderate</span>
+            <span className="text-ink3 font-mono text-[12px]">{copy.riskSummary}</span>
           </div>
         </div>
         <div className="border-line text-ink2 hidden items-center gap-1.5 rounded-full border px-3 py-1.5 text-[11px] sm:inline-flex">
-          <AlertTriangle size={12} aria-hidden="true" />2 factors elevated
+          <AlertTriangle size={12} aria-hidden="true" />
+          {copy.riskElevated}
         </div>
       </div>
 
       <div className="rounded-card border-line bg-line grid gap-px overflow-hidden border sm:grid-cols-2">
-        {RISK_FACTORS.map((f) => (
+        {copy.risk.map((f) => (
           <div key={f.label} className="bg-surface p-4">
             <div className="flex items-center justify-between">
               <div className="text-ink3 font-mono text-[11px] font-medium tracking-[0.06em] uppercase">
@@ -344,7 +460,7 @@ function RiskView() {
               <div
                 className={cn("tnum font-mono text-[11px] font-medium", RISK_LEVEL_STYLES[f.level])}
               >
-                {f.level}
+                {copy.levels[f.level]}
               </div>
             </div>
             <div className="mt-3 flex items-baseline gap-1.5">
@@ -367,29 +483,29 @@ function RiskView() {
   );
 }
 
-function JournalView() {
+function JournalView({ copy }: { copy: Copy }) {
   return (
     <div className="p-[22px]">
       <div className="mb-5 flex items-center justify-between">
         <div>
           <div className="text-ink3 font-mono text-[11px] font-medium tracking-[0.08em] uppercase">
-            Investment journal
+            {copy.journalTitle}
           </div>
           <div className="text-ink mt-1.5 text-[20px] font-medium tracking-[-0.015em]">
-            4 recent notes
+            {copy.journalCount}
           </div>
         </div>
         <div className="border-line text-ink2 hidden items-center gap-1.5 rounded-full border px-3 py-1.5 text-[11px] sm:inline-flex">
           <BookOpen size={12} aria-hidden="true" />
-          18 this month
+          {copy.journalMonth}
         </div>
       </div>
 
       <ol className="flex flex-col gap-3">
-        {JOURNAL.map((j, i) => (
+        {copy.journal.map((j, i) => (
           <li
             key={i}
-            className="rounded-card border-line bg-surface grid grid-cols-[auto_1fr_auto] items-start gap-4 border p-4"
+            className="rounded-card border-line bg-surface grid grid-cols-[auto_1fr] items-start gap-x-4 gap-y-2 border p-4 sm:grid-cols-[auto_1fr_auto]"
           >
             <div className="border-line bg-surface2 text-ink2 flex h-9 w-9 items-center justify-center rounded-lg border font-mono text-[10.5px] font-medium">
               {j.sym}
@@ -408,7 +524,7 @@ function JournalView() {
               </div>
               <p className="text-ink2 mt-1 text-[12.5px] leading-[1.5]">{j.body}</p>
             </div>
-            <div className="text-ink3 flex items-center gap-1.5 font-mono text-[11px] whitespace-nowrap">
+            <div className="text-ink3 col-start-2 flex items-center gap-1.5 font-mono text-[11px] whitespace-nowrap sm:col-start-auto">
               <TrendingUp size={12} aria-hidden="true" />
               {j.d}
             </div>
@@ -419,26 +535,26 @@ function JournalView() {
   );
 }
 
-function CommunityView() {
+function CommunityView({ copy }: { copy: Copy }) {
   return (
     <div className="p-[22px]">
       <div className="mb-5 flex items-center justify-between">
         <div>
           <div className="text-ink3 font-mono text-[11px] font-medium tracking-[0.08em] uppercase">
-            Community feed
+            {copy.communityTitle}
           </div>
           <div className="text-ink mt-1.5 text-[20px] font-medium tracking-[-0.015em]">
-            Today&apos;s threads
+            {copy.communityHeading}
           </div>
         </div>
         <div className="border-line text-ink2 hidden items-center gap-1.5 rounded-full border px-3 py-1.5 text-[11px] sm:inline-flex">
           <MessageCircle size={12} aria-hidden="true" />
-          1,284 active
+          {copy.communityActive}
         </div>
       </div>
 
       <ol className="flex flex-col gap-3">
-        {COMMUNITY.map((c, i) => (
+        {copy.community.map((c, i) => (
           <li key={i} className="rounded-card border-line bg-surface border p-4">
             <div className="flex items-center gap-2.5">
               <div className="bg-surface2 text-ink2 flex h-8 w-8 items-center justify-center rounded-full font-mono text-[11px] font-medium">
